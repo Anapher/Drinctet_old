@@ -2,7 +2,7 @@
 
 namespace Drinctet.Core.Parsing.Parsers
 {
-    public class NeverEverCardParser : TranslatedCardParser<NeverEverCard>
+    public class DrinkCardParser : TextCardParser<DrinkCard>
     {
     }
 }

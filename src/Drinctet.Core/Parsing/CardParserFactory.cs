@@ -19,6 +19,7 @@ namespace Drinctet.Core.Parsing
             var parserTypes = Assembly.GetExecutingAssembly().GetTypes().Where(x =>
                 !x.IsAbstract && !x.IsGenericTypeDefinition &&
                 x.GetTypeInfo().ImplementedInterfaces.Any(i => i == typeof(ICardParser)));
+
             _parsers = parserTypes.ToDictionary(x => x.Name.Replace("Parser", null),
                 x => new Lazy<ICardParser>(() => (ICardParser)Activator.CreateInstance(x)), StringComparer.OrdinalIgnoreCase);
         }

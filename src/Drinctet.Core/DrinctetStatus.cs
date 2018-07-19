@@ -4,11 +4,7 @@ namespace Drinctet.Core
 {
     public class DrinctetStatus
     {
-        public DrinctetStatus()
-        {
-            Players = new List<PlayerInfo>();
-        }
-
-        public IList<PlayerInfo> Players { get; }
+        public IList<PlayerInfo> Players { get; set; } = new List<PlayerInfo>();
+        public string Language { get; set; } = "en";
     }
 }

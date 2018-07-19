@@ -2,7 +2,7 @@
 
 namespace Drinctet.Core.Cards
 {
-    public class NeverEverCard : TextCard
+    public class DrinkCard : TextCard
     {
     }
 }

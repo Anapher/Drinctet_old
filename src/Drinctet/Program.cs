@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Xml;
+using Drinctet.Core.Fragments;
 using Drinctet.Core.Parsing;
 
 namespace Drinctet

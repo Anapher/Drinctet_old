@@ -24,7 +24,7 @@ namespace Drinctet.Core.Parsing
                 {
                     case XmlNodeType.Element:
                         var parser = _parserFactory.GetParser(xmlReader.Name);
-                        Cards.Add(parser.Parse(xmlReader));
+                        Cards.Add(parser.Parse(xmlReader.ReadSubtree()));
                         break;
                 }
             }
