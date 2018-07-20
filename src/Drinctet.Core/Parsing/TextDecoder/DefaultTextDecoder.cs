@@ -21,14 +21,15 @@ namespace Drinctet.Core.Parsing.TextDecoder
 
         public const char SelectionSplitterChar = '/';
         public const char SelectionReferenceChar = '|';
+        public const char ArrayDelimiter = ',';
     }
 
     public class DefaultTextDecoder
     {
-        private static readonly ILog Logger = LogProvider.For<DefaultTextDecoder>();
-
-        public IEnumerable<TextFragment> Decode(string s)
+        public IReadOnlyList<TextFragment> Decode(string s)
         {
+            var result = new List<TextFragment>();
+
             var value = s.AsSpan();
             var index = 0;
             var lastTokenIndex = 0;
@@ -38,10 +39,10 @@ namespace Drinctet.Core.Parsing.TextDecoder
                 if (value[index] == TextDecoderConsts.VarStartChar)
                 {
                     if (lastTokenIndex != index)
-                        yield return new RawTextFragment(new string(value.Slice(lastTokenIndex, index - lastTokenIndex)));
+                        result.Add(new RawTextFragment(new string(value.Slice(lastTokenIndex, index - lastTokenIndex))));
 
                     var content = ReadToken(value, TextDecoderConsts.VarEndChar, ref index);
-                    yield return ParseVariableFragment(content);
+                    result.Add(ParseVariableFragment(content));
                 }
                 else if (value[index] == TextDecoderConsts.SelectionStartChar)
                 {
@@ -49,26 +50,36 @@ namespace Drinctet.Core.Parsing.TextDecoder
                     {
                         index--;
                         if (lastTokenIndex != index)
-                            yield return new RawTextFragment(new string(value.Slice(lastTokenIndex, index - lastTokenIndex)));
+                            result.Add(new RawTextFragment(new string(value.Slice(lastTokenIndex,
+                                index - lastTokenIndex))));
 
                         index++;
                         var content = ReadToken(value, TextDecoderConsts.SelectionEndChar, ref index);
-                        yield return ParseRandomSelectionFragment(content);
+                        result.Add(ParseRandomSelectionFragment(content));
                     }
                     else
                     {
                         if (lastTokenIndex != index)
-                            yield return new RawTextFragment(new string(value.Slice(lastTokenIndex, index - lastTokenIndex)));
+                            result.Add(new RawTextFragment(new string(value.Slice(lastTokenIndex,
+                                index - lastTokenIndex))));
 
                         var content = ReadToken(value, TextDecoderConsts.SelectionEndChar, ref index);
-                        yield return ParseGenderSelectionFragment(content);
+                        result.Add(ParseGenderSelectionFragment(content));
                     }
                 }
+                else continue;
 
+                lastTokenIndex = index;
             } while (++index < s.Length);
+
+            if (lastTokenIndex != s.Length)
+                result.Add(new RawTextFragment(new string(value.Slice(lastTokenIndex,
+                    index - lastTokenIndex))));
+
+            return result;
         }
 
-        private static TextFragment ParseVariableFragment(ReadOnlySpan<char> content)
+        internal static TextFragment ParseVariableFragment(ReadOnlySpan<char> content)
         {
             if (content.StartsWith(TextDecoderConsts.PlayerVariable, StringComparison.OrdinalIgnoreCase))
             {
@@ -97,7 +108,7 @@ namespace Drinctet.Core.Parsing.TextDecoder
                 }
 
                 if (playerTag.Length > TextDecoderConsts.PlayerVariable.Length)
-                    playerReference.PlayerIndex = int.Parse(content.Slice(TextDecoderConsts.PlayerVariable.Length));
+                    playerReference.PlayerIndex = int.Parse(playerTag.Slice(TextDecoderConsts.PlayerVariable.Length));
 
                 return playerReference;
             }
@@ -120,23 +131,23 @@ namespace Drinctet.Core.Parsing.TextDecoder
                 }
 
                 if (sipsTag.Length > TextDecoderConsts.SipsVariable.Length)
-                    sipsFragment.SipsIndex = int.Parse(content.Slice(TextDecoderConsts.SipsVariable.Length));
+                    sipsFragment.SipsIndex = int.Parse(sipsTag.Slice(TextDecoderConsts.SipsVariable.Length));
 
                 return sipsFragment;
             }
             return null;
         }
 
-        private static TextFragment ParseRandomSelectionFragment(ReadOnlySpan<char> content)
+        internal static TextFragment ParseRandomSelectionFragment(ReadOnlySpan<char> content)
         {
             // Samples:
-            // !{12,54,56-90}
-            // !{12,hello,not,19}
+            // 12,54,56-90
+            // 12,hello,not,19
 
             var isNumericSelection = true;
             for (int i = 0; i < content.Length; i++)
             {
-                if (char.IsLetter(content[i]))
+                if (char.IsLetter(content[i]) || content[i] == '"')
                 {
                     isNumericSelection = false;
                     break;
@@ -145,11 +156,76 @@ namespace Drinctet.Core.Parsing.TextDecoder
 
             if (!isNumericSelection)
             {
-                return new RandomTextFragment{Texts = new string(content).Split(',', StringSplitOptions.RemoveEmptyEntries)};
+                return new RandomTextFragment
+                {
+                    Texts = SplitQuoted(content, TextDecoderConsts.ArrayDelimiter)
+                };
             }
+
+            var numbers = ParseNumberArray(content);
+            return new RandomNumberFragment{Numbers = numbers};
         }
 
-        private static TextFragment ParseGenderSelectionFragment(ReadOnlySpan<char> content)
+        internal static IReadOnlyList<INumber> ParseNumberArray(ReadOnlySpan<char> value)
+        {
+            var result = new List<INumber>();
+            INumber currentNumber = null;
+
+            var numberStart = 0;
+            var isRangeToken = false;
+
+            var i = 0;
+            while (true)
+            {
+                for (; i < value.Length; i++)
+                {
+                    var c = value[i];
+
+                    if (char.IsDigit(c))
+                        continue;
+
+                    if (c == '-')
+                    {
+                        if (isRangeToken)
+                            throw new ArgumentException("Can only have one range identifier per field");
+                        isRangeToken = true;
+
+                        currentNumber = new NumberRange();
+                        ((NumberRange)currentNumber).Min = int.Parse(value.Slice(numberStart, i - numberStart));
+                        numberStart = i + 1;
+                        continue;
+                    }
+
+                    if (c == ',')
+                        break;
+
+                    throw new ArgumentException("Invalid character found: " + c);
+                }
+
+                if (i == numberStart)
+                    throw new ArgumentException($"A number was expected at position {i} in string '{value.ToString()}'");
+
+                    var num = int.Parse(value.Slice(numberStart, i - numberStart));
+                if (isRangeToken)
+                {
+                    ((NumberRange)currentNumber).Max = num;
+                }
+                else currentNumber = new StaticNumber(num);
+
+                result.Add(currentNumber);
+
+                if (i == value.Length)
+                    break;
+
+                currentNumber = null;
+                isRangeToken = false;
+                numberStart = ++i;
+            }
+
+            return result;
+        }
+
+        internal static TextFragment ParseGenderSelectionFragment(ReadOnlySpan<char> content)
         {
             var fragment = new GenderBasedSelectionFragment();
 
@@ -166,7 +242,8 @@ namespace Drinctet.Core.Parsing.TextDecoder
                 fragment.FemaleText = new string(content);
             else
             {
-                fragment.FemaleText = new string(content.Slice(0, splitterIndex));
+                if (splitterIndex != 0)
+                    fragment.FemaleText = new string(content.Slice(0, splitterIndex));
                 fragment.MaleText = new string(content.Slice(splitterIndex + 1, content.Length - splitterIndex - 1));
             }
 
@@ -196,12 +273,13 @@ namespace Drinctet.Core.Parsing.TextDecoder
                 }
             }
 
-            return value.Slice(tokenStartPos + 1, i - tokenStartPos - 1);
+            return value.Slice(tokenStartPos + 1, i - tokenStartPos - 2);
         }
 
-        internal static IEnumerable<string> SplitQuoted(ReadOnlySpan<char> value, char delimiter)
+        internal static IReadOnlyList<string> SplitQuoted(ReadOnlySpan<char> value, char delimiter)
         {
             var tokenStart = 0;
+            var result = new List<string>();
 
             while (value.Length > tokenStart - 1)
             {
@@ -213,33 +291,56 @@ namespace Drinctet.Core.Parsing.TextDecoder
                     tokenStart++;
                 }
 
-                for (int i = tokenStart; i < value.Length; i++)
+                var i = tokenStart;
+                do
                 {
                     if (value[i] == delimiter)
                     {
                         if (withinQuotes)
                             continue;
 
-                        yield return new string(value.Slice(tokenStart, i - tokenStart));
+                        result.Add(new string(value.Slice(tokenStart, i - tokenStart)));
                         tokenStart = i + 1;
                         break;
                     }
                     else if (value[i] == '"')
                     {
                         if (!withinQuotes)
-                            throw new ArgumentException("Invalid quotes in the middle of the field.");
+                            continue; //allow quotes in the middle
+                        
+                        if (i == value.Length - 1) //if its the last char
+                        {
+                            result.Add(new string(value.Slice(tokenStart, i - tokenStart)).Replace("\"\"", "\""));
+                            return result;
+                        }
 
                         var nextChar = value[i + 1];
                         if (nextChar == '"')
-                            continue; //escpaed quotes
+                        {
+                            i++;
+                            continue; //escaped quotes
+                        }
 
-                        withinQuotes = false;
                         if (nextChar != delimiter)
                             throw new ArgumentException("The delimiter must come after the closing quotes.");
+
+                        result.Add(new string(value.Slice(tokenStart, i - tokenStart)).Replace("\"\"", "\""));
+                        tokenStart = i + 2;
+                        break;
                     }
-                }
+
+                    if (i == value.Length - 1)
+                    {
+                        if (withinQuotes)
+                            throw new ArgumentException("The text must end with a quote");
+
+                        result.Add(new string(value.Slice(tokenStart, i - tokenStart + 1)));
+                        return result;
+                    }
+                } while (++i < value.Length);
             }
 
+            return result;
         }
     }
 }

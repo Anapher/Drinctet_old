@@ -11,7 +11,7 @@ namespace Drinctet.Core.Fragments
     public class SipsFragment : VariableFragment
     {
         public int SipsIndex { get; set; } = 1;
-        public int MinSips { get; set; }
+        public int MinSips { get; set; } = 1;
     }
 
     public abstract class VariableFragment : TextFragment

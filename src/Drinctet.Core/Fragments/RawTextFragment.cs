@@ -4,7 +4,9 @@
     {
         public RawTextFragment(string text)
         {
-
+            Text = text;
         }
+
+        public string Text { get; set; }
     }
 }

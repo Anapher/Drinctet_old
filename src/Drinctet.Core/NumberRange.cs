@@ -2,8 +2,12 @@
 {
     public class NumberRange : INumber
     {
-        public int Min { get; }
-        public int Max { get; }
+        public int Min { get; internal set; }
+        public int Max { get; internal set; }
+
+        internal NumberRange()
+        {
+        }
 
         public NumberRange(int min, int max)
         {

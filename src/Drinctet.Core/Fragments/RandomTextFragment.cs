@@ -1,7 +1,9 @@
-﻿namespace Drinctet.Core.Fragments
+﻿using System.Collections.Generic;
+
+namespace Drinctet.Core.Fragments
 {
     public class RandomTextFragment : TextFragment
     {
-        public string[] Texts { get; set; }
+        public IReadOnlyList<string> Texts { get; set; }
     }
 }

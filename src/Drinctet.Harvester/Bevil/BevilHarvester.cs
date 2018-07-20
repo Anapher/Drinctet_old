@@ -91,7 +91,7 @@ namespace Drinctet.Harvester.Bevil
             foreach (Match match in _objectRegex.Matches(segment))
             {
                 var question = match.Groups["question"].Value;
-                question = question.Replace("#player", "[Player1]");
+                question = question.Replace("#player", "[Player]");
 
                 var gender = match.Groups["gender"].Value;
                 if (!string.IsNullOrEmpty(gender))
