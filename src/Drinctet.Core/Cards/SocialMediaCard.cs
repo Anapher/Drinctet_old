@@ -2,7 +2,7 @@
 
 namespace Drinctet.Core.Cards
 {
-    public class SocialMediaCard : TextCard
+    public class SocialMediaCard : TargetedTextCard
     {
     }
 }

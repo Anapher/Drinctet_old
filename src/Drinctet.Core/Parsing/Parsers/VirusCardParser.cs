@@ -2,7 +2,7 @@
 
 namespace Drinctet.Core.Parsing.Parsers
 {
-    internal class VirusCardParser : TextCardParser<VirusCard>
+    internal class VirusCardParser : TargetedTextCardParser<VirusCard>
     {
     }
 }

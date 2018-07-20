@@ -2,7 +2,7 @@
 
 namespace Drinctet.Core.Parsing.Parsers
 {
-    internal class WyrCardParser : TextCardParser<WyrCard>
+    internal class WyrCardParser : TargetedTextCardParser<WyrCard>
     {
     }
 }

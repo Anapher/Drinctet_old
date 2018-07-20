@@ -2,7 +2,7 @@
 
 namespace Drinctet.Core.Parsing.Parsers
 {
-    internal class SocialMediaCardParser : TextCardParser<SocialMediaCard>
+    internal class SocialMediaCardParser : TargetedTextCardParser<SocialMediaCard>
     {
     }
 }

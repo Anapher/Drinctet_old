@@ -2,7 +2,7 @@
 
 namespace Drinctet.Core.Cards
 {
-    public class WyrCard : TextCard
+    public class WyrCard : TargetedTextCard
     {
     }
 }

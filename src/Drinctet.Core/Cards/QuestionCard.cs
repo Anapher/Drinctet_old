@@ -2,9 +2,8 @@
 
 namespace Drinctet.Core.Cards
 {
-    public class QuestionCard : TextCard
+    public class QuestionCard : TargetedTextCard
     {
-        public PlayerSettings TargetPlayer { get; internal set; }
         public QuestionCategory Category { get; internal set; }
     }
 

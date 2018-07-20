@@ -27,3 +27,18 @@
     <Text lang="de">[TODO]</Text>
     <Text lang="en">have a magic kitchen that produces anything you want to eat or drink at any moment, or be paid $0.01 every time you blink?</Text>
 </WyrCard>
+<WyrCard>
+    <Text lang="de">[TODO]</Text>
+    <Text lang="en">be married to stalin or have sex with hitler?</Text>
+</WyrCard>
+<WyrCard>
+    <Text lang="de">[TODO]</Text>
+    <Text lang="en">be the smartest person in the world or the stupidest person in the world? (In both scenarios you have the same level of intelligence you have now)?</Text>
+</WyrCard>
+<WyrCard>
+    <WyrCard.targetPlayer>
+        <Player gender="m" />
+    </WyrCard.targetPlayer>
+    <Text lang="de">[TODO]</Text>
+    <Text lang="en">push forward or lean back if you wake up halfway in your mom with your dad halfway in you?</Text>
+</WyrCard>

@@ -28,7 +28,7 @@ namespace Drinctet
                 }
 
             Console.WriteLine($"Parsed {provider.Cards.Count} cards in {sw.ElapsedMilliseconds} ms");
-
+            Console.ReadKey();
         }
     }
 }

@@ -2,9 +2,8 @@
 
 namespace Drinctet.Core.Cards
 {
-    public class TaskCard : TextCard
+    public class TaskCard : TargetedTextCard
     {
-        public PlayerSettings TargetPlayer { get; set; }
         public TaskCategory Category { get; set; }
     }
 
