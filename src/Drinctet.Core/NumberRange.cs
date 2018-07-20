@@ -16,5 +16,7 @@
         }
 
         public int Count => Max - Min;
+
+        public override string ToString() => Min + "-" + Max;
     }
 }

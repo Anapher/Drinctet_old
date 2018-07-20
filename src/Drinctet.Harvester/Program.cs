@@ -35,7 +35,7 @@ namespace Drinctet.Harvester
             };
 
             var tasks = new List<Task>();
-            //tasks.Add(RunHarvester(new PicoloHarvester(new PicoloDataFactory(File.ReadAllText("F:\\Projects\\Drinctet.Sources\\Picolo\\rules_default-de.csv")).FetchLines())));
+            tasks.Add(RunHarvester(new PicoloHarvester(new PicoloDataFactory(File.ReadAllText("F:\\Projects\\Drinctet.Sources\\Picolo\\rules_default-de.csv")).FetchLines())));
             //tasks.AddRange(RunAllHarvesters());
             //await RunHarvester(new BevilHarvester(File.ReadAllText("F:\\Projects\\Drinctet.Sources\\Bevi!\\data.js")));
 

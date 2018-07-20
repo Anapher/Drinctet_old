@@ -2,6 +2,7 @@
 using System;
 #endif
 using System.Collections.Generic;
+using System.Linq;
 using Drinctet.Core.Cards.Base;
 
 namespace Drinctet.Core.Parsing.Utilities
@@ -63,6 +64,22 @@ namespace Drinctet.Core.Parsing.Utilities
                 return true;
 
             return false;
+        }
+
+        public static string GetRequiredGenderShorcut(RequiredGender requiredGender)
+        {
+            return RequiredGenderMap.Where(x => x.Value == requiredGender).OrderBy(x => x.Key.Length).First().Key;
+        }
+
+        public static IReadOnlyList<TEnum> ParseEnum<TEnum>(string value) where TEnum : struct
+        {
+            var result = new List<TEnum>();
+
+            var values = value.Split(',');
+            foreach (var v in values)
+                result.Add(Enum.Parse<TEnum>(v, true));
+
+            return result;
         }
     }
 }

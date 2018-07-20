@@ -157,7 +157,10 @@ namespace Drinctet.Harvester.Picolo
                         if (endingCards.Count == 1)
                         {
                             var endingCard = endingCards.Single();
-                            foreach (var (lang, translation) in GetTexts(endingCard[2], type))
+                            var (endingCardText, _) = Extract(endingCard);
+
+                            counter++;
+                            foreach (var (lang, translation) in GetTexts(endingCardText, type))
                             {
                                 xmlWriter.WriteStartElement("Text");
                                 xmlWriter.WriteAttributeString("lang", lang);
@@ -169,8 +172,11 @@ namespace Drinctet.Harvester.Picolo
                         {
                             foreach (var endingCard in endingCards)
                             {
+                                var (endingCardText, _) = Extract(endingCard);
+
+                                counter++;
                                 xmlWriter.WriteStartElement("Case");
-                                foreach (var (lang, translation) in GetTexts(endingCard[2], type))
+                                foreach (var (lang, translation) in GetTexts(endingCardText, type))
                                 {
                                     xmlWriter.WriteStartElement("Text");
                                     xmlWriter.WriteAttributeString("lang", lang);
@@ -207,6 +213,8 @@ namespace Drinctet.Harvester.Picolo
                             Logger.Warn("The card {card} was skipped because no writer is assigned (type: {type}).", text, type);
                             break;
                     }
+
+                    counter++;
                 }
             }
 

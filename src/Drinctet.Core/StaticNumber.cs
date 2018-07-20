@@ -9,5 +9,7 @@
 
         public int Number { get; }
         public int Count { get; } = 1;
+
+        public override string ToString() => Number.ToString();
     }
 }

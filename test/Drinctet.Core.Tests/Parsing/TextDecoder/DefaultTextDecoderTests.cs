@@ -85,10 +85,10 @@ namespace Drinctet.Core.Tests.Parsing.TextDecoder
             new TheoryData<string, GenderBasedSelectionFragment>
             {
                 {"{she}", new GenderBasedSelectionFragment{FemaleText = "she"}},
-                {"{she|5}", new GenderBasedSelectionFragment{FemaleText = "she", ReferencedPlayerIndex = 5}},
+                {"{she|Player5}", new GenderBasedSelectionFragment{FemaleText = "she", ReferencedPlayerIndex = 5}},
                 {"{she/he}", new GenderBasedSelectionFragment{FemaleText = "she", MaleText = "he"}},
-                {"{she/he|5}", new GenderBasedSelectionFragment{FemaleText = "she", MaleText = "he", ReferencedPlayerIndex = 5}},
-                {"{/he|5}", new GenderBasedSelectionFragment{MaleText = "he", ReferencedPlayerIndex = 5}}
+                {"{she/he|Player5}", new GenderBasedSelectionFragment{FemaleText = "she", MaleText = "he", ReferencedPlayerIndex = 5}},
+                {"{/he|Player5}", new GenderBasedSelectionFragment{MaleText = "he", ReferencedPlayerIndex = 5}}
             };
 
         [Theory]

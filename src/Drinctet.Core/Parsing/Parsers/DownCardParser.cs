@@ -2,7 +2,7 @@
 
 namespace Drinctet.Core.Parsing.Parsers
 {
-    internal class DrinkCardParser : TextCardParser<DrinkCard>
+    internal class DownCardParser : TextCardParser<DownCard>
     {
     }
 }

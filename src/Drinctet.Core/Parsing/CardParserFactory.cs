@@ -5,11 +5,6 @@ using System.Reflection;
 
 namespace Drinctet.Core.Parsing
 {
-    public interface ICardParserFactory
-    {
-        ICardParser GetParser(string name);
-    }
-
     public class CardParserFactory : ICardParserFactory
     {
         private readonly IReadOnlyDictionary<string, Lazy<ICardParser>> _parsers;
@@ -17,6 +12,7 @@ namespace Drinctet.Core.Parsing
         public CardParserFactory()
         {
             var parserTypes = Assembly.GetExecutingAssembly().GetTypes().Where(x =>
+                x.Namespace == "Drinctet.Core.Parsing.Parsers" &&
                 !x.IsAbstract && !x.IsGenericTypeDefinition &&
                 x.GetTypeInfo().ImplementedInterfaces.Any(i => i == typeof(ICardParser)));
 

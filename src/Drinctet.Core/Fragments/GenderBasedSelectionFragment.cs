@@ -10,5 +10,20 @@
         ///     as player or player 1.
         /// </summary>
         public int? ReferencedPlayerIndex { get; set; }
+
+        public override string ToString()
+        {
+            var result = "{" + FemaleText;
+            if (MaleText != null)
+                result += "/" + MaleText;
+            if (ReferencedPlayerIndex != null)
+            {
+                result += "|Player";
+                if (ReferencedPlayerIndex != 1)
+                    result += ReferencedPlayerIndex;
+            }
+
+            return result + "}";
+        }
     }
 }

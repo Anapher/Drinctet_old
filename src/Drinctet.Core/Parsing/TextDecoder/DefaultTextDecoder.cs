@@ -1,30 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using Drinctet.Core.Fragments;
-using Drinctet.Core.Logging;
 using Drinctet.Core.Parsing.Utilities;
 
 namespace Drinctet.Core.Parsing.TextDecoder
 {
-    public static class TextDecoderConsts
-    {
-        public const char VarStartChar = '[';
-        public const char VarEndChar = ']';
-        public const char EscapeChar = '\\';
-        public const char SelectionStartChar = '{';
-        public const char SelectionModifierStartChar = '!';
-        public const char SelectionEndChar = '}';
-
-        public const string PlayerVariable = "Player";
-        public const string SipsVariable = "Sips";
-        public const char VariableParametersStart = ':';
-
-        public const char SelectionSplitterChar = '/';
-        public const char SelectionReferenceChar = '|';
-        public const char ArrayDelimiter = ',';
-    }
-
-    public class DefaultTextDecoder
+    internal class DefaultTextDecoder
     {
         public IReadOnlyList<TextFragment> Decode(string s)
         {
@@ -39,7 +20,8 @@ namespace Drinctet.Core.Parsing.TextDecoder
                 if (value[index] == TextDecoderConsts.VarStartChar)
                 {
                     if (lastTokenIndex != index)
-                        result.Add(new RawTextFragment(new string(value.Slice(lastTokenIndex, index - lastTokenIndex))));
+                        result.Add(new RawTextFragment(new string(value.Slice(lastTokenIndex,
+                            index - lastTokenIndex))));
 
                     var content = ReadToken(value, TextDecoderConsts.VarEndChar, ref index);
                     result.Add(ParseVariableFragment(content));
@@ -67,14 +49,16 @@ namespace Drinctet.Core.Parsing.TextDecoder
                         result.Add(ParseGenderSelectionFragment(content));
                     }
                 }
-                else continue;
+                else
+                {
+                    continue;
+                }
 
                 lastTokenIndex = index;
             } while (++index < s.Length);
 
             if (lastTokenIndex != s.Length)
-                result.Add(new RawTextFragment(new string(value.Slice(lastTokenIndex,
-                    index - lastTokenIndex))));
+                result.Add(new RawTextFragment(new string(value.Slice(lastTokenIndex, index - lastTokenIndex))));
 
             return result;
         }
@@ -104,12 +88,12 @@ namespace Drinctet.Core.Parsing.TextDecoder
                     var gender = content.Slice(parameterBegin + 1, content.Length - 1 - parameterBegin);
                     if (ParserHelper.ParseRequiredGender(new string(gender), out var requiredGender))
                         playerReference.RequiredGender = requiredGender;
-                    else throw new ArgumentException("Gender parameter of player tag could not be parsed: " + new string(content));
+                    else
+                        throw new ArgumentException("Gender parameter of player tag could not be parsed: " +
+                                                    new string(content));
                 }
 
-                if (playerTag.Length > TextDecoderConsts.PlayerVariable.Length)
-                    playerReference.PlayerIndex = int.Parse(playerTag.Slice(TextDecoderConsts.PlayerVariable.Length));
-
+                playerReference.PlayerIndex = ParsePlayerIndex(playerTag);
                 return playerReference;
             }
 
@@ -135,6 +119,7 @@ namespace Drinctet.Core.Parsing.TextDecoder
 
                 return sipsFragment;
             }
+
             return null;
         }
 
@@ -145,25 +130,18 @@ namespace Drinctet.Core.Parsing.TextDecoder
             // 12,hello,not,19
 
             var isNumericSelection = true;
-            for (int i = 0; i < content.Length; i++)
-            {
+            for (var i = 0; i < content.Length; i++)
                 if (char.IsLetter(content[i]) || content[i] == '"')
                 {
                     isNumericSelection = false;
                     break;
                 }
-            }
 
             if (!isNumericSelection)
-            {
-                return new RandomTextFragment
-                {
-                    Texts = SplitQuoted(content, TextDecoderConsts.ArrayDelimiter)
-                };
-            }
+                return new RandomTextFragment {Texts = SplitQuoted(content, TextDecoderConsts.ArrayDelimiter)};
 
             var numbers = ParseNumberArray(content);
-            return new RandomNumberFragment{Numbers = numbers};
+            return new RandomNumberFragment {Numbers = numbers};
         }
 
         internal static IReadOnlyList<INumber> ParseNumberArray(ReadOnlySpan<char> value)
@@ -191,7 +169,7 @@ namespace Drinctet.Core.Parsing.TextDecoder
                         isRangeToken = true;
 
                         currentNumber = new NumberRange();
-                        ((NumberRange)currentNumber).Min = int.Parse(value.Slice(numberStart, i - numberStart));
+                        ((NumberRange) currentNumber).Min = int.Parse(value.Slice(numberStart, i - numberStart));
                         numberStart = i + 1;
                         continue;
                     }
@@ -203,13 +181,12 @@ namespace Drinctet.Core.Parsing.TextDecoder
                 }
 
                 if (i == numberStart)
-                    throw new ArgumentException($"A number was expected at position {i} in string '{value.ToString()}'");
+                    throw new ArgumentException(
+                        $"A number was expected at position {i} in string '{value.ToString()}'");
 
-                    var num = int.Parse(value.Slice(numberStart, i - numberStart));
+                var num = int.Parse(value.Slice(numberStart, i - numberStart));
                 if (isRangeToken)
-                {
-                    ((NumberRange)currentNumber).Max = num;
-                }
+                    ((NumberRange) currentNumber).Max = num;
                 else currentNumber = new StaticNumber(num);
 
                 result.Add(currentNumber);
@@ -234,12 +211,14 @@ namespace Drinctet.Core.Parsing.TextDecoder
 
             if (reference > -1)
             {
-                fragment.ReferencedPlayerIndex = int.Parse(content.Slice(reference + 1));
+                fragment.ReferencedPlayerIndex = ParsePlayerIndex(content.Slice(reference + 1));
                 content = content.Slice(0, reference);
             }
 
             if (splitterIndex == -1)
+            {
                 fragment.FemaleText = new string(content);
+            }
             else
             {
                 if (splitterIndex != 0)
@@ -248,6 +227,14 @@ namespace Drinctet.Core.Parsing.TextDecoder
             }
 
             return fragment;
+        }
+
+        private static int ParsePlayerIndex(ReadOnlySpan<char> value)
+        {
+            if (value.Length > TextDecoderConsts.PlayerVariable.Length)
+                return int.Parse(value.Slice(TextDecoderConsts.PlayerVariable.Length));
+
+            return 1;
         }
 
         private static ReadOnlySpan<char> ReadToken(ReadOnlySpan<char> value, char endChar, ref int i)
@@ -303,11 +290,12 @@ namespace Drinctet.Core.Parsing.TextDecoder
                         tokenStart = i + 1;
                         break;
                     }
-                    else if (value[i] == '"')
+
+                    if (value[i] == '"')
                     {
                         if (!withinQuotes)
                             continue; //allow quotes in the middle
-                        
+
                         if (i == value.Length - 1) //if its the last char
                         {
                             result.Add(new string(value.Slice(tokenStart, i - tokenStart)).Replace("\"\"", "\""));

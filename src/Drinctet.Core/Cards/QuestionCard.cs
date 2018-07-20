@@ -10,6 +10,7 @@ namespace Drinctet.Core.Cards
 
     public enum QuestionCategory
     {
+        Default,
         ConversationStarter,
         Truth,
         DeepTalk,

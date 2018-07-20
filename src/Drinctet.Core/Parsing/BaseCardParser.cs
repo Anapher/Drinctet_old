@@ -16,6 +16,7 @@ namespace Drinctet.Core.Parsing
         public BaseCard Parse(XmlReader xmlReader)
         {
             Logger.Trace("Start parsing card");
+            Reader = xmlReader;
 
             var card = new TCard();
 
@@ -42,6 +43,7 @@ namespace Drinctet.Core.Parsing
                 }
             }
 
+            OnCompleted(card);
             return card;
         }
 
@@ -73,6 +75,10 @@ namespace Drinctet.Core.Parsing
                         yield return player;
                 }
             }
+        }
+
+        protected virtual void OnCompleted(TCard card)
+        {
         }
 
         protected static PlayerSettings ParsePlayer(XmlReader reader)
