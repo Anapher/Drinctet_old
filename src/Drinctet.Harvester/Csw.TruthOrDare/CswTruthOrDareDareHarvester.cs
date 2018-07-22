@@ -34,7 +34,8 @@ namespace Drinctet.Harvester.Csw.TruthOrDare
 
         protected override void WriteAttributes(XmlWriter xmlWriter, string originalText)
         {
-            xmlWriter.WriteAttributeString("category", "Dare");
+            base.WriteAttributes(xmlWriter, originalText);
+            xmlWriter.WriteAttributeString("source", "ConversationStartersWorld");
         }
     }
 }

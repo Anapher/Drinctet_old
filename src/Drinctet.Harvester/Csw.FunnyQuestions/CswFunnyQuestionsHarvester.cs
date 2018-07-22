@@ -4,6 +4,7 @@ using System.Net.Http;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Xml;
+using Drinctet.Core.Cards.Base;
 using Drinctet.Harvester.Logging;
 
 namespace Drinctet.Harvester.Csw.FunnyQuestions
@@ -31,7 +32,8 @@ namespace Drinctet.Harvester.Csw.FunnyQuestions
 
         protected override void WriteAttributes(XmlWriter xmlWriter, string originalText)
         {
-            xmlWriter.WriteAttributeString("category", "Funny");
+            xmlWriter.WriteAttributeString("tags", CardTag.Funny.ToString());
+            xmlWriter.WriteAttributeString("source", "ConversationStartersWorld");
         }
     }
 }

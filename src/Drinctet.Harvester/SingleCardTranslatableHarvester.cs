@@ -34,6 +34,7 @@ namespace Drinctet.Harvester
 
                     xmlWriter.WriteStartElement(CardName);
                     WriteAttributes(xmlWriter, originalText);
+                    WriteElements(xmlWriter);
 
                     IEnumerable<(string lang, string text)> GetTexts()
                     {
@@ -76,6 +77,10 @@ namespace Drinctet.Harvester
         protected abstract Task<(string language, List<string> texts)> GetOriginalTexts(HttpClient httpClient);
 
         protected virtual string TransformForTranslation(string text) => text;
+
+        protected virtual void WriteElements(XmlWriter xmlWriter)
+        {
+        }
 
         protected virtual void WriteAttributes(XmlWriter xmlWriter, string originalText)
         {

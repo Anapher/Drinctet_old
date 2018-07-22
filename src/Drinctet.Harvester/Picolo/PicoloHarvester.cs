@@ -92,6 +92,8 @@ namespace Drinctet.Harvester.Picolo
                     void WriteCard(string cardName)
                     {
                         xmlWriter.WriteStartElement(cardName);
+                        xmlWriter.WriteAttributeString("source", "Picolo");
+
                         foreach (var (lang, translation) in GetTexts(text, type))
                         {
                             xmlWriter.WriteStartElement("Text");
@@ -144,6 +146,8 @@ namespace Drinctet.Harvester.Picolo
                     void WriteMultiCard(string cardName)
                     {
                         xmlWriter.WriteStartElement(cardName);
+                        xmlWriter.WriteAttributeString("source", "Picolo");
+
                         foreach (var (lang, translation) in GetTexts(text, type))
                         {
                             xmlWriter.WriteStartElement("Text");
@@ -221,7 +225,7 @@ namespace Drinctet.Harvester.Picolo
             Logger.Info("{counter} {name} texts were created!", counter, "Picolo");
             return Task.CompletedTask;
         }
-
+        
         private static (IReadOnlyList<string[]> nonDependent,
             IReadOnlyDictionary<string, (List<string[]> beginning, List<string[]> ending)> dependent) GroupRules(
                 IEnumerable<string[]> csvData)

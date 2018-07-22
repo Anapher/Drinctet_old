@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.Xml;
 using Drinctet.Harvester.Logging;
 
 namespace Drinctet.Harvester.Csw.NeverHaveIEver
@@ -37,6 +38,12 @@ namespace Drinctet.Harvester.Csw.NeverHaveIEver
         protected override string TransformForTranslation(string text)
         {
             return "Never have I ever " + text;
+        }
+
+        protected override void WriteAttributes(XmlWriter xmlWriter, string originalText)
+        {
+            base.WriteAttributes(xmlWriter, originalText);
+            xmlWriter.WriteAttributeString("source", "ConversationStartersWorld");
         }
     }
 }

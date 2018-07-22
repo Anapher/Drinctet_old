@@ -4,6 +4,7 @@ using System.Net.Http;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Xml;
+using Drinctet.Core.Cards.Base;
 using Drinctet.Harvester.Logging;
 
 namespace Drinctet.Harvester.Csw.DeepTalk
@@ -31,7 +32,7 @@ namespace Drinctet.Harvester.Csw.DeepTalk
 
         protected override void WriteAttributes(XmlWriter xmlWriter, string originalText)
         {
-            xmlWriter.WriteAttributeString("category", "DeepTalk");
+            xmlWriter.WriteAttributeString("tags", CardTag.Deep.ToString());
         }
     }
 }

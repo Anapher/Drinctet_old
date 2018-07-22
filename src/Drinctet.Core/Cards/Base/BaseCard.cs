@@ -20,8 +20,13 @@ namespace Drinctet.Core.Cards.Base
         public virtual IReadOnlyList<PlayerSettings> Players { get; internal set; }
 
         /// <summary>
-        ///     If true, the card will team up the players
+        ///     The source of this card if applicable
         /// </summary>
-        public virtual bool IsPairing { get; internal set; }
+        public virtual string Source { get; internal set; }
+
+        /// <summary>
+        ///     Special tags of this card
+        /// </summary>
+        public virtual IReadOnlyList<CardTag> Tags { get; internal set; }
     }
 }

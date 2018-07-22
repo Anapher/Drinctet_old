@@ -5,7 +5,7 @@ using Drinctet.Core.Parsing.Utilities;
 
 namespace Drinctet.Core.Parsing.TextDecoder
 {
-    internal class DefaultTextDecoder
+    public class DefaultTextDecoder : ITextDecoder
     {
         public IReadOnlyList<TextFragment> Decode(string s)
         {

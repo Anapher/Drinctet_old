@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.Xml;
 using Drinctet.Harvester.Logging;
 
 namespace Drinctet.Harvester.Csw.Wyr
@@ -35,6 +36,12 @@ namespace Drinctet.Harvester.Csw.Wyr
             var source = await response.Content.ReadAsStringAsync();
             var regex = new Regex(@"<p>Would you rather (?<text>([\w \?]+?))<\/p>");
             return ("en", regex.Matches(source).Select(x => x.Groups["text"].Value).ToList());
+        }
+
+        protected override void WriteAttributes(XmlWriter xmlWriter, string originalText)
+        {
+            base.WriteAttributes(xmlWriter, originalText);
+            xmlWriter.WriteAttributeString("source", "ConversationStartersWorld");
         }
 
         protected override string TransformForTranslation(string text) => "Mike, would you rather " + text;

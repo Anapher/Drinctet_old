@@ -13,6 +13,8 @@ namespace Drinctet.Core.Parsing
         private static readonly ILog Logger = LogProvider.For<BaseCardParser<TCard>>();
         protected XmlReader Reader { get; set; }
 
+        protected virtual IReadOnlyList<CardTag> BaseTags { get; }
+
         public BaseCard Parse(XmlReader xmlReader)
         {
             Logger.Trace("Start parsing card");
@@ -21,13 +23,24 @@ namespace Drinctet.Core.Parsing
             var card = new TCard();
 
             ReadAttribute("willPower", s => card.WillPower = int.Parse(s));
-            ReadAttribute("isPairing", s => card.IsPairing = bool.Parse(s));
+            ReadAttribute("source", s => card.Source = s);
+            ReadAttribute("tags", s =>
+            {
+                var tags = s.Split(',').Select(x => Enum.Parse<CardTag>(x.Trim(), true));
+                if (BaseTags != null)
+                    tags = tags.Concat(BaseTags);
+
+                card.Tags = tags.ToList();
+            });
             ReadAttribute("condition", s =>
             {
                 //TODO
             });
 
             ParseAttributes(card);
+
+            if (card.Tags == null && BaseTags != null)
+                card.Tags = BaseTags;
 
             while (xmlReader.Read())
             {

@@ -4,6 +4,7 @@ using System.Net.Http;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Xml;
+using Drinctet.Core.Cards.Base;
 using Drinctet.Harvester.Logging;
 
 namespace Drinctet.Harvester.Csw.TruthOrDare
@@ -34,7 +35,9 @@ namespace Drinctet.Harvester.Csw.TruthOrDare
 
         protected override void WriteAttributes(XmlWriter xmlWriter, string originalText)
         {
-            xmlWriter.WriteAttributeString("category", "Truth");
+            base.WriteAttributes(xmlWriter, originalText);
+            xmlWriter.WriteAttributeString("source", "ConversationStartersWorld");
+            xmlWriter.WriteAttributeString("willPower", "6");
         }
     }
 }

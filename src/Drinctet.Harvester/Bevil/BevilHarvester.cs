@@ -3,6 +3,7 @@ using System.Net.Http;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Xml;
+using Drinctet.Core.Cards.Base;
 
 namespace Drinctet.Harvester.Bevil
 {
@@ -30,7 +31,7 @@ namespace Drinctet.Harvester.Bevil
             var segment = Regex.Match(_dataJsFile, @"case wahrheit:.*?break;", RegexOptions.Singleline).Value;
             foreach (var dataObj in ParseData(segment))
             {
-                WriteData(xmlWriter, dataObj, "QuestionCard", "Truth");
+                WriteData(xmlWriter, dataObj, "QuestionCard");
             }
         }
 
@@ -42,7 +43,7 @@ namespace Drinctet.Harvester.Bevil
                 if (dataObj.Question.Contains("#pantomime"))
                     continue;
 
-                WriteData(xmlWriter, dataObj, "TaskCard", "Dare");
+                WriteData(xmlWriter, dataObj, "TaskCard");
             }
         }
 
@@ -51,17 +52,19 @@ namespace Drinctet.Harvester.Bevil
             var segment = Regex.Match(_dataJsFile, @"case badLuck:.*?break;", RegexOptions.Singleline).Value;
             foreach (var dataObj in ParseData(segment))
             {
-                WriteData(xmlWriter, dataObj, "TaskCard", "Dare");
+                WriteData(xmlWriter, dataObj, "TaskCard");
             }
         }
 
-        private void WriteData(XmlWriter xmlWriter, DataObj dataObj, string cardName, string category = null)
+        private void WriteData(XmlWriter xmlWriter, DataObj dataObj, string cardName, CardTag? tag = null)
         {
             xmlWriter.WriteStartElement(cardName);
             xmlWriter.WriteAttributeString("willPower", dataObj.WillPower.ToString());
 
-            if (category != null)
-                xmlWriter.WriteAttributeString("category", category);
+            if (tag != null)
+                xmlWriter.WriteAttributeString("tags", tag.ToString());
+
+            xmlWriter.WriteAttributeString("source", "Bevi!");
 
             if (dataObj.Gender != null)
             {

@@ -5,7 +5,12 @@ using Drinctet.Core.Parsing;
 
 namespace Drinctet.Core
 {
-    public class CardsProvider
+    public interface ICardsProvider
+    {
+        IReadOnlyList<BaseCard> Cards { get; }
+    }
+
+    public class CardsProvider : ICardsProvider
     {
         private readonly ICardParserFactory _parserFactory;
         private readonly List<BaseCard> _cards;

@@ -31,7 +31,8 @@ namespace Drinctet.Harvester.Csw.ConversationStarters
 
         protected override void WriteAttributes(XmlWriter xmlWriter, string originalText)
         {
-            xmlWriter.WriteAttributeString("category", "ConversationStarter");
+            base.WriteAttributes(xmlWriter, originalText);
+            xmlWriter.WriteAttributeString("source", "ConversationStartersWorld");
         }
     }
 }

@@ -1,16 +1,35 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
+using Drinctet.Core.Selection;
 
 namespace Drinctet.Core
 {
-    public class GameManager
+    public interface IGameManager
     {
-        public DrinctetStatus Status { get; }
+        DrinctetStatus Status { get; }
+        ISelectionAlgorithm Selection { get; }
+    }
 
-        public GameManager(DrinctetStatus status)
+    public abstract class GameManager : IGameManager
+    {
+        private static readonly Random Random = new Random();
+
+        protected GameManager(DrinctetStatus status)
         {
             Status = status;
+
+            switch (status.SelectionAlgorithm)
+            {
+                case Core.SelectionAlgorithm.Benokla:
+                    Selection = new BenokolaAlgorithm();
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException();
+            }
+
+            Selection.Initialize(status, Random);
         }
+
+        public DrinctetStatus Status { get; }
+        public ISelectionAlgorithm Selection { get; }
     }
 }

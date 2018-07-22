@@ -7,6 +7,7 @@ using System.Reflection;
 using System.Threading.Tasks;
 using System.Xml;
 using Drinctet.Harvester.Bevil;
+using Drinctet.Harvester.Csw.PersonalGirl;
 using Drinctet.Harvester.Logging;
 using Drinctet.Harvester.Logging.LogProviders;
 using Drinctet.Harvester.Picolo;
@@ -35,8 +36,9 @@ namespace Drinctet.Harvester
             };
 
             var tasks = new List<Task>();
-            tasks.Add(RunHarvester(new PicoloHarvester(new PicoloDataFactory(File.ReadAllText("F:\\Projects\\Drinctet.Sources\\Picolo\\rules_default-de.csv")).FetchLines())));
-            //tasks.AddRange(RunAllHarvesters());
+            //tasks.Add(RunHarvester(new PicoloHarvester(new PicoloDataFactory(File.ReadAllText("F:\\Projects\\Drinctet.Sources\\Picolo\\rules_default-de.csv")).FetchLines())));
+            tasks.AddRange(RunAllHarvesters());
+            //tasks.Add(RunHarvester(new CswPersonalGirlQuestionsHarvester()));
             //await RunHarvester(new BevilHarvester(File.ReadAllText("F:\\Projects\\Drinctet.Sources\\Bevi!\\data.js")));
 
             await Task.WhenAll(tasks);

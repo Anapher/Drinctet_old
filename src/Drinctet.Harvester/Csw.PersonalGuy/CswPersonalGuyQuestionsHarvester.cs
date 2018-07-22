@@ -4,6 +4,7 @@ using System.Net.Http;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Xml;
+using Drinctet.Core.Cards.Base;
 using Drinctet.Harvester.Logging;
 
 namespace Drinctet.Harvester.Csw.PersonalGuy
@@ -31,7 +32,18 @@ namespace Drinctet.Harvester.Csw.PersonalGuy
 
         protected override void WriteAttributes(XmlWriter xmlWriter, string originalText)
         {
-            xmlWriter.WriteAttributeString("category", "PersonalGuy");
+            xmlWriter.WriteAttributeString("tags", CardTag.Personal.ToString());
+            xmlWriter.WriteAttributeString("source", "ConversationStartersWorld");
+        }
+
+        protected override void WriteElements(XmlWriter xmlWriter)
+        {
+            base.WriteElements(xmlWriter);
+            xmlWriter.WriteStartElement("QuestionCard.targetPlayer");
+            xmlWriter.WriteStartElement("Player");
+            xmlWriter.WriteAttributeString("gender", "m");
+            xmlWriter.WriteEndElement();
+            xmlWriter.WriteEndElement();
         }
     }
 }

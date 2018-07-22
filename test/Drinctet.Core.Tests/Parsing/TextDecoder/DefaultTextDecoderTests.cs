@@ -31,7 +31,7 @@ namespace Drinctet.Core.Tests.Parsing.TextDecoder
         [MemberData(nameof(QuotedData))]
         public void TestSplitQuoted(string source, string[] expectedResult)
         {
-            var result = DefaultTextDecoder.SplitQuoted(source.AsSpan(), ',').ToArray();
+            var result = Core.Parsing.TextDecoder.DefaultTextDecoder.SplitQuoted(source.AsSpan(), ',').ToArray();
 
             Assert.Equal(expectedResult.Length, result.Length);
             for (var i = 0; i < expectedResult.Length; i++) Assert.Equal(expectedResult[i], result[i]);
@@ -43,7 +43,7 @@ namespace Drinctet.Core.Tests.Parsing.TextDecoder
         [InlineData("\"hello\"\",test")]
         public void TestSplitQuotedWithInvalidData(string source)
         {
-            Assert.ThrowsAny<ArgumentException>(() => DefaultTextDecoder.SplitQuoted(source, ','));
+            Assert.ThrowsAny<ArgumentException>(() => Core.Parsing.TextDecoder.DefaultTextDecoder.SplitQuoted(source, ','));
         }
 
         public static readonly TheoryData<string, INumber[]> TestNumberData = new TheoryData<string, INumber[]>
@@ -65,7 +65,7 @@ namespace Drinctet.Core.Tests.Parsing.TextDecoder
         [MemberData(nameof(TestNumberData))]
         public void TestParseNumberArray(string source, INumber[] numbers)
         {
-            var result = DefaultTextDecoder.ParseNumberArray(source);
+            var result = Core.Parsing.TextDecoder.DefaultTextDecoder.ParseNumberArray(source);
             CompareNumberArrays(numbers, result);
         }
 
@@ -78,7 +78,7 @@ namespace Drinctet.Core.Tests.Parsing.TextDecoder
         [InlineData("1,$5-7,56")]
         public void TestParseNumberArrayWithInvalidData(string source)
         {
-            Assert.ThrowsAny<ArgumentException>(() => DefaultTextDecoder.ParseNumberArray(source));
+            Assert.ThrowsAny<ArgumentException>(() => Core.Parsing.TextDecoder.DefaultTextDecoder.ParseNumberArray(source));
         }
 
         public static readonly TheoryData<string, GenderBasedSelectionFragment> GenderBasedSelectionFragmentData =
@@ -95,7 +95,7 @@ namespace Drinctet.Core.Tests.Parsing.TextDecoder
         [MemberData(nameof(GenderBasedSelectionFragmentData))]
         public void TestParseGenderSelectionFragment(string source, GenderBasedSelectionFragment expected)
         {
-            var result = DefaultTextDecoder.ParseGenderSelectionFragment(source.AsSpan(1, source.Length - 2));
+            var result = Core.Parsing.TextDecoder.DefaultTextDecoder.ParseGenderSelectionFragment(source.AsSpan(1, source.Length - 2));
             CompareFragments(expected, result);
         }
 
@@ -114,7 +114,7 @@ namespace Drinctet.Core.Tests.Parsing.TextDecoder
         [MemberData(nameof(ParseRandomSelectionFragmentData))]
         public void TestParseRandomSelectionFragment(string source, TextFragment expected)
         {
-            var result = DefaultTextDecoder.ParseRandomSelectionFragment(source);
+            var result = Core.Parsing.TextDecoder.DefaultTextDecoder.ParseRandomSelectionFragment(source);
             CompareFragments(expected, result);
         }
 
@@ -137,7 +137,7 @@ namespace Drinctet.Core.Tests.Parsing.TextDecoder
         [MemberData(nameof(ParseVariableFragmentData))]
         public void TestParseVariableFragmentData(string source, TextFragment expected)
         {
-            var result = DefaultTextDecoder.ParseVariableFragment(source);
+            var result = Core.Parsing.TextDecoder.DefaultTextDecoder.ParseVariableFragment(source);
             CompareFragments(expected, result);
         }
 
@@ -193,7 +193,7 @@ namespace Drinctet.Core.Tests.Parsing.TextDecoder
         [MemberData(nameof(DecodeData))]
         public void TestDecode(string source, TextFragment[] expectedFragments)
         {
-            var decoder = new DefaultTextDecoder();
+            var decoder = new Core.Parsing.TextDecoder.DefaultTextDecoder();
             var result = decoder.Decode(source);
             Assert.Equal(expectedFragments.Length, result.Count);
 
