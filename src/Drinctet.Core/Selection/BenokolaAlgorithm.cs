@@ -71,7 +71,7 @@ namespace Drinctet.Core.Selection
                         {
                             value += _status.Players.Count - 1; // 50/50 that the couple is selected
 
-                            if (tags.Contains(CardTag.Pairing))
+                            if (tags?.Contains(CardTag.Pairing) == true)
                             {
                                 value += _status.Players.Count - 1; // 2/3
 
@@ -85,7 +85,7 @@ namespace Drinctet.Core.Selection
 
                     result[i] = player;
                     resultCounter++;
-                    _status.PlayerScores[i]++;
+                    _status.PlayerScores[player.Id]++;
 
                     if (_status.PlayerArrangements.TryGetValue(player.Id, out var arranging))
                         forArrangement.Add(_status.Players.First(x => x.Id == arranging));
@@ -157,7 +157,90 @@ namespace Drinctet.Core.Selection
             return values[_random.Next(values.Count)];
         }
 
-        public TCard SelectCard<TCard>(IReadOnlyList<TCard> cards) where TCard : BaseCard => throw new NotImplementedException();
+        public int GetWillPowerLevel()
+        {
+            var willPower = 0;
+            if (_status.StaticWillPower == null)
+            {
+                var localTime = DateTimeOffset.UtcNow.Add(_status.TimeZone.BaseUtcOffset);
+                if (localTime.Hour > 22 || localTime.Hour < 12)
+                    willPower++;
+
+                if (localTime.Hour < 12)
+                    willPower++;
+
+                willPower += (int)(localTime - _status.StartTime).TotalHours;
+                willPower += _status.SlidesCounter / 12;
+                willPower = (int)(willPower * _status.WillPowerMultiplicator);
+            }
+            else willPower = _status.StaticWillPower.Value;
+
+            if (willPower > 10)
+                willPower = 10;
+
+            return willPower;
+        }
+
+        public TCard SelectCard<TCard>(IReadOnlyList<TCard> cards) where TCard : BaseCard
+        {
+            var willPower = GetWillPowerLevel();
+
+            var factor = Math.Max(_status.CardHistory.Count, 10);
+            var cardsScore = cards.ToDictionary(x => x, x => factor);
+            var willPowerDistribution = new Dictionary<int, int>();
+
+            foreach (var card in cards)
+            {
+                if (willPowerDistribution.TryGetValue(card.WillPower, out var count))
+                    willPowerDistribution[card.WillPower] = count + 1;
+                else willPowerDistribution[card.WillPower] = 1;
+
+                if (card is TextCard textCard)
+                {
+                    if (!textCard.Content.Any(x =>
+                        x.Translations.Any(y => y.Key.TwoLetterISOLanguageName.StartsWith(_status.Language))))
+                        cardsScore[card] -= factor / 2;
+                }
+            }
+
+            for (int i = _status.CardHistory.Count - 1; i >= 0; i--)
+            {
+                var id = _status.CardHistory[i];
+                var card = cards.FirstOrDefault(x => x.Id == id);
+                if (card != null)
+                    cardsScore[card] -= i;
+            }
+
+            var result = SelectRandomWeighted(cards, card =>
+            {
+                var weight = cardsScore[card];
+                if (weight < 0)
+                    return 0;
+
+                var diff = willPower - card.WillPower;
+                if (diff < -3) //we dont want to go that far forward
+                    return 0;
+
+                if (diff == 0)
+                    weight += factor;
+
+                if (diff < 0) //forward
+                    diff = Math.Abs(diff);
+
+                weight += factor / (diff + 1);
+
+                //if (card.Tags.Any())
+                //{
+                //    var min = card.Tags.Select(x => _status.Tags.FirstOrDefault(y => y.Value == x)?.Weight ?? 0).Min();
+                //    weight *= min;
+                //}
+
+                return (double) weight / willPowerDistribution[card.WillPower];
+            });
+
+            _status.CardHistory.Add(result.Id);
+            return result;
+        }
 
         public int GetRandomNumber(int minValue, int maxValue) => _random.Next(minValue, maxValue);
         public int GetRandomNumber(int maxValue) => _random.Next(maxValue);
@@ -213,9 +296,25 @@ namespace Drinctet.Core.Selection
             throw new InvalidOperationException("No choice could be made");
         }
 
-        public int GetSips(int min) => throw new NotImplementedException();
+        public int GetSips(int min)
+        {
+            var baseSips = (int) (_status.DrinkALot * 4);
 
-        public int GetSips(int min, PlayerInfo player) => throw new NotImplementedException();
+            var timespan = DateTimeOffset.UtcNow - _status.StartTime;
+
+            if ((int) Math.Floor(timespan.TotalHours) % 2 == 0)
+                baseSips += 1;
+
+            var localTime = DateTimeOffset.UtcNow.Add(_status.TimeZone.BaseUtcOffset);
+            if (localTime.Hour < 22 && localTime.Hour > 12)
+                baseSips += 1;
+
+            var sips = baseSips + _random.Next(-2, 3);
+            if (sips < 2)
+                sips = 1;
+
+            return sips >= min ? sips : min;
+        }
 
         public SlideType SelectNextSlide()
         {
@@ -237,6 +336,7 @@ namespace Drinctet.Core.Selection
             while (_status.RecentSlides.Count > MaxRecentSlides)
                 _status.RecentSlides.RemoveAt(_status.RecentSlides.Count - 1);
 
+            _status.SlidesCounter++;
             return result;
         }
 
@@ -263,8 +363,7 @@ namespace Drinctet.Core.Selection
         T SelectRandomWeighted<T>(IReadOnlyList<T> items) where T : IWeighted;
         T SelectRandomWeighted<T>(IReadOnlyList<T> items, Func<T, double> getWeight);
         int GetSips(int min);
-        int GetSips(int min, PlayerInfo player);
-
+        int GetWillPowerLevel();
         SlideType SelectNextSlide();
     }
 }

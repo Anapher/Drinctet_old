@@ -6,7 +6,7 @@ namespace Drinctet.Core.Tests.Parsing.Utilities
     public class ParserHelperTests
     {
         [Theory]
-        [InlineData("Player", 0)]
+        [InlineData("Player", 1)]
         [InlineData("Player1", 1)]
         [InlineData("Player100", 100)]
         [InlineData("Player84", 84)]

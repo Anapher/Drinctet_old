@@ -7,7 +7,7 @@ namespace Drinctet.Core.Parsing
 {
     public class CardParserFactory : ICardParserFactory
     {
-        private readonly IReadOnlyDictionary<string, Lazy<ICardParser>> _parsers;
+        private readonly IReadOnlyDictionary<string, Type> _parsers;
 
         public CardParserFactory()
         {
@@ -16,10 +16,10 @@ namespace Drinctet.Core.Parsing
                 !x.IsAbstract && !x.IsGenericTypeDefinition &&
                 x.GetTypeInfo().ImplementedInterfaces.Any(i => i == typeof(ICardParser)));
 
-            _parsers = parserTypes.ToDictionary(x => x.Name.Replace("Parser", null),
-                x => new Lazy<ICardParser>(() => (ICardParser)Activator.CreateInstance(x)), StringComparer.OrdinalIgnoreCase);
+            _parsers = parserTypes.ToDictionary(x => x.Name.Replace("Parser", null), x => x,
+                StringComparer.OrdinalIgnoreCase);
         }
 
-        public ICardParser GetParser(string name) => _parsers[name].Value;
+        public ICardParser GetParser(string name) => (ICardParser) Activator.CreateInstance(_parsers[name]);
     }
 }

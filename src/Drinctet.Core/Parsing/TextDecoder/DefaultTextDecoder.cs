@@ -120,7 +120,7 @@ namespace Drinctet.Core.Parsing.TextDecoder
                 return sipsFragment;
             }
 
-            return null;
+            return new RawTextFragment(content.ToString());
         }
 
         internal static TextFragment ParseRandomSelectionFragment(ReadOnlySpan<char> content)

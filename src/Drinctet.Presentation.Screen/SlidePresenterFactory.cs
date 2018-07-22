@@ -18,32 +18,32 @@ namespace Drinctet.Presentation.Screen
         {
             switch (slideType)
             {
-                case SlideType.Balancing:
-                    break;
-                case SlideType.BlackOrRed:
-                    break;
-                case SlideType.QuizTrust:
-                    break;
+                //case SlideType.Balancing:
+                //    break;
+                //case SlideType.BlackOrRed:
+                //    break;
+                //case SlideType.QuizTrust:
+                //    break;
                 case SlideType.Down:
                     return new DownPresenter();
                 case SlideType.Drink:
-                    break;
+                    return new DrinkPresenter();
                 case SlideType.GroupGame:
-                    break;
+                    return new GroupGamePresenter();
                 case SlideType.NeverEver:
-                    break;
+                    return new NeverEverPresenter();
                 case SlideType.NoIdeaLoses:
-                    break;
+                    return new NoIdeaLosesPresenter();
                 case SlideType.Question:
-                    break;
+                    return new QuestionPresenter();
                 case SlideType.SocialMedia:
-                    break;
+                    return new SocialMediaPresenter();
                 case SlideType.Task:
-                    break;
+                    return new TaskPresenter();
                 case SlideType.Virus:
-                    break;
+                    return new VirusPresenter();
                 case SlideType.WouldYouRather:
-                    break;
+                    return new WouldYouRatherPresenter();
                 default:
                     throw new ArgumentOutOfRangeException(nameof(slideType), slideType, null);
             }

@@ -24,6 +24,7 @@ namespace Drinctet.Core.Parsing
 
             ReadAttribute("willPower", s => card.WillPower = int.Parse(s));
             ReadAttribute("source", s => card.Source = s);
+            ReadAttribute("id", s => card.Id = int.Parse(s));
             ReadAttribute("tags", s =>
             {
                 var tags = s.Split(',').Select(x => Enum.Parse<CardTag>(x.Trim(), true));
@@ -46,13 +47,16 @@ namespace Drinctet.Core.Parsing
             {
                 if (xmlReader.NodeType == XmlNodeType.Element)
                 {
+                    var reader = xmlReader.ReadSubtree();
+                    reader.Read();
+
                     if (xmlReader.Name == $"{typeof(TCard).Name}.players")
                     {
-                        card.Players = ParsePlayers(xmlReader.ReadSubtree()).ToList();
+                        card.Players = ParsePlayers(reader).ToList();
                         continue;
                     }
 
-                    ParseElement(xmlReader.ReadSubtree(), card);
+                    ParseElement(reader, card);
                 }
             }
 

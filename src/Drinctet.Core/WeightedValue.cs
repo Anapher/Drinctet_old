@@ -2,6 +2,21 @@
 {
     public class WeightedValue<TValue> : IWeighted
     {
+        public WeightedValue(TValue value, double weight)
+        {
+            Value = value;
+            Weight = weight;
+        }
+
+        public WeightedValue(TValue value)
+        {
+            Value = value;
+        }
+
+        public WeightedValue()
+        {
+        }
+
         /// <summary>
         ///     The value
         /// </summary>

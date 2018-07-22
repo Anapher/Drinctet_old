@@ -9,7 +9,7 @@ using Drinctet.Core.Selection;
 
 namespace Drinctet.Presentation.Screen.Formatter
 {
-    public class TextFormatter
+    public class TextFormatter : ITextFormatter
     {
         private readonly ISelectionAlgorithm _selection;
         private readonly ITextResource _textResource;
@@ -31,7 +31,7 @@ namespace Drinctet.Presentation.Screen.Formatter
                 var requiredGender = fragment.RequiredGender;
                 if (requiredGender == RequiredGender.None)
                 {
-                    var rootSettings = playerSettings.FirstOrDefault(x => x.PlayerIndex == fragment.PlayerIndex);
+                    var rootSettings = playerSettings?.FirstOrDefault(x => x.PlayerIndex == fragment.PlayerIndex);
                     if (rootSettings != null)
                         requiredGender = rootSettings.Gender;
                 }
@@ -43,13 +43,8 @@ namespace Drinctet.Presentation.Screen.Formatter
             var players = _selection.SelectPlayers(requiredPlayers.Select(x => x.Gender).ToList(), tags)
                 .ToDictionary(x => requiredPlayers[counter++].PlayerIndex, x => x);
 
-            var sips = fragments.OfType<SipsFragment>().GroupBy(x => x.SipsIndex).ToDictionary(x => x.Key, x =>
-            {
-                if (players.Count == 1)
-                    return _selection.GetSips(x.First().MinSips, players.First().Value);
-
-                return _selection.GetSips(x.First().MinSips);
-            });
+            var sips = fragments.OfType<SipsFragment>().GroupBy(x => x.SipsIndex)
+                .ToDictionary(x => x.Key, x => _selection.GetSips(x.First().MinSips));
 
             var builder = new StringBuilder();
             AppendFragments(builder, fragments, players, sips);

@@ -39,5 +39,11 @@ namespace Drinctet.Core.Parsing
 
             return false;
         }
+
+        protected override void OnCompleted(TCard card)
+        {
+            base.OnCompleted(card);
+            card.Content = _contentParser.Result;
+        }
     }
 }

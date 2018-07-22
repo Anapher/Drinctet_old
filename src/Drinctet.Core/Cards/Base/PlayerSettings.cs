@@ -12,7 +12,7 @@
         {
         }
 
-        public int PlayerIndex { get; internal set; }
+        public int PlayerIndex { get; internal set; } = 1;
         public RequiredGender Gender { get; internal set; }
     }
 }
