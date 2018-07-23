@@ -1,6 +1,4 @@
-﻿using System.Globalization;
-using Drinctet.Core;
-using Drinctet.Core.Cards.Base;
+﻿using Drinctet.Core;
 
 namespace Drinctet.Presentation.Screen
 {
@@ -8,20 +6,8 @@ namespace Drinctet.Presentation.Screen
     {
         string Title { get; }
         string Text { get; }
+        bool IsInteractive { get; }
 
         void Initialize(IScreenGameManager gameManager, ICardsProvider cardsProvider, ITextResource textResource);
-    }
-
-    public interface IFollowUpSlidePresenter
-    {
-        void InitializeFollowUp(IScreenGameManager gameManager, BaseCard card, ITextResource textResource);
-    }
-
-    public interface ITextResource
-    {
-        string LanguageKey { get; }
-        CultureInfo Culture { get; }
-
-        string this[string index] { get; }
     }
 }

@@ -15,7 +15,8 @@ namespace Drinctet.Presentation.Screen.Slides
             new Func<string, ITextResource, string>[] {
                 (s, texts) => string.Format(texts["WouldYouRather.Wyr1"], s),
                 (s, texts) => string.Format(texts["WouldYouRather.Wyr2"], s),
-                (s, texts) => string.Format(texts["WouldYouRather.Wyr3"], s)
+                (s, texts) => string.Format(texts["WouldYouRather.Wyr3"], s),
+                (s, texts) => string.Format(texts["WouldYouRather.Wyr4"], s),
             };
         
         protected override void Initialize()

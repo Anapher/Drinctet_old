@@ -9,6 +9,8 @@ namespace Drinctet.Presentation.Screen.Slides.Base
 {
     public abstract class TextCardPresenter<TCard> : CardPresenter<TCard>, IFollowUpSlidePresenter where TCard : TextCard
     {
+        public override bool IsInteractive { get; } = false;
+
         protected override void Initialize()
         {
             if (SelectedCard.FollowUp?.Any() == true)

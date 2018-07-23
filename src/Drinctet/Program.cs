@@ -66,6 +66,28 @@ namespace Drinctet
 
         private class Texts : ITextResource
         {
+            private readonly IReadOnlyDictionary<string, string> _translations = new Dictionary<string, string>
+            {
+                {"OneSip", "einen Schluck"},
+                {"Sips", "{0} Schlucke"},
+                {"DownPresenter.Title", "Auf Ex'"},
+                {"NeverEver.Title", "Ich habe noch nie..."},
+                {"WouldYouRather.Title", "Würdest du lieber..."},
+                {"WouldYouRather.Wyr1", "[Player], würdest du lieber {0}"},
+                {"WouldYouRather.Wyr2", "An [Player1] und [Player2], würdet ihr lieber {0} Wenn ihr euch nicht einigen könnt, trinkt [sips]."},
+                {"WouldYouRather.Wyr3", "An alle: Würdet ihr lieber {0} Stimmt alle gleichzeitig ab, die Verlierer trinken [sips]."},
+                {"WouldYouRather.Wyr4", "[Player], würdest du lieber {0} Alle, die anderer Meinung sind, trinken [sips]."},
+                {"Question.Title", "Frage"},
+                {"Question.Question1", "[Player], {0}"},
+                {"Question.Question2", "Nachdem [Player1] und [Player2] [sips] getrunken haben: {0}"},
+                {"Question.Question3", "An alle: {0}"},
+                {"Task.Title", "Aufgabe" },
+                {"Task.Task1", "[Player100], {0}. Wenn du dich weigerst, trinke [sips]." },
+                {"Task.Task2", "[Player100], {0}." },
+                {"Task.Task3", "[Player100], {0}. Wenn du dich weigerst, trinke [sips] und [Player101] muss die Aufgabe machen." },
+                {"SocialMedia.Text", "[Player], stell bei {0} einen bekloppten Satz rein, der folgende Wörter beinhaltet: {1} und {2}, und schreib am Ende #Drinctet - Oder trink [sips:5]." },
+            };
+
             public string LanguageKey { get; } = "de";
             public CultureInfo Culture { get; } = CultureInfo.GetCultureInfo("de");
 
@@ -73,33 +95,8 @@ namespace Drinctet
             {
                 get
                 {
-                    switch (index)
-                    {
-                        case "OneSip":
-                            return "einen Schluck";
-                        case "Sips":
-                            return "{0} Schlucke";
-                        case "DownPresenter.Title":
-                            return "Auf Ex'";
-                        case "NeverEver.Title":
-                            return "Ich habe noch nie...";
-                        case "WouldYouRather.Title":
-                            return "Würdest du lieber...";
-                        case "WouldYouRather.Wyr1":
-                            return "[Player], würdest du lieber {0}";
-                        case "WouldYouRather.Wyr2":
-                            return "An [Player1] und [Player2], würdet ihr lieber {0} Wenn ihr euch nicht einigen könnt, trinkt [sips].";
-                        case "WouldYouRather.Wyr3":
-                            return "An alle: Würdet ihr lieber {0} Stimmt alle gleichzeitig ab, die Verlierer trinken [sips].";
-                        case "Question.Title":
-                            return "Frage";
-                        case "Question.Question1":
-                            return "[Player], {0}";
-                        case "Question.Question2":
-                            return "Nachdem [Player1] und [Player2] [sips] getrunken haben: {0}";
-                        case "Question.Question3":
-                            return "An alle: {0}";
-                    }
+                    if (_translations.TryGetValue(index, out var result))
+                        return result;
 
                     return "Placeholder";
                 }

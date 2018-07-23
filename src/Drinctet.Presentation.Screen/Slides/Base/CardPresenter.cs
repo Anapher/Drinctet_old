@@ -8,6 +8,7 @@ namespace Drinctet.Presentation.Screen.Slides.Base
     {
         public string Title { get; protected set; }
         public string Text { get; protected set; }
+        public abstract bool IsInteractive { get; }
 
         protected TCard SelectedCard { get; set; }
         protected IScreenGameManager GameManager { get; set; }

@@ -92,6 +92,11 @@ namespace Drinctet.Core
         /// </summary>
         public double WillPowerMultiplicator { get; set; } = 1;
 
+        /// <summary>
+        ///     The used social media platform (Snapchat, Facebook, Instagram, WhatsApp)
+        /// </summary>
+        public string SocialMediaPlatform { get; set; } = "Snapchat";
+
         public void Initialize()
         {
             PlayerScores = Players.ToDictionary(x => x.Id, x => 0);
