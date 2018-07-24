@@ -3,10 +3,40 @@
     x:Class="Drinctet.Mobile.Pages.GamePage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    NavigationPage.HasNavigationBar="False">
+    xmlns:controls="clr-namespace:Drinctet.Mobile.Controls;assembly=Drinctet.Mobile"
+    xmlns:converter="clr-namespace:Drinctet.Mobile.Converter;assembly=Drinctet.Mobile"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:slides="clr-namespace:Drinctet.ViewModels.Slides;assembly=Drinctet.ViewModels"
+    xmlns:viewModels="clr-namespace:Drinctet.ViewModels;assembly=Drinctet.ViewModels"
+    d:DataContext="{d:DesignInstance viewModels:GameViewModel}"
+    NavigationPage.HasNavigationBar="False"
+    mc:Ignorable="d">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Slides/TextSlideViews.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <converter:GetTypeConverter x:Key="GetTypeConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Hello World!" />
-        </StackLayout>
+        <controls:ContentControl
+            Data="{Binding CurrentSlide}"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand">
+            <controls:ContentControl.GestureRecognizers>
+                <TapGestureRecognizer NumberOfTapsRequired="1" />
+            </controls:ContentControl.GestureRecognizers>
+            <controls:ContentControl.Triggers>
+                <DataTrigger
+                    Binding="{Binding CurrentSlide, Converter={StaticResource GetTypeConverter}}"
+                    TargetType="controls:ContentControl"
+                    Value="DownViewModel">
+                    <Setter Property="ItemTemplate" Value="{StaticResource DownDataTemplate}" />
+                </DataTrigger>
+            </controls:ContentControl.Triggers>
+        </controls:ContentControl>
     </ContentPage.Content>
 </ContentPage>

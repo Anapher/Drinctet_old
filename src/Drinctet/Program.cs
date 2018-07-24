@@ -20,7 +20,7 @@ namespace Drinctet
             status.Players.Add(new PlayerInfo(8, Gender.Female){Name = "Larny"});
             status.Players.Add(new PlayerInfo(9, Gender.Female){Name = "Britta"});
 
-            status.Initialize();
+            status.InitializePlayers();
             status.PlayerArrangements.Add(4, 9);
             var cards = GetCards();
 

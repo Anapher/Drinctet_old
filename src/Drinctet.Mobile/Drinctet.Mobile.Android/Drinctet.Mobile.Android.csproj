@@ -59,6 +59,7 @@
     <PackageReference Include="Xamarin.Android.Support.v7.MediaRouter" Version="27.0.2" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cards\AndroidCardsProvider.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -94,10 +95,19 @@
     <Folder Include="Resources\drawable\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Drinctet.Core\Drinctet.Core.csproj">
+      <Project>{55248ffd-fb7c-4290-8c1d-4bb8d99372ff}</Project>
+      <Name>Drinctet.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Drinctet.Mobile\Drinctet.Mobile.csproj">
       <Project>{EE78E072-C2DC-4E7B-8D86-D1145640E8A1}</Project>
       <Name>Drinctet.Mobile</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="..\..\..\cards\*.xml">
+        <Link>Assets\%(FileName)</Link>
+    </AndroidAsset>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

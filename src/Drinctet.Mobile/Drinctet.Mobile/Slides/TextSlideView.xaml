@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    x:Class="Drinctet.Mobile.Slides.TextSlideView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:Drinctet.Mobile.Controls;assembly=Drinctet.Mobile"
+    x:Name="RootView">
+    <ContentView.Content>
+        <StackLayout
+            HorizontalOptions="CenterAndExpand"
+            Orientation="Vertical"
+            VerticalOptions="CenterAndExpand">
+            <ContentPresenter Content="{Binding Source={x:Reference RootView}, Path=Header}" HorizontalOptions="Center" />
+            <controls:MarkdownLabel
+                Margin="0,12,0,0"
+                FontSize="30"
+                HorizontalOptions="Center"
+                HorizontalTextAlignment="Center"
+                Text="{Binding Source={x:Reference RootView}, Path=Text}"
+                TextColor="White" />
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>

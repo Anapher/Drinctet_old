@@ -1,4 +1,8 @@
 ﻿using System.Collections.ObjectModel;
+using System.Globalization;
+using System.Linq;
+using Drinctet.Core;
+using Drinctet.ViewModels.Resources;
 using Drinctet.ViewModels.ViewModelBase;
 
 namespace Drinctet.ViewModels
@@ -10,6 +14,8 @@ namespace Drinctet.ViewModels
 
         public MainPageViewModel()
         {
+            AppResources.Culture = CultureInfo.CurrentCulture;
+
             Players = new ObservableCollection<PlayerViewModel>();
             Players.Add(new PlayerViewModel {Name = "Vincent"});
             Players.Add(new PlayerViewModel {Name = "Bursod"});
@@ -35,7 +41,14 @@ namespace Drinctet.ViewModels
             {
                 return _startCommand ?? (_startCommand = new RelayCommand(parameter =>
                 {
-                    ViewInterface.Show(new GameViewModel());
+                    var settings = new DrinctetStatus();
+
+                    var counter = 1;
+                    settings.Players = Players.Select(x =>
+                        new PlayerInfo(counter++, x.IsFemale ? Gender.Female : Gender.Male) {Name = x.Name}).ToList();
+                    settings.InitializePlayers();
+
+                    ViewInterface.Show(new GameViewModel(settings));
                 }));
             }
         }

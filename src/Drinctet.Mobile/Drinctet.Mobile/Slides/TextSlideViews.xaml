@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ResourceDictionary
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:slideVms="clr-namespace:Drinctet.ViewModels.Slides;assembly=Drinctet.ViewModels"
+    xmlns:slides="clr-namespace:Drinctet.Mobile.Slides;assembly=Drinctet.Mobile"
+    mc:Ignorable="d">
+
+    <DataTemplate x:Key="DownDataTemplate">
+        <slides:TextSlideView BackgroundColor="#27ae60" Text="{Binding Text}">
+            <slides:TextSlideView.Header>
+                <Label
+                    FontAttributes="Bold"
+                    FontSize="50"
+                    Text="Auf Ex'"
+                    TextColor="White" />
+            </slides:TextSlideView.Header>
+        </slides:TextSlideView>
+    </DataTemplate>
+</ResourceDictionary>

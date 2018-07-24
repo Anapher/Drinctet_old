@@ -97,10 +97,9 @@ namespace Drinctet.Core
         /// </summary>
         public string SocialMediaPlatform { get; set; } = "Snapchat";
 
-        public void Initialize()
+        public void InitializePlayers()
         {
             PlayerScores = Players.ToDictionary(x => x.Id, x => 0);
-
         }
     }
 

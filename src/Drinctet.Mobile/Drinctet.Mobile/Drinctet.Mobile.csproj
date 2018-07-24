@@ -9,12 +9,17 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Drinctet.Core\Drinctet.Core.csproj" />
     <ProjectReference Include="..\..\Drinctet.ViewModels\Drinctet.ViewModels.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Update="Pages\GamePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Slides\TextSlideView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Slides\TextSlideViews.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
