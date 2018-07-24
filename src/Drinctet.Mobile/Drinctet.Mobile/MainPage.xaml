@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Drinctet.Mobile.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <StackLayout Orientation="Vertical">
+            <ListView
+                Margin="20,0"
+                HorizontalOptions="CenterAndExpand"
+                ItemsSource="{Binding Players}"
+                SeparatorVisibility="None">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="10" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <Entry Text="{Binding Name}" />
+                                <Switch
+                                    Grid.Column="2"
+                                    Margin="5,0,0,0"
+                                    IsToggled="{Binding IsFemale}" />
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button
+                Margin="20,10,20,0"
+                Command="{Binding AddPlayerCommand}"
+                Text="Spieler hinzufügen" />
+        </StackLayout>
+        <Button
+            Grid.Row="1"
+            Command="{Binding StartCommand}"
+            Text="Spiel starten" />
+    </Grid>
+</ContentPage>

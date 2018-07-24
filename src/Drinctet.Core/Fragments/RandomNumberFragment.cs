@@ -6,6 +6,6 @@ namespace Drinctet.Core.Fragments
     {
         public IReadOnlyList<INumber> Numbers { get; set; }
 
-        public override string ToString() => $"!{{{string.Join(',', Numbers)}}}";
+        public override string ToString() => $"!{{{string.Join(",", Numbers)}}}";
     }
 }

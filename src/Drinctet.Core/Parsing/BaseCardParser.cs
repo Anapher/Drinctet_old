@@ -27,7 +27,7 @@ namespace Drinctet.Core.Parsing
             ReadAttribute("id", s => card.Id = int.Parse(s));
             ReadAttribute("tags", s =>
             {
-                var tags = s.Split(',').Select(x => Enum.Parse<CardTag>(x.Trim(), true));
+                var tags = ParserHelper.ParseEnum<CardTag>(s);
                 if (BaseTags != null)
                     tags = tags.Concat(BaseTags);
 

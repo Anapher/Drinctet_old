@@ -1,6 +1,4 @@
-﻿#if FEATURE_SPAN
-using System;
-#endif
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using Drinctet.Core.Cards.Base;
@@ -71,15 +69,15 @@ namespace Drinctet.Core.Parsing.Utilities
             return RequiredGenderMap.Where(x => x.Value == requiredGender).OrderBy(x => x.Key.Length).First().Key;
         }
 
-        public static IReadOnlyList<TEnum> ParseEnum<TEnum>(string value) where TEnum : struct
+        public static IEnumerable<TEnum> ParseEnum<TEnum>(string value) where TEnum : struct
         {
-            var result = new List<TEnum>();
-
             var values = value.Split(',');
             foreach (var v in values)
-                result.Add(Enum.Parse<TEnum>(v, true));
-
-            return result;
+#if NETCOREAPP
+                yield return Enum.Parse<TEnum>(v, true);
+#else
+                yield return (TEnum) Enum.Parse(typeof(TEnum), v.Trim(), true);
+#endif
         }
     }
 }

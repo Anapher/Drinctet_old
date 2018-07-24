@@ -1,11 +1,12 @@
-﻿using System;
+﻿#if FEATURE_SPAN
+using System;
 using System.Collections.Generic;
 using Drinctet.Core.Fragments;
 using Drinctet.Core.Parsing.Utilities;
 
 namespace Drinctet.Core.Parsing.TextDecoder
 {
-    public class DefaultTextDecoder : ITextDecoder
+    public class SpanTextDecoder : ITextDecoder
     {
         public IReadOnlyList<TextFragment> Decode(string s)
         {
@@ -20,8 +21,8 @@ namespace Drinctet.Core.Parsing.TextDecoder
                 if (value[index] == TextDecoderConsts.VarStartChar)
                 {
                     if (lastTokenIndex != index)
-                        result.Add(new RawTextFragment(new string(value.Slice(lastTokenIndex,
-                            index - lastTokenIndex))));
+                        result.Add(new RawTextFragment(value.Slice(lastTokenIndex,
+                            index - lastTokenIndex).ToString()));
 
                     var content = ReadToken(value, TextDecoderConsts.VarEndChar, ref index);
                     result.Add(ParseVariableFragment(content));
@@ -32,8 +33,8 @@ namespace Drinctet.Core.Parsing.TextDecoder
                     {
                         index--;
                         if (lastTokenIndex != index)
-                            result.Add(new RawTextFragment(new string(value.Slice(lastTokenIndex,
-                                index - lastTokenIndex))));
+                            result.Add(new RawTextFragment(value.Slice(lastTokenIndex,
+                                index - lastTokenIndex).ToString()));
 
                         index++;
                         var content = ReadToken(value, TextDecoderConsts.SelectionEndChar, ref index);
@@ -42,8 +43,8 @@ namespace Drinctet.Core.Parsing.TextDecoder
                     else
                     {
                         if (lastTokenIndex != index)
-                            result.Add(new RawTextFragment(new string(value.Slice(lastTokenIndex,
-                                index - lastTokenIndex))));
+                            result.Add(new RawTextFragment(value.Slice(lastTokenIndex,
+                                index - lastTokenIndex).ToString()));
 
                         var content = ReadToken(value, TextDecoderConsts.SelectionEndChar, ref index);
                         result.Add(ParseGenderSelectionFragment(content));
@@ -58,7 +59,7 @@ namespace Drinctet.Core.Parsing.TextDecoder
             } while (++index < s.Length);
 
             if (lastTokenIndex != s.Length)
-                result.Add(new RawTextFragment(new string(value.Slice(lastTokenIndex, index - lastTokenIndex))));
+                result.Add(new RawTextFragment(value.Slice(lastTokenIndex, index - lastTokenIndex).ToString()));
 
             return result;
         }
@@ -86,11 +87,11 @@ namespace Drinctet.Core.Parsing.TextDecoder
                     playerTag = content.Slice(0, parameterBegin);
 
                     var gender = content.Slice(parameterBegin + 1, content.Length - 1 - parameterBegin);
-                    if (ParserHelper.ParseRequiredGender(new string(gender), out var requiredGender))
+                    if (ParserHelper.ParseRequiredGender(gender.ToString(), out var requiredGender))
                         playerReference.RequiredGender = requiredGender;
                     else
                         throw new ArgumentException("Gender parameter of player tag could not be parsed: " +
-                                                    new string(content));
+                                                    content.ToString());
                 }
 
                 playerReference.PlayerIndex = ParsePlayerIndex(playerTag);
@@ -217,13 +218,13 @@ namespace Drinctet.Core.Parsing.TextDecoder
 
             if (splitterIndex == -1)
             {
-                fragment.FemaleText = new string(content);
+                fragment.FemaleText = content.ToString();
             }
             else
             {
                 if (splitterIndex != 0)
-                    fragment.FemaleText = new string(content.Slice(0, splitterIndex));
-                fragment.MaleText = new string(content.Slice(splitterIndex + 1, content.Length - splitterIndex - 1));
+                    fragment.FemaleText = content.Slice(0, splitterIndex).ToString();
+                fragment.MaleText = content.Slice(splitterIndex + 1, content.Length - splitterIndex - 1).ToString();
             }
 
             return fragment;
@@ -286,7 +287,7 @@ namespace Drinctet.Core.Parsing.TextDecoder
                         if (withinQuotes)
                             continue;
 
-                        result.Add(new string(value.Slice(tokenStart, i - tokenStart)));
+                        result.Add(value.Slice(tokenStart, i - tokenStart).ToString());
                         tokenStart = i + 1;
                         break;
                     }
@@ -298,7 +299,7 @@ namespace Drinctet.Core.Parsing.TextDecoder
 
                         if (i == value.Length - 1) //if its the last char
                         {
-                            result.Add(new string(value.Slice(tokenStart, i - tokenStart)).Replace("\"\"", "\""));
+                            result.Add(value.Slice(tokenStart, i - tokenStart).ToString().Replace("\"\"", "\""));
                             return result;
                         }
 
@@ -312,7 +313,7 @@ namespace Drinctet.Core.Parsing.TextDecoder
                         if (nextChar != delimiter)
                             throw new ArgumentException("The delimiter must come after the closing quotes.");
 
-                        result.Add(new string(value.Slice(tokenStart, i - tokenStart)).Replace("\"\"", "\""));
+                        result.Add(value.Slice(tokenStart, i - tokenStart).ToString().Replace("\"\"", "\""));
                         tokenStart = i + 2;
                         break;
                     }
@@ -322,7 +323,7 @@ namespace Drinctet.Core.Parsing.TextDecoder
                         if (withinQuotes)
                             throw new ArgumentException("The text must end with a quote");
 
-                        result.Add(new string(value.Slice(tokenStart, i - tokenStart + 1)));
+                        result.Add(value.Slice(tokenStart, i - tokenStart + 1).ToString());
                         return result;
                     }
                 } while (++i < value.Length);
@@ -332,3 +333,4 @@ namespace Drinctet.Core.Parsing.TextDecoder
         }
     }
 }
+#endif
