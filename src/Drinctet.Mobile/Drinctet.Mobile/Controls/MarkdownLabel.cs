@@ -16,10 +16,10 @@ namespace Drinctet.Mobile.Controls
         private static void MarkdownPropertyChanged(BindableObject bindable, object oldvalue, object newvalue)
         {
             var label = (MarkdownLabel) bindable;
-            label.FormattedText = MarkdownToFormattedString((string) newvalue);
+            label.FormattedText = MarkdownToFormattedString((string) newvalue, label.FontSize);
         }
 
-        private static FormattedString MarkdownToFormattedString(string markdown)
+        private static FormattedString MarkdownToFormattedString(string markdown, double fontSize)
         {
             var result = new FormattedString();
             var i = 0;
@@ -36,6 +36,7 @@ namespace Drinctet.Mobile.Controls
                         span.FontAttributes |= FontAttributes.Bold;
                     if (isItalic)
                         span.FontAttributes |= FontAttributes.Italic;
+                    span.FontSize = fontSize;
 
                     result.Spans.Add(span);
                 }
@@ -58,6 +59,7 @@ namespace Drinctet.Mobile.Controls
                         {
                             lastTokenPos = i + 2;
                             isBold = !isBold;
+                            i++;
                         }
                         else
                         {
@@ -73,6 +75,7 @@ namespace Drinctet.Mobile.Controls
                         {
                             lastTokenPos = i + 2;
                             isBold = !isBold;
+                            i++;
                         }
                         else
                         {
@@ -81,10 +84,9 @@ namespace Drinctet.Mobile.Controls
                         }
 
                         break;
-                    default:
-                        i++;
-                        continue;
                 }
+
+                i++;
             }
 
             AddSpan();

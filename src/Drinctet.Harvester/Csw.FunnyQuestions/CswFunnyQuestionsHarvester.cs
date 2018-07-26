@@ -16,6 +16,7 @@ namespace Drinctet.Harvester.Csw.FunnyQuestions
         private static readonly ILog Logger = LogProvider.For<CswFunnyQuestionsHarvester>();
 
         public override string CardName { get; } = "QuestionCard";
+        public override int SourceId { get; } = (int) SourceIds.CswFunnyQuestionsHarvester;
 
         protected override async Task<(string language, List<string> texts)> GetOriginalTexts(HttpClient httpClient)
         {
@@ -28,12 +29,6 @@ namespace Drinctet.Harvester.Csw.FunnyQuestions
             var source = await response.Content.ReadAsStringAsync();
             var regex = new Regex(@"<p>(?<question>(.+?))\?</p>");
             return ("en", regex.Matches(source).Select(x => x.Groups["question"].Value + "?").ToList());
-        }
-
-        protected override void WriteAttributes(XmlWriter xmlWriter, string originalText)
-        {
-            xmlWriter.WriteAttributeString("tags", CardTag.Funny.ToString());
-            xmlWriter.WriteAttributeString("source", "ConversationStartersWorld");
         }
     }
 }

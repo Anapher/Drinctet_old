@@ -16,6 +16,7 @@ namespace Drinctet.Harvester.Csw.DeepTalk
         private static readonly ILog Logger = LogProvider.For<CswDeepTalkQuestionsHarvester>();
 
         public override string CardName { get; } = "QuestionCard";
+        public override int SourceId { get; } = (int) SourceIds.CswDeepTalkQuestionsHarvester;
 
         protected override async Task<(string language, List<string> texts)> GetOriginalTexts(HttpClient httpClient)
         {

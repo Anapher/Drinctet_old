@@ -4,13 +4,18 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Xml;
 using Drinctet.Core.Cards.Base;
+using HashidsNet;
 
 namespace Drinctet.Harvester.Bevil
 {
     public class BevilHarvester : IHarvester
     {
+        private static readonly SourceIds SourceId = SourceIds.BevilHarvester;
+
         private readonly string _dataJsFile;
         private readonly Regex _objectRegex = new Regex(@"{id:\d+,question:""(?<question>(.*?))"",alclvl:(?<alcLvl>(\d+)),gender:""(?<gender>(.*?))""}");
+        private int _counter;
+        private readonly Hashids _hashids = CardIdProvider.GetHashIds();
 
         public BevilHarvester(string dataJsFile)
         {
@@ -59,13 +64,12 @@ namespace Drinctet.Harvester.Bevil
         private void WriteData(XmlWriter xmlWriter, DataObj dataObj, string cardName, CardTag? tag = null)
         {
             xmlWriter.WriteStartElement(cardName);
+            xmlWriter.WriteAttributeString("id", _hashids.Encode((int)SourceId, _counter));
             xmlWriter.WriteAttributeString("willPower", dataObj.WillPower.ToString());
 
             if (tag != null)
                 xmlWriter.WriteAttributeString("tags", tag.ToString());
-
-            xmlWriter.WriteAttributeString("source", "Bevi!");
-
+            
             if (dataObj.Gender != null)
             {
                 xmlWriter.WriteStartElement("TaskCard.targetPlayer");
@@ -80,6 +84,8 @@ namespace Drinctet.Harvester.Bevil
             xmlWriter.WriteString(dataObj.Question);
             xmlWriter.WriteEndElement();
             xmlWriter.WriteEndElement();
+
+            _counter++;
         }
 
         private class DataObj

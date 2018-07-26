@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Drinctet.Presentation.Screen\Drinctet.Presentation.Screen.csproj" />
+    <ProjectReference Include="..\Drinctet.ViewModels\Drinctet.ViewModels.csproj" />
   </ItemGroup>
 
 </Project>

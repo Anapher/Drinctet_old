@@ -6,7 +6,7 @@ using Drinctet.Core.Parsing.Utilities;
 
 namespace Drinctet.Core.Parsing.TextDecoder
 {
-    public class SpanTextDecoder : ITextDecoder
+    public class DefaultTextDecoder : ITextDecoder
     {
         public IReadOnlyList<TextFragment> Decode(string s)
         {

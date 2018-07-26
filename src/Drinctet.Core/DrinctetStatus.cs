@@ -20,7 +20,7 @@ namespace Drinctet.Core
         ///     cards with no tags)
         /// </summary>
         public IList<WeightedValue<CardTag>> Tags { get; set; } = Enum.GetValues(typeof(CardTag)).Cast<CardTag>()
-            .Select(x => new WeightedValue<CardTag>(x, .5)).ToList();
+            .Select(x => new WeightedValue<CardTag>(x, 1)).ToList();
 
         /// <summary>
         ///     The slides that will be displayed with their weight. All slides that are not present in this list will never be

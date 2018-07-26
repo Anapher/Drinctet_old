@@ -5,6 +5,6 @@ namespace Drinctet.Core.Parsing
 {
     public interface ICardParser
     {
-        BaseCard Parse(XmlReader xmlReader);
+        BaseCard Parse(XmlReader xmlReader, string source);
     }
 }

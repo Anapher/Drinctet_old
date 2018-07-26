@@ -15,6 +15,7 @@ namespace Drinctet.Harvester.Csw.ConversationStarters
         private static readonly ILog Logger = LogProvider.For<CwsConversationStartersHarvester>();
 
         public override string CardName { get; } = "QuestionCard";
+        public override int SourceId { get; } = (int) SourceIds.CwsConversationStartersHarvester;
 
         protected override async Task<(string language, List<string> texts)> GetOriginalTexts(HttpClient httpClient)
         {
@@ -27,12 +28,6 @@ namespace Drinctet.Harvester.Csw.ConversationStarters
             var source = await response.Content.ReadAsStringAsync();
             var regex = new Regex(@"<p>(?<question>(.+?))\?</p>");
             return ("en", regex.Matches(source).Select(x => x.Groups["question"].Value + "?").ToList());
-        }
-
-        protected override void WriteAttributes(XmlWriter xmlWriter, string originalText)
-        {
-            base.WriteAttributes(xmlWriter, originalText);
-            xmlWriter.WriteAttributeString("source", "ConversationStartersWorld");
         }
     }
 }

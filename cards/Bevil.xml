@@ -1,0 +1,375 @@
+﻿<TaskCard id="6OT7" willPower="1">
+  <Text lang="de">Die nächsten drei Runde darfst du nicht sprechen, sondern nur rappen.</Text>
+</TaskCard>
+<TaskCard id="dRTY" willPower="2">
+  <Text lang="de">Führe eine Unterhaltung mit deinem Glas und tue so, als ob es antworten würde.</Text>
+</TaskCard>
+<TaskCard id="JzTb" willPower="3">
+  <Text lang="de">Mache [Player] einen Heiratsantrag</Text>
+</TaskCard>
+<TaskCard id="b1To" willPower="1">
+  <Text lang="de">Rede drei Runden mit einem Akzent.</Text>
+</TaskCard>
+<TaskCard id="4DTJ" willPower="2">
+  <Text lang="de">Mache jedem in der Runde ein Kompliment.</Text>
+</TaskCard>
+<TaskCard id="POTz" willPower="3">
+  <Text lang="de">Tue so, als würdest du am „Germany’s Next Topmodel“-Casting teilnehmen und vor Heidi Klum den Catwalk entlang stolzieren.</Text>
+</TaskCard>
+<TaskCard id="oGTY" willPower="6">
+  <Text lang="de">Lass dich vom Mitspieler rechts von dir schminken.</Text>
+</TaskCard>
+<TaskCard id="eJTR" willPower="4">
+  <Text lang="de">Schmink dich selbst mit verbundenen Augen</Text>
+</TaskCard>
+<TaskCard id="N4TE" willPower="2">
+  <Text lang="de">Benimm dich zwei Minuten wie ein Huhn.</Text>
+</TaskCard>
+<TaskCard id="gDTo" willPower="3">
+  <Text lang="de">Flirte vor dem Spiegel mit dir selbst</Text>
+</TaskCard>
+<TaskCard id="OVTD" willPower="2">
+  <Text lang="de">Mache das hässlichste Gesicht, das du kannst!</Text>
+</TaskCard>
+<TaskCard id="YGTK" willPower="3">
+  <Text lang="de">Spiele eine höchst dramatische Sterbeszene.</Text>
+</TaskCard>
+<TaskCard id="npTn" willPower="5">
+  <Text lang="de">Versuche, deine Beine hinter deinen Kopf zu bekommen.</Text>
+</TaskCard>
+<TaskCard id="K8Tg" willPower="4">
+  <Text lang="de">Spiele einen Wutanfall.</Text>
+</TaskCard>
+<TaskCard id="9yTG" willPower="2">
+  <Text lang="de">Tue so, als hättest du einen total Lachanfall.</Text>
+</TaskCard>
+<TaskCard id="2OT5" willPower="2">
+  <Text lang="de">Schreibe deinen Namen, jedoch mit dem Fuß.</Text>
+</TaskCard>
+<TaskCard id="jDTR" willPower="4">
+  <Text lang="de">Mache fünf Bodybuilder-Posen.</Text>
+</TaskCard>
+<TaskCard id="0VTV" willPower="8">
+  <Text lang="de">Trinke einen Shot aus [Player]s Bauchnabel.</Text>
+</TaskCard>
+<JokeCard id="x1Tx" willPower="8">
+  <Text lang="de">Was ist der Unterschied zwischen einem Raben? Er hat zwei gleich lange Beine, das Rechte besonders.</Text>
+</JokeCard>
+<TaskCard id="mDT6" willPower="8">
+  <Text lang="de">Mache das Fenster auf und rufe so laut du kannst: „Penis!“</Text>
+</TaskCard>
+<TaskCard id="ZyTB" willPower="9">
+  <Text lang="de">Verschwinde mit [Player] für 5 Minuten im Bad. Viel Spaß ;)</Text>
+</TaskCard>
+<TaskCard id="Q4T5" willPower="10" tags="Sexual">
+  <Text lang="de">Küsse [Player].</Text>
+</TaskCard>
+<TaskCard id="vzTN" willPower="8">
+  <TaskCard.targetPlayer>
+    <Player gender="m" />
+  </TaskCard.targetPlayer>
+  <Text lang="de">Beschreibe deinen Penis.</Text>
+</TaskCard>
+<TaskCard id="kLTE" willPower="8">
+  <TaskCard.targetPlayer>
+    <Player gender="f" />
+  </TaskCard.targetPlayer>
+  <Text lang="de">Beschreibe deine Vagina.</Text>
+</TaskCard>
+<TaskCard id="VWT3" willPower="9" tags="Sexual">
+  <Text lang="de">Mache einen Lapdance für [Player].</Text>
+</TaskCard>
+<TaskCard id="RPT4" willPower="6">
+  <Text lang="de">Ziehe 1 Kleidungsstück aus.</Text>
+</TaskCard>
+<TaskCard id="3mTW" willPower="7">
+  <Text lang="de">Ziehe 2 Kleidungsstücke aus.</Text>
+</TaskCard>
+<TaskCard id="L1T5" willPower="9">
+  <Text lang="de">Ziehe 3 Kleidungsstücke aus.</Text>
+</TaskCard>
+<TaskCard id="WYTZ" willPower="10">
+  <Text lang="de">Ziehe !{4,5} Kleidungsstücke aus.</Text>
+</TaskCard>
+<TaskCard id="pyTB" willPower="9">
+  <Text lang="de">Ziehe [Player] ein Kleidungsstück aus.</Text>
+</TaskCard>
+<TaskCard id="GlTX" willPower="8">
+  <Text lang="de">Lecke [Player] an. {Sie/Er} gehört jetzt dir ;)</Text>
+</TaskCard>
+<TaskCard id="ypTL" willPower="9">
+  <Text lang="de">Stecke [Player] einen Finger in den Mund.</Text>
+</TaskCard>
+<TaskCard id="BpTn" willPower="7">
+  <Text lang="de">Schlage [Player] auf den Hintern.</Text>
+</TaskCard>
+<TaskCard id="7pTE" willPower="10" tags="Sexual">
+  <Text lang="de">Mache [Player:o] einen Knutschfleck an einer Stelle {ihrer/seiner} Wahl. Wenn {sie/er} das nicht will muss {sie/er} [sips:6] trinken.</Text>
+</TaskCard>
+<TaskCard id="lLTo" willPower="6">
+  <Text lang="de">Küsse [Player]s Hals.</Text>
+</TaskCard>
+<TaskCard id="XpTG" willPower="9" tags="Sexual">
+  <Text lang="de">Täusche einen Orgasmus vor - hier und jetzt.</Text>
+</TaskCard>
+<TaskCard id="EBTv" willPower="6">
+  <Text lang="de">Gib [Player] eine sinnliche Massage.</Text>
+</TaskCard>
+<TaskCard id="zGTQ" willPower="7">
+  <Text lang="de">Zeige deine Unterwäsche.</Text>
+</TaskCard>
+<TaskCard id="8GTR" willPower="4" tags="HostOnly">
+  <Text lang="de">Lass dir die Augen verbinden und erkenne folgende Person (Achtung, nicht laut sagen!) '[Player]' am Geruch.</Text>
+</TaskCard>
+<TaskCard id="1VTG" willPower="8" tags="Sexual">
+  <Text lang="de">Tu so, als wärst du Gemüsehändler auf dem Wochenmarkt und verkaufe {deine Vagina/deinen Penis}.</Text>
+</TaskCard>
+<TaskCard id="6OTN7" willPower="10" tags="Sexual">
+  <Text lang="de">Küsse eine Person gleichen Geschlechts so gut du kannst.</Text>
+</TaskCard>
+<TaskCard id="dRTYY" willPower="10" tags="Sexual">
+  <TaskCard.targetPlayer>
+    <Player gender="f" />
+  </TaskCard.targetPlayer>
+  <Text lang="de">Greife [Player:m] in die Hose und fühle, was es dort so gibt.</Text>
+</TaskCard>
+<TaskCard id="JzTjb" willPower="10" tags="Sexual">
+  <Text lang="de">Öffne mit Lippen und Zähne [Player:o]s Hose.</Text>
+</TaskCard>
+<TaskCard id="b1Tpo" willPower="9" tags="Sexual">
+  <Text lang="de">Führe mit einem penisähnlichen Gegenstand einen perfekten Blowjob vor.</Text>
+</TaskCard>
+<TaskCard id="4DTNJ" willPower="9">
+  <Text lang="de">Küsse [Player:o] für 5 Sekunden.</Text>
+</TaskCard>
+<TaskCard id="POT8z" willPower="7" tags="Sexual">
+  <Text lang="de">Nimm [Player]s Hand und fahre damit über deinen Körper, als wäre es deine eigene.</Text>
+</TaskCard>
+<QuestionCard id="oGTgY">
+  <Text lang="de">Hast du schon mal einen Popel gegessen?</Text>
+</QuestionCard>
+<QuestionCard id="eJTKR" willPower="2" tags="Personal">
+  <Text lang="de">Was ist das Peinlichste, was dir je passiert ist?</Text>
+</QuestionCard>
+<QuestionCard id="N4TmE" willPower="3">
+  <Text lang="de">Was findest du an der Person rechts von dir besonders schön?</Text>
+</QuestionCard>
+<QuestionCard id="gDT5o" willPower="4" tags="Personal">
+  <Text lang="de">An wen ging dein letzter Liebesbrief?</Text>
+</QuestionCard>
+<QuestionCard id="OVT0D" willPower="1">
+  <Text lang="de">Hast du schon mal in der Schule gepupst?</Text>
+</QuestionCard>
+<QuestionCard id="YGTjK" willPower="2">
+  <Text lang="de">In welchen Star bist du heimlich verknallt?</Text>
+</QuestionCard>
+<QuestionCard id="npTJn" willPower="3" tags="Deep">
+  <Text lang="de">Wovor hast du die meiste Angst?</Text>
+</QuestionCard>
+<QuestionCard id="K8Tmg">
+  <Text lang="de">Du hast drei Wünsche frei - welche wählst du?</Text>
+</QuestionCard>
+<QuestionCard id="9yT3G" willPower="3">
+  <Text lang="de">Wenn du unsichtbar wärst, was würdest du als erstes tun?</Text>
+</QuestionCard>
+<QuestionCard id="2OTl5" willPower="1">
+  <Text lang="de">Dein schönster Traum, den du jemals hattest?</Text>
+</QuestionCard>
+<QuestionCard id="jDT6R" willPower="2">
+  <Text lang="de">Wenn du ein Tier sein könntest, welches wärst du gerne?</Text>
+</QuestionCard>
+<QuestionCard id="0VToV" willPower="6">
+  <Text lang="de">Was würdest du tun, wenn du für einen Tag {ein Mann/eine Frau} wärst?</Text>
+</QuestionCard>
+<QuestionCard id="x1TNx" willPower="4">
+  <Text lang="de">Was war dein bisher schlimmster Albtraum?</Text>
+</QuestionCard>
+<QuestionCard id="mDT46" willPower="4">
+  <Text lang="de">Was ist das Peinlichste, das dir jemals auf einem Date passiert ist?</Text>
+</QuestionCard>
+<QuestionCard id="ZyTbB" willPower="2">
+  <Text lang="de">Welche Eigenschaft der Person !{links,rechts} von dir schätzt du ganz besonders?</Text>
+</QuestionCard>
+<QuestionCard id="Q4TO5" willPower="4" tags="Personal">
+  <Text lang="de">Wenn du morgen jemanden heiraten müsstest, wer wäre das?</Text>
+</QuestionCard>
+<QuestionCard id="vzT3N" willPower="7">
+  <Text lang="de">Was würdest du gerne mal ausprobieren, traust dich aber nicht?</Text>
+</QuestionCard>
+<QuestionCard id="kLTeE" willPower="2">
+  <Text lang="de">Stell dir vor, du dürftest die Gedanken einer Person im Raum lesen – welche Person wählst du und warum?</Text>
+</QuestionCard>
+<QuestionCard id="VWTA3" willPower="2">
+  <Text lang="de">Wann wurdest du das letzte Mal rot und warum?</Text>
+</QuestionCard>
+<QuestionCard id="RPTk4" willPower="3">
+  <Text lang="de">Was ist deine größte Macke?</Text>
+</QuestionCard>
+<QuestionCard id="a8TeR" willPower="8" tags="Sexual">
+  <Text lang="de">Hast du schon einmal versucht, dich selbst oral zu befriedigen?</Text>
+</QuestionCard>
+<QuestionCard id="A1T7K" willPower="9">
+  <Text lang="de">Was findest du an [Player] heiß?</Text>
+</QuestionCard>
+<QuestionCard id="3mTOW" willPower="8">
+  <Text lang="de">Was für Sexspielzeuge besitzt du?</Text>
+</QuestionCard>
+<QuestionCard id="L1TY5" willPower="6">
+  <Text lang="de">Was denkst du: Was für Sexspielzeuge besitzt [Player]?</Text>
+</QuestionCard>
+<QuestionCard id="WYTdZ" willPower="8">
+  <Text lang="de">Spielst du gerne Rollenspiele?</Text>
+</QuestionCard>
+<QuestionCard id="DyT1A" willPower="8" tags="Sexual">
+  <Text lang="de">Wann hast du das letzte mal masturbiert?</Text>
+</QuestionCard>
+<QuestionCard id="5OTRN" willPower="5" tags="Sexual">
+  <Text lang="de">Wann hattest du das letzte Mal Sex?</Text>
+</QuestionCard>
+<QuestionCard id="pyTjB" willPower="6" tags="Sexual">
+  <Text lang="de">Hattest du schon einmal Sex im Freien?</Text>
+</QuestionCard>
+<QuestionCard id="GlT8X" willPower="10" tags="Sexual">
+  <Text lang="de">Für wie viel Geld würdest du Sex mit einer fremden Person haben?</Text>
+</QuestionCard>
+<QuestionCard id="ypTvL" willPower="4">
+  <Text lang="de">Hast du schon einmal in die Badewanne gepinkelt?</Text>
+</QuestionCard>
+<QuestionCard id="BpT2n" willPower="7" tags="Sexual">
+  <Text lang="de">Auf einer Skala von 1-10, wie gut bist du im Bett?</Text>
+</QuestionCard>
+<QuestionCard id="7pTNE" willPower="8" tags="Sexual">
+  <Text lang="de">In Schulnoten, wie gut war dein letzter Sex?</Text>
+</QuestionCard>
+<QuestionCard id="lLTgo" willPower="10" tags="Sexual">
+  <Text lang="de">Auf welche Kategorie drückst du bei Pornoseiten am häufigsten?</Text>
+</QuestionCard>
+<QuestionCard id="XpTAG" willPower="8" tags="Sexual">
+  <Text lang="de">Bist du gerade rasiert (untenrum)?</Text>
+</QuestionCard>
+<QuestionCard id="EBT9v" willPower="9" tags="Sexual">
+  <Text lang="de">Mit wie vielen Personen hattest du in deinem Leben schon Sex?</Text>
+</QuestionCard>
+<QuestionCard id="zGToQ" willPower="10" tags="Sexual">
+  <Text lang="de">Mit wie vielen Personen in dieser Runde könntest du dir vorstellen zu schlafen?</Text>
+</QuestionCard>
+<QuestionCard id="8GT0R" willPower="10" tags="Sexual">
+  <Text lang="de">Würdest du für 1000€ mit [Player] schlafen?</Text>
+</QuestionCard>
+<QuestionCard id="1VT4G" willPower="8">
+  <Text lang="de">Hast du dir [Player] schon einmal nackt vorgestellt?</Text>
+</QuestionCard>
+<QuestionCard id="6OTK7" willPower="1">
+  <Text lang="de">Welchen Film hast du am häufigsten gesehen?</Text>
+</QuestionCard>
+<QuestionCard id="dRTBY" willPower="4">
+  <Text lang="de">Welche Drogen hast du schon einmal genommen?</Text>
+</QuestionCard>
+<QuestionCard id="JzTbb" willPower="6" tags="Sexual">
+  <Text lang="de">Hast du schon einmal Sexspielzeuge benutzt?</Text>
+</QuestionCard>
+<QuestionCard id="b1T4o" willPower="6" tags="Sexual">
+  <Text lang="de">Wie häufig masturbierst du pro Woche?</Text>
+</QuestionCard>
+<QuestionCard id="4DTEJ" willPower="6" tags="Sexual">
+  <Text lang="de">Findest du den Geschmack von Sperma/“weiblicherFeuchtigkeit“ abstoßend?</Text>
+</QuestionCard>
+<QuestionCard id="POTbz" willPower="6" tags="Sexual">
+  <Text lang="de">Welches Körperteil des anderen Geschlechts zieht dich am meisten an?</Text>
+</QuestionCard>
+<QuestionCard id="oGT6Y" willPower="6" tags="Sexual">
+  <Text lang="de">Wie, wo und mit wem hattest du dein erstes Mal?</Text>
+</QuestionCard>
+<QuestionCard id="eJTnR" willPower="8" tags="Sexual">
+  <Text lang="de">Hattest du schon einmal Sex mit einem guten Freund?</Text>
+</QuestionCard>
+<QuestionCard id="N4TvE" willPower="6" tags="Sexual">
+  <Text lang="de">Was ist das Peinlichste, was dir je beim Sex passiert ist?</Text>
+</QuestionCard>
+<QuestionCard id="gDTao" willPower="6" tags="Sexual">
+  <Text lang="de">Was ist deine Lieblingsstellung?</Text>
+</QuestionCard>
+<QuestionCard id="OVTZD" willPower="7">
+  <Text lang="de">Wenn du auf den Strich gehen würdest, was wäre das Beste, was du zu bieten hast?</Text>
+</QuestionCard>
+<QuestionCard id="YGT9K" willPower="8" tags="Sexual">
+  <Text lang="de">Hattest du schon einmal Sex mit dem gleichen Geschlecht?</Text>
+</QuestionCard>
+<QuestionCard id="npTKn" willPower="6" tags="Sexual">
+  <Text lang="de">Mit wem hattest du den bisher besten Sex?</Text>
+</QuestionCard>
+<QuestionCard id="6OTKE" willPower="4" tags="Personal">
+  <Text lang="de">Was war dein schlimmster Korb?</Text>
+</QuestionCard>
+<QuestionCard id="dRTBV" willPower="4" tags="Sexual">
+  <Text lang="de">Sei ehrlich, wie häufig denkst du an Sex?</Text>
+</QuestionCard>
+<QuestionCard id="JzTba" willPower="6" tags="Sexual">
+  <Text lang="de">Mit wem hattest du deinen letzten Sextraum?</Text>
+</QuestionCard>
+<QuestionCard id="b1T4n" willPower="8" tags="Sexual">
+  <Text lang="de">Stöhnst du laut bei deinem Höhepunkt?</Text>
+</QuestionCard>
+<QuestionCard id="4DTEa" willPower="8" tags="Sexual">
+  <Text lang="de">Magst du Oralsex lieber aktiv oder passiv?</Text>
+</QuestionCard>
+<QuestionCard id="POTbJ" willPower="6" tags="Sexual">
+  <Text lang="de">Bist du beim Oralsex gerne passiv?</Text>
+</QuestionCard>
+<QuestionCard id="oGT6W" willPower="8" tags="Sexual">
+  <Text lang="de">Hattest du schon einmal Analsex?</Text>
+</QuestionCard>
+<QuestionCard id="eJTnP" willPower="6">
+  <Text lang="de">Warst du schonmal mindesten 24 Stunden nackt, wenn ja wann und warum?</Text>
+</QuestionCard>
+<QuestionCard id="N4Tvp" willPower="9" tags="Sexual">
+  <Text lang="de">Hattest du schonmal einen Finger im Po (egal ob von dir oder jemand anderem)?</Text>
+</QuestionCard>
+<QuestionCard id="gDTa7" willPower="6">
+  <Text lang="de">Bist du schonmal den ganzen Tag ohne Unterwäsche unterwegs gewesen? Wenn ja, wo warst du?</Text>
+</QuestionCard>
+<TaskCard id="OVTZO" willPower="9">
+  <Text lang="de">Zieh dich im Bad nackt aus, wickel dich in ein Handtuch und setze dich wieder an den Tisch.</Text>
+</TaskCard>
+<TaskCard id="mDTKb" willPower="9" tags="Sexual">
+  <Text lang="de">Lass dir von [Player:o] einen Knutschfleck machen. Egal wo.</Text>
+</TaskCard>
+<TaskCard id="ZyTnP" willPower="8">
+  <Text lang="de">Flirte [Player] an, als wäre {sie/er} die heißeste Person, die du je gesehen hast.</Text>
+</TaskCard>
+<TaskCard id="Q4TZ7" willPower="6">
+  <Text lang="de">Tu so, als wärst du ein Kussexperte und zeige alleine (!) wie ein perfekter Zungenkuss funktioniert.</Text>
+</TaskCard>
+<TaskCard id="vzTXO" willPower="6">
+  <Text lang="de">Tausche ein Kleidungsstück mit [Player].</Text>
+</TaskCard>
+<TaskCard id="kLTNd" willPower="3">
+  <Text lang="de">Schreibe deiner Mutter, dass du sie lieb hast (und lass es bitte nicht wie deine Abschiedsbrief deines nächsten Suizidversuchs aussehen).</Text>
+</TaskCard>
+<TaskCard id="VWTZg" willPower="6" tags="SocialMedia">
+  <Text lang="de">Lass [Player] ein Bild mit deinem Handy machen. Das ist für den Rest des Abends dein WhatsApp Profilbild.</Text>
+</TaskCard>
+<TaskCard id="RPT6B" willPower="6" tags="SocialMedia">
+  <Text lang="de">Schicke der Person, mit der du als letztes geschrieben hast, ein Grimassen-Selfie.</Text>
+</TaskCard>
+<TaskCard id="a8T20" willPower="8">
+  <Text lang="de">Tausche zwei Kleidungsstücke mit [Player].</Text>
+</TaskCard>
+<TaskCard id="A1T8E" willPower="9">
+  <Text lang="de">Lass dir von [Player] den Hintern versohlen.</Text>
+</TaskCard>
+<TaskCard id="L1TBQ" willPower="4">
+  <Text lang="de">Lassen den nächsten Furz laut raus.</Text>
+</TaskCard>
+<TaskCard id="WYTEm" willPower="7">
+  <Text lang="de">Zeige der Runde deinen nackten Bauch.</Text>
+</TaskCard>
+<TaskCard id="DyT4y" willPower="4">
+  <Text lang="de">Gib [Player] eine 2-minütige Kopfmassage.</Text>
+</TaskCard>
+<TaskCard id="5OTmR" willPower="8">
+  <Text lang="de">Ziehe deine Unterwäsche aus und verbringe den Rest des Spiels ohne.</Text>
+</TaskCard>
+<TaskCard id="pyT24" willPower="9">
+  <Text lang="de">[Player] öffnet alle Knöpfe und Reißverschlüsse deiner Kleidung.</Text>
+</TaskCard>

@@ -1,5 +1,4 @@
-﻿using System;
-using System.Globalization;
+﻿using System.Globalization;
 using Drinctet.ViewModels.Manager;
 
 namespace Drinctet.ViewModels.Resources
@@ -9,6 +8,6 @@ namespace Drinctet.ViewModels.Resources
         public string LanguageKey { get; } = AppResources.Culture.TwoLetterISOLanguageName.Split('-')[0];
         public CultureInfo Culture { get; } = AppResources.Culture;
 
-        public string this[string index] => AppResources.ResourceManager.GetString(index);
+        public string this[string index] => AppResources.ResourceManager.GetString(index.Replace('.', '_'), Culture);
     }
 }

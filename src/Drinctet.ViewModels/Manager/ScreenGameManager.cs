@@ -2,7 +2,7 @@
 using Drinctet.Core;
 using Drinctet.Core.Cards.Base;
 using Drinctet.Core.Parsing.TextDecoder;
-using Drinctet.ViewModels.Manager.Formatter;
+using Drinctet.ViewModels.Formatter;
 
 namespace Drinctet.ViewModels.Manager
 {
@@ -13,7 +13,7 @@ namespace Drinctet.ViewModels.Manager
         public ScreenGameManager(DrinctetStatus status, ITextResource textResource) : base(status)
         {
             _textResource = textResource;
-            TextDecoder = new StringTextDecoder();
+            TextDecoder = new DefaultTextDecoder();
             TextFormatter = new TextFormatter(Selection, textResource) {BoldPlayerNames = true};
         }
 

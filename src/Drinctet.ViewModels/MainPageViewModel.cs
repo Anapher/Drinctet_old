@@ -14,7 +14,7 @@ namespace Drinctet.ViewModels
 
         public MainPageViewModel()
         {
-            AppResources.Culture = CultureInfo.CurrentCulture;
+            AppResources.Culture = CultureInfo.GetCultureInfo("de");
 
             Players = new ObservableCollection<PlayerViewModel>();
             Players.Add(new PlayerViewModel {Name = "Vincent"});

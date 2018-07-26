@@ -1,6 +1,7 @@
 using Drinctet.Core;
 using Drinctet.Mobile.Pages;
 using Drinctet.ViewModels;
+using Drinctet.ViewModels.ViewModelBase;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -13,6 +14,8 @@ namespace Drinctet.Mobile
         public App()
         {
             InitializeComponent();
+
+            DependencyServiceInitializer.DependencyService = new DependenyServiceWrapper();
 
             var store = new MobilePageStore();
             store.RegisterPage<GamePage, GameViewModel>();

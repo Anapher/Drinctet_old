@@ -106,7 +106,7 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="..\..\..\cards\*.xml">
-        <Link>Assets\%(FileName)</Link>
+        <Link>Assets\cards\%(FileName)</Link>
     </AndroidAsset>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

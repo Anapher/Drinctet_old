@@ -6,8 +6,9 @@ using Drinctet.Core;
 using Drinctet.Core.Cards.Base;
 using Drinctet.Core.Fragments;
 using Drinctet.Core.Selection;
+using Drinctet.ViewModels.Manager;
 
-namespace Drinctet.ViewModels.Manager.Formatter
+namespace Drinctet.ViewModels.Formatter
 {
     public class TextFormatter : ITextFormatter
     {
@@ -62,17 +63,17 @@ namespace Drinctet.ViewModels.Manager.Formatter
                 else if (fragment is PlayerReferenceFragment playerReferenceFragment)
                 {
                     if (BoldPlayerNames)
-                        builder.Append("*");
+                        builder.Append("**");
                     builder.Append(players[playerReferenceFragment.PlayerIndex].Name);
                     if (BoldPlayerNames)
-                        builder.Append("*");
+                        builder.Append("**");
 
                     lastPlayerReferenceFragment = playerReferenceFragment;
                 }
                 else if (fragment is SipsFragment sipsFragment)
                 {
                     if (BoldSips)
-                        builder.Append("*");
+                        builder.Append("**");
 
                     var sip = sips[sipsFragment.SipsIndex];
                     if (sip == 1)
@@ -80,7 +81,7 @@ namespace Drinctet.ViewModels.Manager.Formatter
                     else builder.AppendFormat(_textResource["Sips"], sip);
 
                     if (BoldSips)
-                        builder.Append("*");
+                        builder.Append("**");
                 }
                 else if (fragment is GenderBasedSelectionFragment genderBasedSelectionFragment)
                 {

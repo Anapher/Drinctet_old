@@ -3,6 +3,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using System.Xml;
 using Drinctet.Harvester.Logging;
+using HashidsNet;
 
 namespace Drinctet.Harvester
 {
@@ -12,6 +13,7 @@ namespace Drinctet.Harvester
         private static readonly ILog Logger = LogProvider.For<SingleCardTranslatableHarvester<THarvester>>();
 
         public abstract string CardName { get; }
+        public abstract int SourceId { get; }
 
         public override async Task Harvest(XmlWriter xmlWriter, IArtifactDirectory directory, HttpClient httpClient)
         {
@@ -22,6 +24,7 @@ namespace Drinctet.Harvester
 
             var (originalLanguage, originalTexts) = await originalTextsTask;
             var counter = 0;
+            var hashIds = CardIdProvider.GetHashIds();
 
             using (var translatableWriter = directory.CreateTextFile($"{name}.translatable.txt"))
             {
@@ -33,7 +36,10 @@ namespace Drinctet.Harvester
                     translatableWriter.WriteLine();
 
                     xmlWriter.WriteStartElement(CardName);
+
+                    xmlWriter.WriteAttributeString("id", hashIds.Encode(SourceId, counter));
                     WriteAttributes(xmlWriter, originalText);
+
                     WriteElements(xmlWriter);
 
                     IEnumerable<(string lang, string text)> GetTexts()

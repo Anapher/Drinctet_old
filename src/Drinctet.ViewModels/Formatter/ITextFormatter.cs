@@ -3,7 +3,7 @@ using System.Text;
 using Drinctet.Core.Cards.Base;
 using Drinctet.Core.Fragments;
 
-namespace Drinctet.ViewModels.Manager.Formatter
+namespace Drinctet.ViewModels.Formatter
 {
     public interface ITextFormatter
     {

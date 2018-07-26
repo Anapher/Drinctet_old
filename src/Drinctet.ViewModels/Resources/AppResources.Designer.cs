@@ -59,14 +59,5 @@ namespace Drinctet.ViewModels.Resources {
                 resourceCulture = value;
             }
         }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Add Player.
-        /// </summary>
-        internal static string AddPlayer {
-            get {
-                return ResourceManager.GetString("AddPlayer", resourceCulture);
-            }
-        }
     }
 }

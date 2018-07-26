@@ -15,6 +15,7 @@ namespace Drinctet.Harvester.Csw.TruthOrDare
         private static readonly ILog Logger = LogProvider.For<CswTruthOrDareDareHarvester>();
 
         public override string CardName { get; } = "TaskCard";
+        public override int SourceId { get; } = (int)SourceIds.CswTruthOrDareDareHarvester;
 
         protected override async Task<(string language, List<string> texts)> GetOriginalTexts(HttpClient httpClient)
         {
@@ -30,12 +31,6 @@ namespace Drinctet.Harvester.Csw.TruthOrDare
 
             var regex = new Regex(@"<p>(?<task>(.+?))</p>");
             return ("en", regex.Matches(daresHalf).Select(x => x.Groups["task"].Value).ToList());
-        }
-
-        protected override void WriteAttributes(XmlWriter xmlWriter, string originalText)
-        {
-            base.WriteAttributes(xmlWriter, originalText);
-            xmlWriter.WriteAttributeString("source", "ConversationStartersWorld");
         }
     }
 }

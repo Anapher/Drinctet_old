@@ -16,6 +16,7 @@ namespace Drinctet.Harvester.Csw.PersonalGuy
         private static readonly ILog Logger = LogProvider.For<CswPersonalGuyQuestionsHarvester>();
 
         public override string CardName { get; } = "QuestionCard";
+        public override int SourceId { get; } = (int)SourceIds.CswPersonalGuyQuestionsHarvester;
 
         protected override async Task<(string language, List<string> texts)> GetOriginalTexts(HttpClient httpClient)
         {
@@ -33,7 +34,6 @@ namespace Drinctet.Harvester.Csw.PersonalGuy
         protected override void WriteAttributes(XmlWriter xmlWriter, string originalText)
         {
             xmlWriter.WriteAttributeString("tags", CardTag.Personal.ToString());
-            xmlWriter.WriteAttributeString("source", "ConversationStartersWorld");
         }
 
         protected override void WriteElements(XmlWriter xmlWriter)

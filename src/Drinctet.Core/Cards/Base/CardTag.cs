@@ -28,13 +28,13 @@
         Disgusting,
 
         /// <summary>
-        ///     The card pairs the players
-        /// </summary>
-        Pairing,
-
-        /// <summary>
         ///     The card has something to do with social media
         /// </summary>
-        SocialMedia
+        SocialMedia,
+
+        /// <summary>
+        ///     Only the host must read this
+        /// </summary>
+        HostOnly
     }
 }

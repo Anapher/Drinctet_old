@@ -14,9 +14,9 @@ namespace Drinctet.Mobile.Droid.Cards
             var settings = new XmlReaderSettings {ConformanceLevel = ConformanceLevel.Fragment};
 
             var assets = Android.App.Application.Context.Assets;
-            foreach (var file in assets.List(""))
+            foreach (var file in assets.List("cards"))
             {
-                using (var stream = assets.Open(file, Access.Streaming))
+                using (var stream = assets.Open("cards/" + file, Access.Streaming))
                 using (var reader = XmlReader.Create(stream, settings))
                     AddCards(reader);
             }

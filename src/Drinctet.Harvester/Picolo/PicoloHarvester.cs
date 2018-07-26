@@ -16,9 +16,11 @@ namespace Drinctet.Harvester.Picolo
         private static readonly string[] DummyNames = { "Vincent", "Nora", "Bursod", "Larny", "Annika", "Sven" };
         private static readonly int[] DummySips = { 71685, 32623, 51052, 16352, 93972 }; //numbers must be high to avoid confusing them with other numbers
         private static readonly Regex SocialMediaRegex = new Regex("\"[^%]+?\"");
+        private static readonly SourceIds SourceId = SourceIds.PicoloHarvester;
 
         private readonly IReadOnlyDictionary<(string lang, int type), Func<string, string>>
             _typeSpecificTranslationTransformings;
+
 
         public PicoloHarvester(IEnumerable<string[]> csvData)
         {
@@ -38,6 +40,7 @@ namespace Drinctet.Harvester.Picolo
             var translations = GetTranslations(directory);
 
             var counter = 0;
+            var hashIds = CardIdProvider.GetHashIds();
 
             var (nonDependent, dependent) = GroupRules(_csvData);
             using (var translatableWriter = directory.CreateTextFile("Picolo.translatable.txt"))
@@ -92,7 +95,7 @@ namespace Drinctet.Harvester.Picolo
                     void WriteCard(string cardName)
                     {
                         xmlWriter.WriteStartElement(cardName);
-                        xmlWriter.WriteAttributeString("source", "Picolo");
+                        xmlWriter.WriteAttributeString("id", hashIds.Encode((int) SourceId, counter));
 
                         foreach (var (lang, translation) in GetTexts(text, type))
                         {
@@ -146,7 +149,7 @@ namespace Drinctet.Harvester.Picolo
                     void WriteMultiCard(string cardName)
                     {
                         xmlWriter.WriteStartElement(cardName);
-                        xmlWriter.WriteAttributeString("source", "Picolo");
+                        xmlWriter.WriteAttributeString("id", hashIds.Encode((int)SourceId, counter));
 
                         foreach (var (lang, translation) in GetTexts(text, type))
                         {

@@ -25,7 +25,7 @@ namespace Drinctet.Core
 
         public IReadOnlyList<BaseCard> Cards { get; }
 
-        public void AddCards(XmlReader xmlReader)
+        public void AddCards(XmlReader xmlReader, string source)
         {
             while (xmlReader.Read())
             {
@@ -35,7 +35,7 @@ namespace Drinctet.Core
                         var parser = _parserFactory.GetParser(xmlReader.Name);
                         var subReader = xmlReader.ReadSubtree();
                         subReader.Read();
-                        _cards.Add(parser.Parse(subReader));
+                        _cards.Add(parser.Parse(subReader, source));
                         break;
                 }
             }

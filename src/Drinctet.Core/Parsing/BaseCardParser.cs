@@ -5,6 +5,7 @@ using System.Xml;
 using Drinctet.Core.Cards.Base;
 using Drinctet.Core.Logging;
 using Drinctet.Core.Parsing.Utilities;
+using HashidsNet;
 
 namespace Drinctet.Core.Parsing
 {
@@ -15,7 +16,7 @@ namespace Drinctet.Core.Parsing
 
         protected virtual IReadOnlyList<CardTag> BaseTags { get; }
 
-        public BaseCard Parse(XmlReader xmlReader)
+        public BaseCard Parse(XmlReader xmlReader, string source)
         {
             Logger.Trace("Start parsing card");
             Reader = xmlReader;
@@ -23,8 +24,17 @@ namespace Drinctet.Core.Parsing
             var card = new TCard();
 
             ReadAttribute("willPower", s => card.WillPower = int.Parse(s));
-            ReadAttribute("source", s => card.Source = s);
-            ReadAttribute("id", s => card.Id = int.Parse(s));
+            ReadAttribute("id", s =>
+            {
+                card.Origin = new CardOrigin {CardId = s, SourceString = source};
+
+                if (int.TryParse(s, out var idInteger))
+                    card.Id = idInteger * source.GetHashCode();
+
+                var hashIds = new Hashids("DrinctetByVG");
+                var result = hashIds.Decode(s);
+                card.Id = result[0] * 1000 + result[1];
+            });
             ReadAttribute("tags", s =>
             {
                 var tags = ParserHelper.ParseEnum<CardTag>(s);

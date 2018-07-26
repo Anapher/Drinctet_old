@@ -1,4 +1,5 @@
-﻿using Drinctet.Core;
+﻿using System.Globalization;
+using Drinctet.Core;
 using Drinctet.ViewModels.Manager;
 using Drinctet.ViewModels.Resources;
 using Drinctet.ViewModels.Slides;
@@ -17,9 +18,12 @@ namespace Drinctet.ViewModels
 
         public GameViewModel(DrinctetStatus status)
         {
+            AppResources.Culture = CultureInfo.GetCultureInfo("de");
+
             _status = status;
             _screenGameManager = new ScreenGameManager(_status, new ResourceTextTranslation());
             _cardsProvider = DependencyService.Get<ICardsProvider>();
+            NextSlideCommand.Execute(null);
         }
 
         public GameViewModel()

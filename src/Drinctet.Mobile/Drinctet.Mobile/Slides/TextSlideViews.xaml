@@ -8,6 +8,13 @@
     xmlns:slides="clr-namespace:Drinctet.Mobile.Slides;assembly=Drinctet.Mobile"
     mc:Ignorable="d">
 
+    <Style x:Key="DefaultHeader" TargetType="Label">
+        <Setter Property="TextColor" Value="White" />
+        <Setter Property="FontSize" Value="40" />
+        <Setter Property="FontAttributes" Value="Bold" />
+    </Style>
+
+
     <DataTemplate x:Key="DownDataTemplate">
         <slides:TextSlideView BackgroundColor="#27ae60" Text="{Binding Text}">
             <slides:TextSlideView.Header>
@@ -16,6 +23,78 @@
                     FontSize="50"
                     Text="Auf Ex'"
                     TextColor="White" />
+            </slides:TextSlideView.Header>
+        </slides:TextSlideView>
+    </DataTemplate>
+
+    <DataTemplate x:Key="DrinkDataTemplate">
+        <slides:TextSlideView BackgroundColor="#2980b9" Text="{Binding Text}">
+            <slides:TextSlideView.Header>
+                <Label Style="{StaticResource DefaultHeader}" Text="Trinken" />
+            </slides:TextSlideView.Header>
+        </slides:TextSlideView>
+    </DataTemplate>
+
+    <DataTemplate x:Key="GroupGameDataTemplate">
+        <slides:TextSlideView BackgroundColor="#3498db" Text="{Binding Text}">
+            <slides:TextSlideView.Header>
+                <Label Style="{StaticResource DefaultHeader}" Text="Gruppenspiel" />
+            </slides:TextSlideView.Header>
+        </slides:TextSlideView>
+    </DataTemplate>
+
+    <DataTemplate x:Key="NeverEverDataTemplate">
+        <slides:TextSlideView BackgroundColor="#9b59b6" Text="{Binding Text}">
+            <slides:TextSlideView.Header>
+                <Label Style="{StaticResource DefaultHeader}" Text="Ich habe noch nie..." />
+            </slides:TextSlideView.Header>
+        </slides:TextSlideView>
+    </DataTemplate>
+
+    <DataTemplate x:Key="NoIdeaLosesDataTemplate">
+        <slides:TextSlideView BackgroundColor="#16a085" Text="{Binding Text}">
+            <slides:TextSlideView.Header>
+                <Label Style="{StaticResource DefaultHeader}" Text="Bis keiner mehr eine Idee hat" />
+            </slides:TextSlideView.Header>
+        </slides:TextSlideView>
+    </DataTemplate>
+
+    <DataTemplate x:Key="QuestionDataTemplate">
+        <slides:TextSlideView BackgroundColor="#27ae60" Text="{Binding Text}">
+            <slides:TextSlideView.Header>
+                <Label Style="{StaticResource DefaultHeader}" Text="Frage" />
+            </slides:TextSlideView.Header>
+        </slides:TextSlideView>
+    </DataTemplate>
+
+    <DataTemplate x:Key="SocialMediaDataTemplate">
+        <slides:TextSlideView BackgroundColor="#f39c12" Text="{Binding Text}">
+            <slides:TextSlideView.Header>
+                <Label Style="{StaticResource DefaultHeader}" Text="Soziale Netzwerke" />
+            </slides:TextSlideView.Header>
+        </slides:TextSlideView>
+    </DataTemplate>
+
+    <DataTemplate x:Key="TaskDataTemplate">
+        <slides:TextSlideView BackgroundColor="#c0392b" Text="{Binding Text}">
+            <slides:TextSlideView.Header>
+                <Label Style="{StaticResource DefaultHeader}" Text="Aufgabe" />
+            </slides:TextSlideView.Header>
+        </slides:TextSlideView>
+    </DataTemplate>
+
+    <DataTemplate x:Key="VirusDataTemplate">
+        <slides:TextSlideView BackgroundColor="#2ecc71" Text="{Binding Text}">
+            <slides:TextSlideView.Header>
+                <Label Style="{StaticResource DefaultHeader}" Text="Virus" />
+            </slides:TextSlideView.Header>
+        </slides:TextSlideView>
+    </DataTemplate>
+
+    <DataTemplate x:Key="WouldYouRatherDataTemplate">
+        <slides:TextSlideView BackgroundColor="#34495e" Text="{Binding Text}">
+            <slides:TextSlideView.Header>
+                <Label Style="{StaticResource DefaultHeader}" Text="Würdest du lieber..." />
             </slides:TextSlideView.Header>
         </slides:TextSlideView>
     </DataTemplate>

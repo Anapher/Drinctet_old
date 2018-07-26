@@ -2,7 +2,7 @@
 using Drinctet.Core;
 using Drinctet.Core.Cards.Base;
 using Drinctet.Core.Parsing.TextDecoder;
-using Drinctet.ViewModels.Manager.Formatter;
+using Drinctet.ViewModels.Formatter;
 
 namespace Drinctet.ViewModels.Manager
 {

@@ -24,6 +24,7 @@ namespace Drinctet.Harvester.Csw.Wyr
         }
 
         public override string CardName { get; } = "WyrCard";
+        public override int SourceId { get; } = (int)SourceIds.CswWyrHarvester;
 
         protected override async Task<(string language, List<string> texts)> GetOriginalTexts(HttpClient httpClient)
         {
@@ -36,12 +37,6 @@ namespace Drinctet.Harvester.Csw.Wyr
             var source = await response.Content.ReadAsStringAsync();
             var regex = new Regex(@"<p>Would you rather (?<text>([\w \?]+?))<\/p>");
             return ("en", regex.Matches(source).Select(x => x.Groups["text"].Value).ToList());
-        }
-
-        protected override void WriteAttributes(XmlWriter xmlWriter, string originalText)
-        {
-            base.WriteAttributes(xmlWriter, originalText);
-            xmlWriter.WriteAttributeString("source", "ConversationStartersWorld");
         }
 
         protected override string TransformForTranslation(string text) => "Mike, would you rather " + text;

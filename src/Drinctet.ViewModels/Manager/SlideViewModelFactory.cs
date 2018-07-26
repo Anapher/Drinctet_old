@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using Drinctet.Core;
+using Drinctet.ViewModels.Slides;
 
 namespace Drinctet.ViewModels.Manager
 {
@@ -20,30 +21,28 @@ namespace Drinctet.ViewModels.Manager
             switch (slideType)
             {
                 case SlideType.Down:
-                    break;
+                    return new DownViewModel();
                 case SlideType.Drink:
-                    break;
+                    return new DrinkViewModel();
                 case SlideType.GroupGame:
-                    break;
+                    return new GroupGameViewModel();
                 case SlideType.NeverEver:
-                    break;
+                    return new NeverEverViewModel();
                 case SlideType.NoIdeaLoses:
-                    break;
+                    return new NoIdeaLosesViewModel();
                 case SlideType.Question:
-                    break;
+                    return new QuestionViewModel();
                 case SlideType.SocialMedia:
-                    break;
+                    return new SocialMediaViewModel();
                 case SlideType.Task:
-                    break;
+                    return new TaskViewModel();
                 case SlideType.Virus:
-                    break;
+                    return new VirusViewModel();
                 case SlideType.WouldYouRather:
-                    break;
+                    return new WouldYouRatherViewModel();
                 default:
                     throw new ArgumentOutOfRangeException(nameof(slideType), slideType, null);
             }
-
-            throw new ArgumentOutOfRangeException(nameof(slideType), slideType, null);
         }
     }
 }

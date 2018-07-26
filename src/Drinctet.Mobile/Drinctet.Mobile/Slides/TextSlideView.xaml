@@ -16,7 +16,7 @@
                 FontSize="30"
                 HorizontalOptions="Center"
                 HorizontalTextAlignment="Center"
-                Text="{Binding Source={x:Reference RootView}, Path=Text}"
+                Markdown="{Binding Source={x:Reference RootView}, Path=Text}"
                 TextColor="White" />
         </StackLayout>
     </ContentView.Content>

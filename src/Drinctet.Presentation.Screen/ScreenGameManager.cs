@@ -13,7 +13,7 @@ namespace Drinctet.Presentation.Screen
         public ScreenGameManager(DrinctetStatus status, ITextResource textResource) : base(status)
         {
             _textResource = textResource;
-            TextDecoder = new SpanTextDecoder();
+            TextDecoder = new DefaultTextDecoder();
             TextFormatter = new TextFormatter(Selection, textResource) {BoldPlayerNames = true};
         }
 

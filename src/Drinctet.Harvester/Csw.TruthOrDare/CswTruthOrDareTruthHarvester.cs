@@ -16,6 +16,7 @@ namespace Drinctet.Harvester.Csw.TruthOrDare
         private static readonly ILog Logger = LogProvider.For<CswTruthOrDareTruthHarvester>();
 
         public override string CardName { get; } = "QuestionCard";
+        public override int SourceId { get; } = (int)SourceIds.CswTruthOrDareTruthHarvester;
 
         protected override async Task<(string language, List<string> texts)> GetOriginalTexts(HttpClient httpClient)
         {
@@ -36,7 +37,6 @@ namespace Drinctet.Harvester.Csw.TruthOrDare
         protected override void WriteAttributes(XmlWriter xmlWriter, string originalText)
         {
             base.WriteAttributes(xmlWriter, originalText);
-            xmlWriter.WriteAttributeString("source", "ConversationStartersWorld");
             xmlWriter.WriteAttributeString("willPower", "6");
         }
     }

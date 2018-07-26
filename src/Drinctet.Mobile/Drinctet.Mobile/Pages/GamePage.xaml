@@ -7,7 +7,6 @@
     xmlns:converter="clr-namespace:Drinctet.Mobile.Converter;assembly=Drinctet.Mobile"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:slides="clr-namespace:Drinctet.ViewModels.Slides;assembly=Drinctet.ViewModels"
     xmlns:viewModels="clr-namespace:Drinctet.ViewModels;assembly=Drinctet.ViewModels"
     d:DataContext="{d:DesignInstance viewModels:GameViewModel}"
     NavigationPage.HasNavigationBar="False"
@@ -27,7 +26,7 @@
             HorizontalOptions="FillAndExpand"
             VerticalOptions="FillAndExpand">
             <controls:ContentControl.GestureRecognizers>
-                <TapGestureRecognizer NumberOfTapsRequired="1" />
+                <TapGestureRecognizer Command="{Binding NextSlideCommand}" NumberOfTapsRequired="1" />
             </controls:ContentControl.GestureRecognizers>
             <controls:ContentControl.Triggers>
                 <DataTrigger
@@ -35,6 +34,60 @@
                     TargetType="controls:ContentControl"
                     Value="DownViewModel">
                     <Setter Property="ItemTemplate" Value="{StaticResource DownDataTemplate}" />
+                </DataTrigger>
+                <DataTrigger
+                    Binding="{Binding CurrentSlide, Converter={StaticResource GetTypeConverter}}"
+                    TargetType="controls:ContentControl"
+                    Value="DrinkViewModel">
+                    <Setter Property="ItemTemplate" Value="{StaticResource DrinkDataTemplate}" />
+                </DataTrigger>
+                <DataTrigger
+                    Binding="{Binding CurrentSlide, Converter={StaticResource GetTypeConverter}}"
+                    TargetType="controls:ContentControl"
+                    Value="GroupGameViewModel">
+                    <Setter Property="ItemTemplate" Value="{StaticResource GroupGameDataTemplate}" />
+                </DataTrigger>
+                <DataTrigger
+                    Binding="{Binding CurrentSlide, Converter={StaticResource GetTypeConverter}}"
+                    TargetType="controls:ContentControl"
+                    Value="NeverEverViewModel">
+                    <Setter Property="ItemTemplate" Value="{StaticResource NeverEverDataTemplate}" />
+                </DataTrigger>
+                <DataTrigger
+                    Binding="{Binding CurrentSlide, Converter={StaticResource GetTypeConverter}}"
+                    TargetType="controls:ContentControl"
+                    Value="NoIdeaLosesViewModel">
+                    <Setter Property="ItemTemplate" Value="{StaticResource NoIdeaLosesDataTemplate}" />
+                </DataTrigger>
+                <DataTrigger
+                    Binding="{Binding CurrentSlide, Converter={StaticResource GetTypeConverter}}"
+                    TargetType="controls:ContentControl"
+                    Value="QuestionViewModel">
+                    <Setter Property="ItemTemplate" Value="{StaticResource QuestionDataTemplate}" />
+                </DataTrigger>
+                <DataTrigger
+                    Binding="{Binding CurrentSlide, Converter={StaticResource GetTypeConverter}}"
+                    TargetType="controls:ContentControl"
+                    Value="SocialMediaViewModel">
+                    <Setter Property="ItemTemplate" Value="{StaticResource SocialMediaDataTemplate}" />
+                </DataTrigger>
+                <DataTrigger
+                    Binding="{Binding CurrentSlide, Converter={StaticResource GetTypeConverter}}"
+                    TargetType="controls:ContentControl"
+                    Value="TaskViewModel">
+                    <Setter Property="ItemTemplate" Value="{StaticResource TaskDataTemplate}" />
+                </DataTrigger>
+                <DataTrigger
+                    Binding="{Binding CurrentSlide, Converter={StaticResource GetTypeConverter}}"
+                    TargetType="controls:ContentControl"
+                    Value="VirusViewModel">
+                    <Setter Property="ItemTemplate" Value="{StaticResource VirusDataTemplate}" />
+                </DataTrigger>
+                <DataTrigger
+                    Binding="{Binding CurrentSlide, Converter={StaticResource GetTypeConverter}}"
+                    TargetType="controls:ContentControl"
+                    Value="WouldYouRatherViewModel">
+                    <Setter Property="ItemTemplate" Value="{StaticResource WouldYouRatherDataTemplate}" />
                 </DataTrigger>
             </controls:ContentControl.Triggers>
         </controls:ContentControl>
