@@ -692,15 +692,15 @@
 </QuestionCard>
 <QuestionCard id="xaIPG"> <!-- TODO -->
   <Text lang="en">Where would you like to travel next?</Text>
-  <Text lang="de">Wohin möchten Sie als nächstes reisen?</Text>
+  <Text lang="de">Wohin möchtest du als nächstes verreisen?</Text>
 </QuestionCard>
 <QuestionCard id="m7I3m">
   <Text lang="en">What was the most over hyped place you’ve traveled to?</Text>
-  <Text lang="de">Was war der am meisten überhöhte Ort, zu dem Sie gereist sind?</Text>
+  <Text lang="de">Welcher ist der am meisten überbewertete Ort, zu dem du bisher gereist bist?</Text>
 </QuestionCard>
 <QuestionCard id="Z5IVj">
   <Text lang="en">What’s the best thing about traveling? How about the worst thing?</Text>
-  <Text lang="de">Was ist das Beste am Reisen? Wie wär's mit dem Schlimmsten?</Text>
+  <Text lang="de">Was ist das Beste am Reisen? Wie was ist das Schlimmste?</Text>
 </QuestionCard>
 <QuestionCard id="QoI1Q">
   <Text lang="en">How do you think traveling to a lot of different countries changes a person?</Text>
@@ -708,59 +708,59 @@
 </QuestionCard>
 <QuestionCard id="vJIY3">
   <Text lang="en">What is the longest plane trip you have taken?</Text>
-  <Text lang="de">Was ist die längste Flugreise, die Sie gemacht haben?</Text>
+  <Text lang="de">Was ist die längste Flugreise, die du je gemacht hast?</Text>
 </QuestionCard>
 <QuestionCard id="kEIVN">
   <Text lang="en">Do you prefer to go off the beaten path when you travel?</Text>
-  <Text lang="de">Bevorzugen Sie es, die ausgetretenen Pfade zu verlassen, wenn Sie reisen?</Text>
+  <Text lang="de">Versucht du, Touristenmetropole zu vermeiden, wenn du verreist?</Text>
 </QuestionCard>
 <QuestionCard id="VoI1N">
   <Text lang="en">Where do you get your recommendations for what to do and where to stay when you travel?</Text>
-  <Text lang="de">Woher bekommen Sie Ihre Empfehlungen, was Sie tun und wo Sie sich auf Reisen aufhalten sollten?</Text>
+  <Text lang="de">Woher holst du dir Informationen und Empfehlungen über dein Reiseziel (wohin, Attraktionen, etc.)?</Text>
 </QuestionCard>
 <QuestionCard id="RjIOO">
   <Text lang="en">What is the worst hotel you have stayed at? How about the best hotel?</Text>
-  <Text lang="de">Was ist das schlechteste Hotel, in dem Sie übernachtet haben, wie wäre es mit dem besten Hotel?</Text>
+  <Text lang="de">Was war das schlechteste Hotel, in dem du bisher übernachtet hast? Was war das beste Hotel?</Text>
 </QuestionCard>
 <QuestionCard id="amIyY">
   <Text lang="en">What is your favorite piece of technology that you own?</Text>
-  <Text lang="de">Was ist Ihre Lieblingstechnologie, die Sie besitzen?</Text>
+  <Text lang="de">Was ist das technische Gerät, was du besitzt und was du am meisten magst?</Text>
 </QuestionCard>
 <QuestionCard id="A0Ix6">
   <Text lang="en">What piece of technology is really frustrating to use?</Text>
-  <Text lang="de">Welche Technologie ist wirklich frustrierend?</Text>
+  <Text lang="de">Welches technische Gerät ist echt frustierend zu benutzen?</Text>
 </QuestionCard>
 <QuestionCard id="38IN2">
   <Text lang="en">What was the best invention of the last 50 years?</Text>
-  <Text lang="de">Was war die beste Erfindung der letzten 50 Jahre?</Text>
+  <Text lang="de">Was ist die beste Erfindung der letzten 50 Jahre?</Text>
 </QuestionCard>
 <QuestionCard id="LEIJ1">
   <Text lang="en">Does technology simplify life or make it more complicated?</Text>
-  <Text lang="de">Vereinfacht die Technik das Leben oder macht sie es komplizierter?</Text>
+  <Text lang="de">Vereinfacht Technik das Leben oder macht sie es komplizierter?</Text>
 </QuestionCard>
 <QuestionCard id="WeIAx">
   <Text lang="en">Which emerging technology are you most excited about?</Text>
-  <Text lang="de">Welche neue Technologie begeistert Sie am meisten?</Text>
+  <Text lang="de">Welche neue Technologie begeistert dich am meisten?</Text>
 </QuestionCard>
 <QuestionCard id="DdIEG">
   <Text lang="en">What problems will technology solve in the next 5 years? What problems will it create?</Text>
-  <Text lang="de">Welche Probleme wird die Technologie in den nächsten 5 Jahren lösen?</Text>
+  <Text lang="de">Welche Probleme wird Technologie in den nächsten 5 Jahren lösen?</Text>
 </QuestionCard>
 <QuestionCard id="56IQA">
   <Text lang="en">Will technology save the human race or destroy it?</Text>
-  <Text lang="de">Wird die Technologie die Menschheit retten oder zerstören?</Text>
+  <Text lang="de">Wird Technologie die Menschheit retten oder zerstören?</Text>
 </QuestionCard>
 <QuestionCard id="pdIyV">
   <Text lang="en">What piece of technology would look like magic or a miracle to people in medieval Europe?</Text>
-  <Text lang="de">Welches Stück Technik würde für die Menschen im mittelalterlichen Europa wie Magie oder ein Wunder aussehen?</Text>
+  <Text lang="de">Welches technische Gerät würde für die Menschen im mittelalterlichen Europa wie Magie oder ein Wunder aussehen?</Text>
 </QuestionCard>
 <QuestionCard id="GeIld">
   <Text lang="en">Can you think of any technology that has only made the world worse? How about a piece of technology that has only made the world better?</Text>
-  <Text lang="de">Können Sie sich eine Technologie vorstellen, die die Welt nur noch schlimmer gemacht hat, wie wäre es mit einer Technologie, die die Welt nur besser gemacht hat?</Text>
+  <Text lang="de">Fällt dir ein technisches Gerät ein, welches die Welt nur schlimmer gemacht hat? Gibt es auch ein Gerät, welches die Welt nur besser gemacht hat?</Text>
 </QuestionCard>
 <QuestionCard id="yAIxG">
   <Text lang="en">What technology from a science fiction movie would you most like to have?</Text>
-  <Text lang="de">Welche Technologie aus einem Science-Fiction-Film würden Sie am liebsten haben?</Text>
+  <Text lang="de">Welche Technik aus einem Science-Fiction-Film würdest du am liebsten besitzen?</Text>
 </QuestionCard>
 <QuestionCard id="BNILN">
   <Text lang="en">What scifi movie or book would you like the future to be like?</Text>
@@ -768,15 +768,15 @@
 </QuestionCard>
 <QuestionCard id="7BI4l">
   <Text lang="en">What do you think the next big technological advance will be?</Text>
-  <Text lang="de">Was wird Ihrer Meinung nach der nächste große technologische Fortschritt sein?</Text>
+  <Text lang="de">Was wird deiner Meinung nach der nächste große technische Fortschritt sein?</Text>
 </QuestionCard>
 <QuestionCard id="lBIXp">
   <Text lang="en">Do you care about fashion? What style of clothes do you usually wear?</Text>
-  <Text lang="de">Interessieren Sie sich für Mode, welche Art von Kleidung tragen Sie normalerweise?</Text>
+  <Text lang="de">Interessierst du dich für Mode? Welchen Kleidung-Style trägst du normalerweise?</Text>
 </QuestionCard>
 <QuestionCard id="X9Izo">
   <Text lang="en">What is the best pair of shoes you have ever owned? Why were they so good?</Text>
-  <Text lang="de">Was ist das beste Paar Schuhe, das Sie je besaßen?</Text>
+  <Text lang="de">Was sind die besten Schuhe, die du je besessen hast? Wieso waren die so gut?</Text>
 </QuestionCard>
 <QuestionCard id="EoIba">
   <Text lang="en">What is your favorite shirt?</Text>
@@ -784,7 +784,7 @@
 </QuestionCard>
 <QuestionCard id="zdIgW">
   <Text lang="en">What is the most embarrassing piece of clothing you own?</Text>
-  <Text lang="de">Was ist das peinlichste Kleidungsstück, das Sie besitzen?</Text>
+  <Text lang="de">Was ist das peinlichste Kleidungsstück, das du besitzt?</Text>
 </QuestionCard>
 <QuestionCard id="87IjV">
   <Text lang="en">Does fashion help society in any way?</Text>
@@ -792,15 +792,15 @@
 </QuestionCard>
 <QuestionCard id="1PIlP">
   <Text lang="en">What is a fashion trend you are really glad went away?</Text>
-  <Text lang="de">Was ist ein Modetrend, über den Sie sich wirklich freuen?</Text>
+  <Text lang="de">Was ist ein Modetrend, über den du dich wirklich freust?</Text>
 </QuestionCard>
 <QuestionCard id="62I8A">
   <Text lang="en">Who do you think has the biggest impact on fashion trends: actors and actresses, musicians, fashion designers, or consumers?</Text>
-  <Text lang="de">Wer hat Ihrer Meinung nach den größten Einfluss auf Modetrends: Schauspieler und Schauspielerinnen, Musiker, Modedesigner oder Konsumenten?</Text>
+  <Text lang="de">Wer hat deiner Meinung nach den größten Einfluss auf Modetrends: Schauspieler und Schauspielerinnen, Musiker, Modedesigner oder Konsumenten?</Text>
 </QuestionCard>
 <QuestionCard id="ddIak">
   <Text lang="en">What old trend is coming back these days?</Text>
-  <Text lang="de">Welcher alte Trend kommt in diesen Tagen zurück?</Text>
+  <Text lang="de">Welcher alte Mode-Trend kommt in diesen Tagen zurück?</Text>
 </QuestionCard>
 <QuestionCard id="J5IvO">
   <Text lang="en">If you didn’t care at all what people thought of you, what clothes would you wear?</Text>
@@ -808,27 +808,27 @@
 </QuestionCard>
 <QuestionCard id="GeIlA">
   <Text lang="en">What is the most comfortable piece of clothing you own?</Text>
-  <Text lang="de">Welches ist das bequemste Kleidungsstück, das Sie besitzen?</Text>
+  <Text lang="de">Welches ist das bequemste Kleidungsstück, das du besitzt?</Text>
 </QuestionCard>
 <QuestionCard id="yAIxN">
   <Text lang="en">How do clothes change how the opposite sex views a person?</Text>
-  <Text lang="de">Wie verändert die Kleidung, wie das andere Geschlecht eine Person sieht?</Text>
+  <Text lang="de">Welche Veränderung hat Kleidung auf die Sichtweise des anderen Geschlechts auf die Person?</Text>
 </QuestionCard>
 <QuestionCard id="BNIL8">
   <Text lang="en">What is the craziest, most outrageous thing you want to achieve?</Text>
-  <Text lang="de">Was ist das Verrückteste, Ungeheuerlichste, was Sie erreichen wollen?</Text>
+  <Text lang="de">Was ist das Verrückteste, Unglaublichste, was du erreichen willst?</Text>
 </QuestionCard>
 <QuestionCard id="7BI4J">
   <Text lang="en">What are some goals you have already achieved?</Text>
-  <Text lang="de">Welche Ziele haben Sie bereits erreicht?</Text>
+  <Text lang="de">Welche Ziele hast du bereits erreicht?</Text>
 </QuestionCard>
 <QuestionCard id="lBIXN">
   <Text lang="en">What personal goals do you have?</Text>
-  <Text lang="de">Welche persönlichen Ziele haben Sie?</Text>
+  <Text lang="de">Welche persönlichen Ziele hast du?</Text>
 </QuestionCard>
 <QuestionCard id="X9Izp">
   <Text lang="en">What do you hope to achieve in your professional life?</Text>
-  <Text lang="de">Was wollen Sie im Berufsleben erreichen?</Text>
+  <Text lang="de">Was willst du im Berufsleben erreichen?</Text>
 </QuestionCard>
 <QuestionCard id="EoIb6">
   <Text lang="en">Have your parents influenced what goals you have?</Text>
@@ -836,7 +836,7 @@
 </QuestionCard>
 <QuestionCard id="zdIgA">
   <Text lang="en">Do you usually achieve goals you set? Why or why not?</Text>
-  <Text lang="de">Erreichen Sie in der Regel Ihre Ziele, warum oder warum nicht?</Text>
+  <Text lang="de">Erreichst du in der Regel deine Ziele? Warum oder warum nicht?</Text>
 </QuestionCard>
 <QuestionCard id="87Ijp">
   <Text lang="en">What is the best way to stay motivated and complete goals?</Text>
@@ -844,27 +844,27 @@
 </QuestionCard>
 <QuestionCard id="1PIlO">
   <Text lang="en">What are some goals you have failed to accomplish?</Text>
-  <Text lang="de">Was sind einige Ziele, die Sie nicht erreicht haben?</Text>
+  <Text lang="de">Was sind einige Ziele, die du nicht erreicht hast?</Text>
 </QuestionCard>
 <QuestionCard id="62I86">
   <Text lang="en">When do you want to retire? What do you want to do when you retire?</Text>
-  <Text lang="de">Wann wollen Sie in Rente gehen? Was wollen Sie tun, wenn Sie in Rente gehen?</Text>
+  <Text lang="de">Wann willst du in Rente gehen? Was willst du tun, wenn du in Rente gehst?</Text>
 </QuestionCard>
 <QuestionCard id="ddIav">
   <Text lang="en">What are your goals for the next two years?</Text>
-  <Text lang="de">Was sind Ihre Ziele für die nächsten zwei Jahre?</Text>
+  <Text lang="de">Was sind deine Ziele für die nächsten zwei Jahre?</Text>
 </QuestionCard>
 <QuestionCard id="J5IvL">
   <Text lang="en">How have your goals changed over your life?</Text>
-  <Text lang="de">Wie haben sich Ihre Ziele im Laufe Ihres Lebens verändert?</Text>
+  <Text lang="de">Wie haben sich deine Ziele im Laufe deines Lebens verändert?</Text>
 </QuestionCard>
 <QuestionCard id="bLIXK">
   <Text lang="en">How much do you plan for the future?</Text>
-  <Text lang="de">Wie viel planen Sie für die Zukunft?</Text>
+  <Text lang="de">Wie viel planst du für die Zukunft?</Text>
 </QuestionCard>
 <QuestionCard id="4dIJP">
   <Text lang="en">How do you plan to make the world a better place?</Text>
-  <Text lang="de">Wie wollen Sie die Welt zu einem besseren Ort machen?</Text>
+  <Text lang="de">Wie willst du die Welt zu einem besseren Ort machen?</Text>
 </QuestionCard>
 <QuestionCard id="PjI7a">
   <Text lang="en">What’s the most refreshing thing on a hot summer day?</Text>
@@ -876,31 +876,31 @@
 </QuestionCard>
 <QuestionCard id="ebId6">
   <Text lang="en">Where is the nicest place you have been to in fall?</Text>
-  <Text lang="de">Wo ist der schönste Ort, an dem Sie im Herbst waren?</Text>
+  <Text lang="de">Welcher ist der schönste Ort, an dem du im Herbst warst?</Text>
 </QuestionCard>
 <QuestionCard id="NBI2J">
   <Text lang="en">What is your favorite thing to eat or drink in winter?</Text>
-  <Text lang="de">Was essen oder trinken Sie am liebsten im Winter?</Text>
+  <Text lang="de">Was isst oder trinkst du am liebsten im Winter?</Text>
 </QuestionCard>
 <QuestionCard id="gRIn5">
   <Text lang="en">Do you prefer summer or winter activities?</Text>
-  <Text lang="de">Bevorzugen Sie Sommer- oder Winteraktivitäten?</Text>
+  <Text lang="de">Bevorzugst du Sommer- oder Winteraktivitäten?</Text>
 </QuestionCard>
 <QuestionCard id="OjIoZ">
   <Text lang="en">What do you like to do in spring?</Text>
-  <Text lang="de">Was machen Sie gerne im Frühling?</Text>
+  <Text lang="de">Was machst du gerne im Frühling?</Text>
 </QuestionCard>
 <QuestionCard id="YvIGx">
   <Text lang="en">Did your family take seasonal vacations?</Text>
-  <Text lang="de">Hat Ihre Familie saisonale Ferien gemacht?</Text>
+  <Text lang="de">Hat deine Familie jahreszeitabhängige Ferien gemacht?</Text>
 </QuestionCard>
 <QuestionCard id="nLI9A">
   <Text lang="en">Do you feel like fall and spring are getting shorter?</Text>
-  <Text lang="de">Haben Sie das Gefühl, dass der Herbst und der Frühling kürzer werden?</Text>
+  <Text lang="de">Hast du das Gefühl, dass der Herbst und der Frühling kürzer werden?</Text>
 </QuestionCard>
 <QuestionCard id="KpIAA">
   <Text lang="en">Which season are you most active in?</Text>
-  <Text lang="de">In welcher Jahreszeit sind Sie am aktivsten?</Text>
+  <Text lang="de">In welcher Jahreszeit bist du am aktivsten?</Text>
 </QuestionCard>
 <QuestionCard id="9pIPo">
   <Text lang="en">Is it better to live where there are four seasons or where one season takes up most of the year?</Text>
@@ -908,31 +908,31 @@
 </QuestionCard>
 <QuestionCard id="2mIKd">
   <Text lang="en">If you could make a holiday, what would it be like? What traditions would it have? What would people eat on your holiday?</Text>
-  <Text lang="de">Wenn Sie einen Urlaub machen könnten, wie wäre es dann, welche Traditionen würde es haben, was würden die Leute in Ihrem Urlaub essen?</Text>
+  <Text lang="de">Wenn du einen Feiertag erstellen könntest, wie wäre es dann? Welche Traditionen würde es geben? Was würden die Leute an deinem Feiertag essen?</Text>
 </QuestionCard>
 <QuestionCard id="jKIvA">
   <Text lang="en">What is the biggest holiday for your family?</Text>
-  <Text lang="de">Was ist der größte Urlaub für Ihre Familie?</Text>
+  <Text lang="de">Welcher ist der größte Feiertag für deine Familie?</Text>
 </QuestionCard>
 <QuestionCard id="0bIOR">
   <Text lang="en">Do you wish there were more or less holidays? Why?</Text>
-  <Text lang="de">Wünschen Sie sich mehr oder weniger Urlaub? Warum?</Text>
+  <Text lang="de">Wünscht du dir mehr oder weniger Feiertage? Warum?</Text>
 </QuestionCard>
 <QuestionCard id="xaIz9">
   <Text lang="en">If you had to get rid of a holiday, which would you get rid of? Why?</Text>
-  <Text lang="de">Wenn du einen Urlaub loswerden müsstest, welchen würdest du loswerden? Warum?</Text>
+  <Text lang="de">Wenn du einen Feiertag loswerden müsstest, welchen würdest du nehemn? Warum?</Text>
 </QuestionCard>
 <QuestionCard id="m7IBY">
   <Text lang="en">What is your favorite holiday?</Text>
-  <Text lang="de">Was ist Ihr Lieblingsurlaub?</Text>
+  <Text lang="de">Was ist dein Lieblingsfeiertag?</Text>
 </QuestionCard>
 <QuestionCard id="Z5Ikg">
   <Text lang="en">What kinds of food do you usually eat on your favorite holiday?</Text>
-  <Text lang="de">Was essen Sie normalerweise an Ihrem Lieblingsfeiertag?</Text>
+  <Text lang="de">Was isst du normalerweise an deinem Lieblingsfeiertag?</Text>
 </QuestionCard>
 <QuestionCard id="QoI0x">
   <Text lang="en">Does having a day off for a holiday increase or decrease productivity at work?</Text>
-  <Text lang="de">Steigert oder verringert ein freier Tag für einen Urlaub die Produktivität am Arbeitsplatz?</Text>
+  <Text lang="de">Steigert oder verringert ein freier Tag in der Woche die Produktivität am Arbeitsplatz?</Text>
 </QuestionCard>
 <QuestionCard id="vJIkA">
   <Text lang="en">What holidays have been over commercialized?</Text>
@@ -944,15 +944,15 @@
 </QuestionCard>
 <QuestionCard id="VoILG">
   <Text lang="en">What do you know about the history of some holidays?</Text>
-  <Text lang="de">Was wissen Sie über die Geschichte einiger Feiertage?</Text>
+  <Text lang="de">Was weißst du über die Geschichte einiger Feiertage?</Text>
 </QuestionCard>
 <QuestionCard id="RjIJ8">
   <Text lang="en">What are some good and bad things about the education system in your country?</Text>
-  <Text lang="de">Was sind einige gute und schlechte Dinge über das Bildungssystem in Ihrem Land?</Text>
+  <Text lang="de">Was sind einige gute und schlechte Dinge bei dem Bildungssystem in deinem Land?</Text>
 </QuestionCard>
 <QuestionCard id="amIYp">
   <Text lang="en">What do you think of online education?</Text>
-  <Text lang="de">Was halten Sie von Online-Bildung?</Text>
+  <Text lang="de">Was hältst du von Online-Bildung?</Text>
 </QuestionCard>
 <QuestionCard id="A0Ijo">
   <Text lang="en">How can governments make education more efficient?</Text>
@@ -960,11 +960,11 @@
 </QuestionCard>
 <QuestionCard id="38IQG">
   <Text lang="en">What do you think of standardized tests?</Text>
-  <Text lang="de">Was halten Sie von standardisierten Tests?</Text>
+  <Text lang="de">Was hältst du von standardisierten Tests (z. B. landesweites Abitur)?</Text>
 </QuestionCard>
 <QuestionCard id="LEIxn">
   <Text lang="en">How can technology improve education? Can it hurt education?</Text>
-  <Text lang="de">Wie kann Technologie die Bildung verbessern, kann sie der Bildung schaden?</Text>
+  <Text lang="de">Wie kann Technologie Bildung verbessern? Kann sie der Bildung auch schaden?</Text>
 </QuestionCard>
 <QuestionCard id="WeI8V">
   <Text lang="en">Are bigger or small schools better?</Text>
@@ -980,35 +980,35 @@
 </QuestionCard>
 <QuestionCard id="pdIPR">
   <Text lang="en">What do you think of homeschooling?</Text>
-  <Text lang="de">Was hältst du von Homeschooling?</Text>
+  <Text lang="de">Was hältst du von Hausunterricht?</Text>
 </QuestionCard>
 <QuestionCard id="GeI3A">
   <Text lang="en">How has the education you received changed your life?</Text>
-  <Text lang="de">Wie hat die Ausbildung, die Sie erhalten haben, Ihr Leben verändert?</Text>
+  <Text lang="de">Wie hat die Bildung, die du erhalten hast, dein Leben verändert?</Text>
 </QuestionCard>
 <QuestionCard id="yAImN">
   <Text lang="en">What or who has taught you most of the information you use on a regular basis?</Text>
-  <Text lang="de">Was oder wer hat Ihnen die meisten der Informationen, die Sie regelmäßig verwenden, beigebracht?</Text>
+  <Text lang="de">Was oder wer hat dir die meisten der Informationen, die du regelmäßig verwendest, beigebracht?</Text>
 </QuestionCard>
 <QuestionCard id="BNI58">
   <Text lang="en">What is your favorite food?</Text>
-  <Text lang="de">Was ist Ihr Lieblingsessen?</Text>
+  <Text lang="de">Was ist dein Lieblingsessen?</Text>
 </QuestionCard>
 <QuestionCard id="7BInJ">
   <Text lang="en">Do you like spicy food? Why or why not? What is the spiciest thing you have ever eaten?</Text>
-  <Text lang="de">Magst du scharfes Essen, warum oder warum nicht, was ist das Schärfste, was du je gegessen hast?</Text>
+  <Text lang="de">Magst du scharfes Essen? Warum oder warum nicht? Was ist das Schärfste, was du je gegessen hast?</Text>
 </QuestionCard>
 <QuestionCard id="lBIvN">
   <Text lang="en">What foods do you absolutely hate?</Text>
-  <Text lang="de">Welche Lebensmittel hassen Sie absolut?</Text>
+  <Text lang="de">Welche Lebensmittel hasst du über alles?</Text>
 </QuestionCard>
 <QuestionCard id="X9IYp">
   <Text lang="en">What food do you know you shouldn’t eat but can’t help yourself?</Text>
-  <Text lang="de">Welches Essen sollte man nicht essen, aber man kann sich nicht selbst helfen?</Text>
+  <Text lang="de">Bei welchem Essen weißt du, dass du es nicht essen solltest, aber du isst es trotzdem?</Text>
 </QuestionCard>
 <QuestionCard id="EoIo6">
   <Text lang="en">Does government have a place in regulating food? To what extent should government regulate food?</Text>
-  <Text lang="de">Hat die Regierung einen Platz in der Regulierung von Nahrungsmitteln und inwieweit sollte sie diese regulieren?</Text>
+  <Text lang="de">Sollte die Regierung Nahrungsmittel regulieren? Inwieweit sollte sie diese regulieren?</Text>
 </QuestionCard>
 <QuestionCard id="zdI9A">
   <Text lang="en">When was the last time you had a food fight?</Text>
@@ -1016,19 +1016,19 @@
 </QuestionCard>
 <QuestionCard id="87I4p">
   <Text lang="en">What do you get every time you go grocery shopping?</Text>
-  <Text lang="de">Was bekommen Sie jedes Mal, wenn Sie einkaufen gehen?</Text>
+  <Text lang="de">Was kaufst du immer, wenn du einkaufen gehst?</Text>
 </QuestionCard>
 <QuestionCard id="1PI7O">
   <Text lang="en">If your life was a meal, what would kind of meal would it be?</Text>
-  <Text lang="de">Wenn dein Leben eine Mahlzeit wäre, was wäre das für eine Mahlzeit?</Text>
+  <Text lang="de">Wenn dein Leben eine Mahlzeit wäre, was für eine Mahlzeit wäre es?</Text>
 </QuestionCard>
 <QuestionCard id="62Io6">
   <Text lang="en">What do you think of buffets?</Text>
-  <Text lang="de">Was halten Sie von Buffets?</Text>
+  <Text lang="de">Was hältst du von Buffetessen?</Text>
 </QuestionCard>
 <QuestionCard id="ddI9v">
   <Text lang="en">What would you want your last meal to be if you were on death row?</Text>
-  <Text lang="de">Was soll deine letzte Mahlzeit sein, wenn du im Todestrakt sitzt?</Text>
+  <Text lang="de">Was wäre deine letzte Mahlzeit, wenn du im Todestrakt sitzt?</Text>
 </QuestionCard>
 <QuestionCard id="J5ImL">
   <Text lang="en">What food looks disgusting but tastes delicious?</Text>
@@ -1036,11 +1036,11 @@
 </QuestionCard>
 <QuestionCard id="bLImK">
   <Text lang="en">Time freezes for everyone but you for one day. What do you do?</Text>
-  <Text lang="de">Die Zeit friert für alle außer Ihnen für einen Tag ein. Was tun Sie?</Text>
+  <Text lang="de">Die Zeit friert für alle außer dir für einen Tag ein. Was tust du?</Text>
 </QuestionCard>
 <QuestionCard id="4dI0P">
   <Text lang="en">If you could call up anyone in the world and have a one hour conversation, who would you call?</Text>
-  <Text lang="de">Wenn du jemanden auf der Welt anrufen könntest und ein einstündiges Gespräch führen könntest, wen würdest du anrufen?</Text>
+  <Text lang="de">Wenn du irgendjemanden auf der Welt anrufen könntest und ein einstündiges Gespräch (ohne Sprachbarriere) führen könntest, wen würdest du anrufen?</Text>
 </QuestionCard>
 <QuestionCard id="PjIza">
   <Text lang="en">You have to relive one day of your life forever. Which day do you choose?</Text>
@@ -1048,19 +1048,19 @@
 </QuestionCard>
 <QuestionCard id="o9Iej">
   <Text lang="en">If your mind was an island, what would it look like?</Text>
-  <Text lang="de">Wenn dein Verstand eine Insel wäre, wie würde es dann aussehen?</Text>
+  <Text lang="de">Wenn dein Verstand eine Insel wäre, wie würde es da aussehen?</Text>
 </QuestionCard>
 <QuestionCard id="ebI36">
   <Text lang="en">What flavor of ice cream do you wish existed?</Text>
-  <Text lang="de">Welchen Eisgeschmack wünschen Sie sich?</Text>
+  <Text lang="de">Bei welchem Eisgeschmack wünscht du dir, dass er existiert?</Text>
 </QuestionCard>
 <QuestionCard id="NBInJ">
   <Text lang="en">What does your own personal hell look like? How about your own personal heaven?</Text>
-  <Text lang="de">Wie sieht Ihre persönliche Hölle aus? Was ist mit Ihrem persönlichen Himmel?</Text>
+  <Text lang="de">Wie sieht deine persönliche Hölle aus? Was ist mit deinem persönlichen Himmel?</Text>
 </QuestionCard>
 <QuestionCard id="gRID5">
   <Text lang="en">A portal to another world opens in front of you. You don’t know how long it will stay open or if you’ll be able to get back after you go through. What do you do?</Text>
-  <Text lang="de">Ein Portal zu einer anderen Welt öffnet sich vor Ihnen. Sie wissen nicht, wie lange es offen bleibt oder ob Sie nach dem Durchqueren wieder zurückkommen können. Was tun Sie?</Text>
+  <Text lang="de">Ein Portal zu einer anderen Welt öffnet sich vor dir. Du weißt nicht, wie lange es offen bleibt oder ob du nach dem Durchqueren wieder zurückkommen kannst. Was tust du?</Text>
 </QuestionCard>
 <QuestionCard id="OjInZ">
   <Text lang="en">If you had a personal mascot, what would your mascot be?</Text>
@@ -1068,7 +1068,7 @@
 </QuestionCard>
 <QuestionCard id="YvI1x">
   <Text lang="en">You find a remote that can rewind, fast forward, stop and start time. What do you do with it?</Text>
-  <Text lang="de">Sie finden eine Fernbedienung, die zurückspulen, vorspulen, stoppen und starten kann - was machen Sie damit?</Text>
+  <Text lang="de">Du findest eine Fernbedienung, die Zeit zurückspulen, vorspulen, stoppen und starten kann - was machst du damit?</Text>
 </QuestionCard>
 <QuestionCard id="nLIBA">
   <Text lang="en">If you were a king / queen, what would your throne look like?</Text>
@@ -1076,5 +1076,5 @@
 </QuestionCard>
 <QuestionCard id="KpI9A">
   <Text lang="en">If you were on the run from the police for a crime you didn’t commit, where would you go?</Text>
-  <Text lang="de">Wenn Sie auf der Flucht vor der Polizei wegen eines Verbrechens wären, das Sie nicht begangen haben, wohin würden Sie gehen?</Text>
+  <Text lang="de">Wenn du auf der Flucht vor der Polizei wegen eines Verbrechens wärst, das du nicht begangen hast, wohin würdest du gehen?</Text>
 </QuestionCard>
