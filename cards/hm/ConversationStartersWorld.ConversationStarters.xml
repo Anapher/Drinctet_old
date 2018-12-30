@@ -1,0 +1,392 @@
+﻿<QuestionCard id="GeIP" willPower="1">
+  <Text lang="en">What was the last funny video you saw?</Text>
+  <Text lang="de">Was war das letzte lustige Video, das du gesehen hast?</Text>
+</QuestionCard>
+<QuestionCard id="yAIv" willPower="2" tags="Personal">
+  <Text lang="en">What do you do to get rid of stress?</Text>
+  <Text lang="de">Was tust du, um Stress abzubauen?</Text>
+</QuestionCard>
+<QuestionCard id="BNIR" willPower="3" tags="Personal">
+  <Text lang="en">What is something you are obsessed with?</Text>
+  <Text lang="de">Was ist etwas, von dem du wie besessen bist?</Text>
+</QuestionCard>
+<QuestionCard id="7BI3" willPower="1">
+  <Text lang="en">Who is your favorite entertainer (comedian, musician, actor, etc.)?</Text>
+  <Text lang="de">Wer ist dein Lieblings-Entertainer (Komiker, Musiker, Schauspieler, etc.)?</Text>
+</QuestionCard>
+<QuestionCard id="lBIX" willPower="1">
+  <Text lang="en">What’s your favorite way to waste time?</Text>
+  <Text lang="de">Wie verschwendest du am liebsten deine Zeit?</Text>
+</QuestionCard>
+<QuestionCard id="X9IY" willPower="1">
+  <Text lang="en">Do you have any pets? What are their names?</Text>
+  <Text lang="de">Hast du Haustiere? Wenn ja, wie heißen die?</Text>
+</QuestionCard>
+<QuestionCard id="EoI7" willPower="2">
+  <Text lang="en">Where did you go last weekend? What did you do?</Text>
+  <Text lang="de">Wo warst du letztes Wochenende? Was hast du da gemacht?</Text>
+</QuestionCard>
+<QuestionCard id="zdIO" willPower="1">
+  <Text lang="en">What are you going to do this weekend?</Text>
+  <Text lang="de">Was wirst du dieses Wochenende machen?</Text>
+</QuestionCard>
+<QuestionCard id="87IY" willPower="3">
+  <Text lang="en">What is something that is popular now that annoys you?</Text>
+  <Text lang="de">Was ist etwas, was in letzter Zeit zu deinem Ärgerniss sehr beliebt ist?</Text>
+</QuestionCard>
+<QuestionCard id="1PIA" willPower="1">
+  <Text lang="en">What did you do on your last vacation?</Text>
+  <Text lang="de">Was hast du in deinem letzten Urlaub gemacht?</Text>
+</QuestionCard>
+<QuestionCard id="62IL" willPower="4">
+  <Text lang="en">What was the last time you worked incredibly hard?</Text>
+  <Text lang="de">Wann war das letzte Mal, dass du unglaublich hart gearbeitet hast?</Text>
+</QuestionCard>
+<QuestionCard id="ddIo" willPower="1">
+  <Text lang="en">Are you very active or do you prefer to just relax in your free time?</Text>
+  <Text lang="de">Bist du sehr aktiv oder möchtest du einfach nur in deiner Freizeit entspannen?</Text>
+</QuestionCard>
+<QuestionCard id="J5IP" willPower="1">
+  <Text lang="en">What do you do when you hang out with your friends?</Text>
+  <Text lang="de">Was machst du, wenn du mit deinen Freunden rumhängst?</Text>
+</QuestionCard>
+<QuestionCard id="bLI9" willPower="2">
+  <Text lang="en">Who is your oldest friend? Where did you meet them?</Text>
+  <Text lang="de">Wer ist dein ältester Freund? Wo hast du ihn getroffen?</Text>
+</QuestionCard>
+<QuestionCard id="4dIg" willPower="3">
+  <Text lang="en">What’s the best / worst thing about your work / school?</Text>
+  <Text lang="de">Was ist das Beste / Schlimmste an deiner Arbeit / Schule?</Text>
+</QuestionCard>
+<QuestionCard id="PjID" willPower="1">
+  <Text lang="en">If you had intro music, what song would it be? Why?</Text>
+  <Text lang="de">Wenn du Intro-Musik hättest, welcher Song wäre das? Warum?</Text>
+</QuestionCard>
+<QuestionCard id="o9I7" willPower="1">
+  <Text lang="en">What were you really into when you were a kid?</Text>
+  <Text lang="de">Was hast du als Kind sehr gerne gemacht?</Text>
+</QuestionCard>
+<QuestionCard id="ebIL" willPower="1">
+  <Text lang="en">If you could have any animal as a pet, what animal would you choose?</Text>
+  <Text lang="de">Wenn du irgendein Tier als Haustier haben könntest, welches Tier würdest du wählen?</Text>
+</QuestionCard>
+<QuestionCard id="NBI4" willPower="3">
+  <Text lang="en">What three words best describe you?</Text>
+  <Text lang="de">Welche drei Worte beschreiben dich am besten?</Text>
+</QuestionCard>
+<QuestionCard id="gRI9" willPower="2">
+  <Text lang="en">What would be your perfect weekend?</Text>
+  <Text lang="de">Was wäre dein perfektes Wochenende?</Text>
+</QuestionCard>
+<QuestionCard id="OjIy" willPower="4">
+  <Text lang="en">What do you think of tattoos? Do you have any?</Text>
+  <Text lang="de">Was hältst du von Tätowierungen? Hast du welche?</Text>
+</QuestionCard>
+<QuestionCard id="YvI0" willPower="1">
+  <Text lang="en">What’s your favorite number? Why?</Text>
+  <Text lang="de">Was ist deine Lieblingszahl? Warum?</Text>
+</QuestionCard>
+<QuestionCard id="nLIQ" willPower="2">
+  <Text lang="en">What’s the most useful thing you own?</Text>
+  <Text lang="de">Was ist das Nützlichste, was du besitzt?</Text>
+</QuestionCard>
+<QuestionCard id="KpIZ" willPower="3">
+  <Text lang="en">Have you ever saved an animal’s life? How about a person’s life?</Text>
+  <Text lang="de">Hast du jemals das Leben eines Tieres gerettet? Oder sogar das Leben eines Menschen?</Text>
+</QuestionCard>
+<QuestionCard id="9pIJ" willPower="5">
+  <Text lang="en">If you opened a business, what kind of business would it be?</Text>
+  <Text lang="de">Wenn du ein Geschäft eröffnen würdest, was für ein Geschäft wäre das?</Text>
+</QuestionCard>
+<QuestionCard id="2mIX" willPower="2">
+  <Text lang="en">Are you a very organized person?</Text>
+  <Text lang="de">Bist du ein sehr organisierter Mensch?</Text>
+</QuestionCard>
+<QuestionCard id="jKIe" willPower="2">
+  <Text lang="en">Have you ever spoke in front of a large group of people? How did it go?</Text>
+  <Text lang="de">Hast du jemals vor einer großen Gruppe von Leuten gesprochen? Wie ist es gelaufen?</Text>
+</QuestionCard>
+<QuestionCard id="0bIg" willPower="4">
+  <Text lang="en">What is the strangest dream you have ever had?</Text>
+  <Text lang="de">Was ist der seltsamste Traum, den du je hattest?</Text>
+</QuestionCard>
+<QuestionCard id="xaIB" willPower="5" tags="Personal">
+  <Text lang="en">What is a controversial opinion you have?</Text>
+  <Text lang="de">Was ist eine umstrittene Meinung, die du hast?</Text>
+</QuestionCard>
+<QuestionCard id="m7IW" willPower="3">
+  <Text lang="en">Who in your life brings you the most joy?</Text>
+  <Text lang="de">Wer in deinem Leben bringt dir die meiste Freude?</Text>
+</QuestionCard>
+<QuestionCard id="Z5IR" willPower="4" tags="Deep">
+  <Text lang="en">Who had the biggest impact on the person you have become?</Text>
+  <Text lang="de">Wer hatte den größten Einfluss auf die Person, die du geworden bist?</Text>
+</QuestionCard>
+<QuestionCard id="QoIg" willPower="6">
+  <Text lang="en">What is the most annoying habit someone can have?</Text>
+  <Text lang="de">Was ist die lästigste Angewohnheit, die man haben kann?</Text>
+</QuestionCard>
+<QuestionCard id="vJIl" willPower="2">
+  <Text lang="en">Where is the most beautiful place you have been?</Text>
+  <Text lang="de">Wo ist der schönste Ort, an dem du bisher gewesen bist?</Text>
+</QuestionCard>
+<QuestionCard id="kEIy" willPower="1">
+  <Text lang="en">Where do you spend most of your free time / day?</Text>
+  <Text lang="de">Wo verbringst du die meiste Zeit deiner Freizeit?</Text>
+</QuestionCard>
+<QuestionCard id="VoIy" willPower="1">
+  <Text lang="en">Who was your best friend in elementary school?</Text>
+  <Text lang="de">Wer war dein bester Freund in der Grundschule?</Text>
+</QuestionCard>
+<QuestionCard id="RjI7" willPower="2">
+  <Text lang="en">How often do you stay up past 3 a.m.?</Text>
+  <Text lang="de">Wie oft bleibst du bis 3 Uhr morgens wach?</Text>
+</QuestionCard>
+<QuestionCard id="amIV" willPower="1">
+  <Text lang="en">What’s your favorite season? Why?</Text>
+  <Text lang="de">Was ist deine Lieblingsjahreszeit? Warum?</Text>
+</QuestionCard>
+<QuestionCard id="A0ID" willPower="2">
+  <Text lang="en">Which is more important, a great car or a great house? Why?</Text>
+  <Text lang="de">Was ist wichtiger, ein tolles Auto oder ein tolles Haus? Warum?</Text>
+</QuestionCard>
+<QuestionCard id="38In" willPower="1">
+  <Text lang="en">What animal or insect do you wish humans could eradicate?</Text>
+  <Text lang="de">Welches Tier oder Insekt sollte vom Menschen ausgerottet werden?</Text>
+</QuestionCard>
+<QuestionCard id="LEIO" willPower="2">
+  <Text lang="en">Where is the most beautiful place near where you live?</Text>
+  <Text lang="de">Wo ist der schönste Ort in deiner Nähe?</Text>
+</QuestionCard>
+<QuestionCard id="WeIy" willPower="1">
+  <Text lang="en">What do you bring with you everywhere you go?</Text>
+  <Text lang="de">Was bringst du überall mit hin, wohin du auch gehst?</Text>
+</QuestionCard>
+<QuestionCard id="DdIY" willPower="1">
+  <Text lang="en">How much time do you spend on the internet? What do you usually do?</Text>
+  <Text lang="de">Wie viel Zeit verbringst du im Internet und was machst du da normalerweise?</Text>
+</QuestionCard>
+<QuestionCard id="56Ik" willPower="4">
+  <Text lang="en">What is the most disgusting habit some people have?</Text>
+  <Text lang="de">Was ist die widerlichste Angewohnheit, die manche Leute haben?</Text>
+</QuestionCard>
+<QuestionCard id="pdIm" willPower="1">
+  <Text lang="en">Where and when was the most amazing sunset you have ever seen?</Text>
+  <Text lang="de">Wo und wann war der tollste Sonnenuntergang, den du je gesehen hast?</Text>
+</QuestionCard>
+<QuestionCard id="GeI8P" willPower="2">
+  <Text lang="en">Which recent news story is the most interesting?</Text>
+  <Text lang="de">Welche aktuelle Nachricht ist die interessanteste?</Text>
+</QuestionCard>
+<QuestionCard id="yAIvv" willPower="4">
+  <Text lang="en">Where is the worst place you have been stuck for a long time?</Text>
+  <Text lang="de">Wo war der schlimmste Ort, an dem du zu lange festsaßt?</Text>
+</QuestionCard>
+<QuestionCard id="BNI2R" tags="Funny" willPower="3">
+  <Text lang="en">If you had to change your name, what would your new name be?</Text>
+  <Text lang="de">Wenn du deinen Namen ändern müsstest, wie würde dein neuer Name lauten?</Text>
+</QuestionCard>
+<QuestionCard id="7BIN3" tags="Funny" willPower="2">
+  <Text lang="en">What is something that really annoys you but doesn’t bother most people?</Text>
+  <Text lang="de">Was ist etwas, das dich richtig nervt, aber die meisten Menschen nicht stört?</Text>
+</QuestionCard>
+<QuestionCard id="lBIgX" tags="Funny" willPower="2">
+  <Text lang="en">What word or saying from the past do you think should come back?</Text>
+  <Text lang="de">Welches Wort oder Sprichwort aus der Vergangenheit sollte deiner Meinung nach zurückkommen?</Text>
+</QuestionCard>
+<QuestionCard id="X9IAY" tags="Deep" willPower="4">
+  <Text lang="en">How should success be measured? By that measurement, who is the most successful person you know?</Text>
+  <Text lang="de">Wie sollte Erfolg bemessen werden? Wer ist nach dieser Definition die erfolgreichste Person, die du kennst?</Text>
+</QuestionCard>
+<QuestionCard id="EoI97" tags="Personal" willPower="4">
+  <Text lang="en">What is your guilty pleasure?</Text>
+  <Text lang="de">Was tust du sehr gerne, wofür du dich ein Stück weit schähmst?</Text>
+</QuestionCard>
+<QuestionCard id="zdIoO" willPower="4">
+  <Text lang="en">Was there ever an event in your life that defied explanation?</Text>
+  <Text lang="de">Gab es jemals ein Ereignis in deinem Leben, das nicht wirklich erklärbar war?</Text>
+</QuestionCard>
+<QuestionCard id="87I0Y" willPower="3">
+  <Text lang="en">If you could learn the answer to one question about your future, what would the question be?</Text>
+  <Text lang="de">Wenn du die Antwort auf eine Frage über deine Zukunft erfahren könntest, was wäre die Frage?</Text>
+</QuestionCard>
+<QuestionCard id="1PI4A" willPower="4">
+  <Text lang="en">Has anyone ever saved your life?</Text>
+  <Text lang="de">Hat dir jemals jemand das Leben gerettet?</Text>
+</QuestionCard>
+<QuestionCard id="62INL" willPower="4">
+  <Text lang="en">What benefit do you bring to the group when you hang out with friends?</Text>
+  <Text lang="de">Was trägst du zu deiner Freundesgruppe bei, wenn ihr euch trefft?</Text>
+</QuestionCard>
+<QuestionCard id="ddIYo" willPower="3">
+  <Text lang="en">How often do you curse?</Text>
+  <Text lang="de">Wie oft fluchst du?</Text>
+</QuestionCard>
+<QuestionCard id="J5IjP" willPower="3">
+  <Text lang="en">What trends did you follow when you were younger?</Text>
+  <Text lang="de">Welche Trends hast du früher verfolgt, als du jünger warst?</Text>
+</QuestionCard>
+<QuestionCard id="bLIp9" willPower="5">
+  <Text lang="en">What do you fear is hiding in the dark?</Text>
+  <Text lang="de">Vor was fürchtest du dich im Dunkeln?</Text>
+</QuestionCard>
+<QuestionCard id="4dINg" willPower="5">
+  <Text lang="en">What was the best time period of your life? What do you think will be the best time period of your entire life?</Text>
+  <Text lang="de">Wann war die bisher beste Zeit deines Lebens? Was denkst du wird die beste Zeit deines ganzen Lebens sein?</Text>
+</QuestionCard>
+<QuestionCard id="PjI8D" willPower="3">
+  <Text lang="en">What do you do to improve your mood when you are in a bad mood?</Text>
+  <Text lang="de">Was tust du, um deine Stimmung zu verbessern, wenn du schlecht gelaunt bist?</Text>
+</QuestionCard>
+<QuestionCard id="o9Ig7" willPower="4">
+  <Text lang="en">What is the silliest fear you have?</Text>
+  <Text lang="de">Was ist die dämlichste Angst, die du hast?</Text>
+</QuestionCard>
+<QuestionCard id="ebIKL" willPower="5" tags="Deep">
+  <Text lang="en">What are some things you want to accomplish before you die?</Text>
+  <Text lang="de">Was willst du erreichen, bevor du stirbst?</Text>
+</QuestionCard>
+<QuestionCard id="NBIm4" willPower="1">
+  <Text lang="en">What is the best room in your house? Why?</Text>
+  <Text lang="de">Welches ist das beste Zimmer in deinem Haus? Warum?</Text>
+</QuestionCard>
+<QuestionCard id="gRI59" willPower="1">
+  <Text lang="en">Who is someone who is popular now that you really like? Why do you like them so much?</Text>
+  <Text lang="de">Welche Person magst du, die jetzt sehr berühmt ist?</Text>
+</QuestionCard>
+<QuestionCard id="OjI0y" willPower="2">
+  <Text lang="en">Where is the best place to take a date?</Text>
+  <Text lang="de">Welcher ist der beste Ort für ein Date?</Text>
+</QuestionCard>
+<QuestionCard id="YvIj0" willPower="3">
+  <Text lang="en">What smell brings back great memories?</Text>
+  <Text lang="de">Welcher Geruch weckt tolle Erinnerungen?</Text>
+</QuestionCard>
+<QuestionCard id="nLIJQ" willPower="2">
+  <Text lang="en">How often do you help others? Who do you help? How do you help?</Text>
+  <Text lang="de">Wie oft hilfst du anderen? Wem hilfst du? Wie hilft du?</Text>
+</QuestionCard>
+<QuestionCard id="KpImZ" willPower="3" tags="Personal">
+  <Text lang="en">What are you best at?</Text>
+  <Text lang="de">Was kannst du am besten?</Text>
+</QuestionCard>
+<QuestionCard id="9pI3J" willPower="4" tags="Personal">
+  <Text lang="en">What makes you nervous?</Text>
+  <Text lang="de">Was macht dich nervös?</Text>
+</QuestionCard>
+<QuestionCard id="2mIlX" willPower="2">
+  <Text lang="en">Who, besides your parents, had the biggest impact on your life?</Text>
+  <Text lang="de">Wer, außer deinen Eltern, hatte den größten Einfluss auf dein Leben?</Text>
+</QuestionCard>
+<QuestionCard id="jKI6e" willPower="2">
+  <Text lang="en">What weird or useless talent do you have?</Text>
+  <Text lang="de">Welches seltsame oder nutzlose Talent hast du?</Text>
+</QuestionCard>
+<QuestionCard id="0bIog" willPower="3">
+  <Text lang="en">What are some strange beliefs that some people have?</Text>
+  <Text lang="de">Was sind seltsame Überzeugungen, die manche Leute haben?</Text>
+</QuestionCard>
+<QuestionCard id="xaINB" willPower="3">
+  <Text lang="en">Who would be the worst person to be stuck in an elevator with? How about the best person to be stuck in an elevator with?</Text>
+  <Text lang="de">Welche wäre die schlimmste Person, mit der man in einem Aufzug festsitzen kann? Welche wäre die beste Person, mit der man in einem Aufzug festsitzen kann?</Text>
+</QuestionCard>
+<QuestionCard id="m7I4W" willPower="2">
+  <Text lang="en">What’s the funniest TV series you have seen?</Text>
+  <Text lang="de">Welche ist die lustigste Fernsehserie, die du je gesehen hast?</Text>
+</QuestionCard>
+<QuestionCard id="Z5IbR" willPower="1">
+  <Text lang="en">Which TV show do you want your life to be like?</Text>
+  <Text lang="de">Welcher Fernsehserie sollte deinem Leben ähneln?</Text>
+</QuestionCard>
+<QuestionCard id="QoIOg" willPower="2">
+  <Text lang="en">If you could bring back one TV show that was cancelled, which one would you bring back?</Text>
+  <Text lang="de">Wenn du eine eingestellte Fernsehsendung zurückbringen könntest, welche wäre das?</Text>
+</QuestionCard>
+<QuestionCard id="vJI3l" willPower="1">
+  <Text lang="en">How have TV shows changed over the years?</Text>
+  <Text lang="de">Wie haben sich die Fernsehsendungen im Laufe der Jahre verändert?</Text>
+</QuestionCard>
+<QuestionCard id="kEIey" willPower="1">
+  <Text lang="en">What’s the best sitcom past or present?</Text>
+  <Text lang="de">Welche ist die beste Sitcom (Situationskomödie) der Vergangenheit oder Gegenwart?</Text>
+</QuestionCard>
+<QuestionCard id="VoIAy" willPower="1">
+  <Text lang="en">What’s the best show currently on TV?</Text>
+  <Text lang="de">Was ist die derzeit beste Sendung im Fernsehen?</Text>
+</QuestionCard>
+<QuestionCard id="RjIk7" willPower="2">
+  <Text lang="en">What do you think about game shows? Do you have a favorite one?</Text>
+  <Text lang="de">Was hältst du von Spielshows? Hast du eine Lieblingssendung?</Text>
+</QuestionCard>
+<QuestionCard id="amIeV" willPower="1">
+  <Text lang="en">What’s the most underrated or overrated TV show?</Text>
+  <Text lang="de">Was ist die am meisten unterschätzte oder überbewertete TV-Show?</Text>
+</QuestionCard>
+<QuestionCard id="A0I7D" willPower="1">
+  <Text lang="en">What do you think about reality TV? Why is it so popular?</Text>
+  <Text lang="de">Was hältst du von Reality-TV? Warum ist es so beliebt?</Text>
+</QuestionCard>
+<QuestionCard id="38IOn" willPower="1">
+  <Text lang="en">Do you like reality TV shows? Why or why not? If so, which ones?</Text>
+  <Text lang="de">Magst du Reality-TV-Shows? Warum oder warum nicht? Wenn ja, welche?</Text>
+</QuestionCard>
+<QuestionCard id="LEIYO" willPower="3">
+  <Text lang="en">What will be the future of TV shows?</Text>
+  <Text lang="de">Wie wird die Zukunft der TV-Sendungen aussehen?</Text>
+</QuestionCard>
+<QuestionCard id="WeIdy" willPower="1">
+  <Text lang="en">What was the best birthday wish or gift you’ve ever received?</Text>
+  <Text lang="de">Was war das beste Geschenk, das du je erhalten hast?</Text>
+</QuestionCard>
+<QuestionCard id="DdI1Y" willPower="3">
+  <Text lang="en">How often do you binge watch shows?</Text>
+  <Text lang="de">Wie oft schaust du dir Serien im Serienmarathon an ("Binge Watching")?</Text>
+</QuestionCard>
+<QuestionCard id="56IRk" willPower="3">
+  <Text lang="en">What cartoons did you watch as a child?</Text>
+  <Text lang="de">Welche Cartoons hast du als Kind gesehen?</Text>
+</QuestionCard>
+<QuestionCard id="pdIjm" willPower="2">
+  <Text lang="en">What was the last movie you watched? How was it?</Text>
+  <Text lang="de">Welcher war der letzte Film, den du gesehen hast? Wie war er?</Text>
+</QuestionCard>
+<QuestionCard id="GeIYP" willPower="1">
+  <Text lang="en">Do you prefer to watch movies in the theater or in the comfort of your own home?</Text>
+  <Text lang="de">Guckst du Filme lieber im Kino oder zu Hause?</Text>
+</QuestionCard>
+<QuestionCard id="yAIQv" willPower="1">
+  <Text lang="en">What’s the worst movie you have seen recently?</Text>
+  <Text lang="de">Was ist der schlechteste Film, den du in letzter Zeit gesehen hast?</Text>
+</QuestionCard>
+<QuestionCard id="BNIRR" willPower="3">
+  <Text lang="en">What’s the strangest movie you have ever seen?</Text>
+  <Text lang="de">Was ist der komischste Film, den du je gesehen hast?</Text>
+</QuestionCard>
+<QuestionCard id="7BIk3" willPower="1">
+  <Text lang="en">What is the most overrated movie?</Text>
+  <Text lang="de">Was ist der am meisten überbewertete Film?</Text>
+</QuestionCard>
+<QuestionCard id="lBIjX" willPower="2">
+  <Text lang="en">What’s your favorite genre of movie?</Text>
+  <Text lang="de">Was ist dein Lieblingsgenre bei Filmen?</Text>
+</QuestionCard>
+<QuestionCard id="X9I1Y" willPower="2">
+  <Text lang="en">What movie scene choked you up the most?</Text>
+  <Text lang="de">Welche Filmszene hat dich am meisten fasziniert?</Text>
+</QuestionCard>
+<QuestionCard id="EoI07" willPower="1">
+  <Text lang="en">Do you like documentaries? Why / why not?</Text>
+  <Text lang="de">Magst du Dokumentarfilme? Warum / warum nicht?</Text>
+</QuestionCard>
+<QuestionCard id="zdIbO" willPower="2">
+  <Text lang="en">When was the last time you went to a movie theater?</Text>
+  <Text lang="de">Wann warst du das letzte Mal im Kino?</Text>
+</QuestionCard>
+<QuestionCard id="87IyY" willPower="3">
+  <Text lang="en">Do movies have the same power as books to change the world?</Text>
+  <Text lang="de">Haben Filme die gleiche Macht wie Bücher, um die Welt zu verändern?</Text>
+</QuestionCard>
+<QuestionCard id="1PINA" willPower="2">
+  <Text lang="en">Which do you prefer? Books or movies?</Text>
+  <Text lang="de">Bevorzugst du eher Bücher oder Filme?</Text>
+</QuestionCard>

@@ -1,0 +1,104 @@
+<TaskCard id="18fj" willPower="4">
+  <Text lang="en">Let the group pose you in an embarrassing position and take a picture.</Text>
+  <Text lang="de">Die Gruppe darf entscheiden, wie du dich wo positionieren sollst, um ein peinliches Foto zu machen.</Text>
+</TaskCard>
+<TaskCard id="o8f3" willPower="3">
+  <Text lang="en">Drink a small cup of a concoction that the group makes. (Don’t make anything that might cause bodily harm. No visits to the emergency room.).</Text>
+  <Text lang="de">Trink einen kleinen Becher von einer Mischung, die die Gruppe herstellt (Nichts machen, was in der Notaufnahme endet!).</Text>
+</TaskCard>
+<TaskCard id="YVfv" willPower="1">
+  <Text lang="en">Make every person in the group smile, keep going until everyone has cracked a smiled.</Text>
+  <Text lang="de">Bring jede Person in der Gruppe einmal zum Lächeln.</Text>
+</TaskCard>
+<TaskCard id="jXf5" willPower="1">
+  <Text lang="en">Talk in an accent for the next 3 rounds.</Text>
+  <Text lang="de">Sprich mit einem Akzent für die nächsten 3 Runden.</Text>
+</TaskCard>
+<TaskCard id="0Nf8" willPower="2">
+  <Text lang="en">Beg and plead the person to your right not to leave you for that other boy or girl. Weeping, gnashing of teeth, and wailing is encouraged.</Text>
+  <Text lang="de">Bettel und fleh [Player2:o] an, dich nicht wegen des anderen Jungen oder Mädchens zu verlassen.</Text>
+</TaskCard>
+<TaskCard id="xXfK" willPower="1">
+  <Text lang="en">Attempt to break dance for 30 seconds.</Text>
+  <Text lang="de">Tanz 30 Sekunden lang.</Text>
+</TaskCard>
+<TaskCard id="m8fa" willPower="4">
+  <Text lang="en">Kiss the person to your left.</Text>
+  <Text lang="de">Küss die Person zu deiner !{Linken,Rechten}.</Text>
+</TaskCard>
+<TaskCard id="QWfA" willPower="2">
+  <Text lang="en">Do push ups until you can’t do any more, wait 5 seconds, and then do one more.</Text>
+  <Text lang="de">Mach Liegestütze, bis du nicht mehr kannst, warte 5 Sekunden, und mach dann einen weiteren.</Text>
+</TaskCard>
+<TaskCard id="v7fx" willPower="3">
+  <Text lang="en">Sell a piece trash to someone in the group. Use your best salesmanship.</Text>
+  <Text lang="de">Verkaufe ein Stück Müll an jemanden in der Gruppe. Nutze deine beste Verkaufskunst.</Text>
+</TaskCard>
+<TaskCard id="VYfl" willPower="1">
+  <Text lang="en">Attempt to do a magic trick.</Text>
+  <Text lang="de">Versuch, einen Zaubertrick zu machen.</Text>
+</TaskCard>
+<TaskCard id="Rvf2" willPower="7">
+  <Text lang="en">Switch clothes with someone of the opposite sex in the group for three rounds.</Text>
+  <Text lang="de">Wechsel die Kleidung mit jemandem des anderen Geschlechts in der Gruppe für drei Runden (Unterwäsche muss nicht getauscht werden).</Text>
+</TaskCard>
+<TaskCard id="aafO" willPower="2">
+  <Text lang="en">Imitate a celebrity every time you talk for three minutes.</Text>
+  <Text lang="de">Such dir eine berühmte Person aus und imitiere sie für 3 Minuten.</Text>
+</TaskCard>
+<TaskCard id="AOfN" willPower="2">
+  <Text lang="en">Try to juggle 2 or 3 items of the group’s choosing.</Text>
+  <Text lang="de">Versuch, 2 oder 3 Gegenstände nach Wahl der Gruppe zu jonglieren.</Text>
+</TaskCard>
+<TaskCard id="Lofy" willPower="3">
+  <Text lang="en">Walk on your hands from one side of the room to the other. You can ask someone to hold your legs if necessary.</Text>
+  <Text lang="de">Geh im Handstand von einer Seite des Raumes zur anderen. Falls du das nicht kannst, bitte jemanden deine Beine zu halten.</Text>
+</TaskCard>
+<TaskCard id="WvfB" willPower="5">
+  <Text lang="en">Gargle something that shouldn’t be gargled, but won’t hurt you.</Text>
+  <Text lang="de">Gurgle etwas, das nicht gegurgelt werden sollte, aber dir nicht schaden wird.</Text>
+</TaskCard>
+<TaskCard id="DOfR" willPower="6">
+  <Text lang="en">Get slapped on the face by the person of your choosing.</Text>
+  <Text lang="de">Lass dir von einer Person deiner Wahl ins Gesicht schlagen.</Text>
+</TaskCard>
+<TaskCard id="p1fZ" willPower="5">
+  <Text lang="en">Spin an imaginary hula hoop around your waist for 3 minutes while the game continues.</Text>
+  <Text lang="de">Dreh einen imaginären Hula-Hoop um deine Hüfte für 3 Minuten, während das Spiel weitergeht.</Text>
+</TaskCard>
+<TaskCard id="GnfB" willPower="6">
+  <Text lang="en">Imitate popular YouTube videos until someone can guess the video you are imitating.</Text>
+  <Text lang="de">Imitiere ein beliebtes YouTube-Video, bis jemand das Video erraten kann.</Text>
+</TaskCard>
+<TaskCard id="y6fy" willPower="4">
+  <Text lang="en">Dance to a song of the group’s choosing.</Text>
+  <Text lang="de">Tanz zu einem Lied deiner Wahl.</Text>
+</TaskCard>
+<TaskCard id="BLfG" willPower="7">
+  <Text lang="en">Seduce a member of the same gender in the group.</Text>
+  <Text lang="de">Verführ ein Mitglied des gleichen Geschlechts aus der Gruppe.</Text>
+</TaskCard>
+<TaskCard id="lmf6" willPower="6">
+  <Text lang="en">Be someone’s pet for the next 5 minutes.</Text>
+  <Text lang="de">Sei jemandes Haustier für die nächsten 5 Minuten.</Text>
+</TaskCard>
+<TaskCard id="18f4j" willPower="7">
+  <Text lang="en">Choose someone from the group to give you a spanking.</Text>
+  <Text lang="de">Wähle jemanden aus der Gruppe, der dir den Hintern versohlt.</Text>
+</TaskCard>
+<TaskCard id="o8fg3" willPower="6">
+  <Text lang="en">Do your best impression of a baby being born.</Text>
+  <Text lang="de">Spiele die Geburt eines Babys.</Text>
+</TaskCard>
+<TaskCard id="KdfmL" willPower="9">
+  <Text lang="en">Transfer an icecube from your mouth to the person’s mouth on your right.</Text>
+  <Text lang="de">Übertrag einen Eiswürfel aus deinem Mund in den Mund von [Player:o].</Text>
+</TaskCard>
+<TaskCard id="2vflg" willPower="4">
+  <Text lang="en">No talking. Pretend to be a food. Don’t pretend to eat the food, pretend to be the food. Keep pretending until someone in the group guesses the food you are.</Text>
+  <Text lang="de">Nicht reden. Gib vor, ein Essen zu sein. Gib nicht vor, das Essen zu essen, gib vor, das Essen zu sein. Tu es so lange so, bis jemand in der Gruppe das Essen errät, das du bist.</Text>
+</TaskCard>
+<TaskCard id="m8f4a" willPower="5">
+  <Text lang="en">Sit in a spinning chair and have the group spin you for 30 seconds. Might help to hold a trash can just in case.</Text>
+  <Text lang="de">Setz dich in einen Drehstuhl und lass dich von der Gruppe 30 Sekunden lang drehen. Vielleicht solltet ihr einen Eimer bereithalten, nur für den Fall ;)</Text>
+</TaskCard>

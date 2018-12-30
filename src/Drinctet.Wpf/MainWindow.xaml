@@ -1,0 +1,79 @@
+﻿<mah:MetroWindow
+    x:Class="Drinctet.Wpf.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:Drinctet.Wpf"
+    xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModels="clr-namespace:Drinctet.Wpf.ViewModels"
+    xmlns:viewModels1="clr-namespace:Drinctet.ViewModels;assembly=Drinctet.ViewModels"
+    xmlns:views="clr-namespace:Drinctet.Wpf.Views"
+    Title="Drinctet - Saufen Geil!"
+    Width="1280"
+    Height="720"
+    d:DataContext="{d:DesignInstance viewModels:MainViewModel}"
+    IgnoreTaskbarOnMaximize="True"
+    ShowIconOnTitleBar="False"
+    Style="{StaticResource NormalWindow}"
+    TitleAlignment="Center"
+    TitleCharacterCasing="Upper"
+    TitlebarHeight="30"
+    mc:Ignorable="d">
+    <Window.DataContext>
+        <viewModels:MainViewModel />
+    </Window.DataContext>
+    <mah:MetroWindow.RightWindowCommands>
+        <mah:WindowCommands>
+            <Button Command="{Binding OpenSettingsCommand}" Content="Einstellungen" />
+        </mah:WindowCommands>
+    </mah:MetroWindow.RightWindowCommands>
+    <mah:MetroWindow.TitleTemplate>
+        <DataTemplate>
+            <StackPanel
+                Margin="0,-1,0,0"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Orientation="Horizontal">
+                <Viewbox
+                    Width="18"
+                    Height="18"
+                    Child="{StaticResource AppIcon}" />
+                <TextBlock
+                    Margin="8,0,0,0"
+                    FontFamily="{DynamicResource HeaderFontFamily}"
+                    FontSize="{DynamicResource WindowTitleFontSize}"
+                    Text="{TemplateBinding Content}"
+                    TextTrimming="CharacterEllipsis" />
+            </StackPanel>
+        </DataTemplate>
+    </mah:MetroWindow.TitleTemplate>
+    <mah:MetroWindow.Flyouts>
+        <mah:FlyoutsControl>
+            <mah:Flyout
+                Width="500"
+                Header="Einstellungen"
+                IsModal="True"
+                IsOpen="{Binding IsSettingsOpen}"
+                Position="Right">
+                <ScrollViewer>
+                    <views:SettingsView Margin="10" DataContext="{Binding SettingsViewModel}" />
+                </ScrollViewer>
+            </mah:Flyout>
+        </mah:FlyoutsControl>
+    </mah:MetroWindow.Flyouts>
+    <mah:TransitioningContentControl
+        x:Name="MainContentControl"
+        Content="{Binding ViewModel}"
+        Focusable="False"
+        Transition="Down">
+        <ContentControl.Resources>
+            <DataTemplate DataType="{x:Type viewModels:WelcomeViewModel}">
+                <views:WelcomeView />
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModels1:GameViewModel}">
+                <views:GameView />
+            </DataTemplate>
+        </ContentControl.Resources>
+    </mah:TransitioningContentControl>
+</mah:MetroWindow>

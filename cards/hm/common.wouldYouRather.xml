@@ -16,29 +16,25 @@
     <Text lang="en">be able to fly or teleport?</Text>
 </WyrCard>
 <WyrCard source="AskReddit">
-    <Text lang="de">fliegen oder teleportieren?</Text>
-    <Text lang="en">be able to fly or teleport?</Text>
-</WyrCard>
-<WyrCard source="AskReddit">
     <Text lang="de">deine wahre Liebe finden oder 10 Millionen Euro bekommen?</Text>
     <Text lang="en">find true love or win 10 million dollars?</Text>
 </WyrCard>
 <WyrCard source="AskReddit">
-    <Text lang="de">[TODO]</Text>
+    <Text lang="de">eine magische Küche besitzen, die zu jeder Zeit alles macht, was du essen oder trinken willst, oder für jedes Mal Augenzwinkern 1 Cent belommen?</Text>
     <Text lang="en">have a magic kitchen that produces anything you want to eat or drink at any moment, or be paid $0.01 every time you blink?</Text>
 </WyrCard>
 <WyrCard source="AskReddit">
-    <Text lang="de">[TODO]</Text>
+    <Text lang="de">mit Stalin verheiratet sein oder einmal Sex mit Hitler haben?</Text>
     <Text lang="en">be married to stalin or have sex with hitler?</Text>
 </WyrCard>
 <WyrCard source="AskReddit">
-    <Text lang="de">[TODO]</Text>
+    <Text lang="de">die intelligenteste Person der Welt oder die dümmste Person der Welt sein? (in beiden Szenarien bist du so intelligent wie du jetzt bist)</Text>
     <Text lang="en">be the smartest person in the world or the stupidest person in the world? (In both scenarios you have the same level of intelligence you have now)?</Text>
 </WyrCard>
-<WyrCard source="AskReddit">
+<WyrCard source="AskReddit" willPower="6">
     <WyrCard.targetPlayer>
         <Player gender="m" />
     </WyrCard.targetPlayer>
-    <Text lang="de">[TODO]</Text>
+    <Text lang="de">dich vorwärts lehnen oder dich zurücklehnen, wenn du aufwachst und du zur Hälfte in deiner Mutter und dein Vater zur Hälfte in dir ist?</Text>
     <Text lang="en">push forward or lean back if you wake up halfway in your mom with your dad halfway in you?</Text>
 </WyrCard>

@@ -46,7 +46,7 @@ namespace Drinctet.ViewModels
                     var counter = 1;
                     settings.Players = Players.Select(x =>
                         new PlayerInfo(counter++, x.IsFemale ? Gender.Female : Gender.Male) {Name = x.Name}).ToList();
-                    settings.InitializePlayers();
+                    settings.UpdatePlayers();
 
                     ViewInterface.Show(new GameViewModel(settings));
                 }));

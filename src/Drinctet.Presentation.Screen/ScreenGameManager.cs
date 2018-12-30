@@ -20,8 +20,8 @@ namespace Drinctet.Presentation.Screen
         public ISlidePresenter Next(ICardsProvider cardsProvider)
         {
             var nextSlide = Selection.SelectNextSlide();
-            var presenter = SlidePresenterFactory.Create(nextSlide, this, cardsProvider, _textResource);
-            return presenter;
+            return SlidePresenterFactory.Create(nextSlide, this, cardsProvider, _textResource);
+
         }
 
         public ITextDecoder TextDecoder { get; }

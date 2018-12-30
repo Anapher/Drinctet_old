@@ -1,0 +1,63 @@
+<QuestionCard id="zOsb" tags="Personal" willPower="4">
+  <QuestionCard.targetPlayer>
+    <Player gender="m" />
+  </QuestionCard.targetPlayer>
+  <Text lang="en">How often do you feel overwhelmed?</Text>
+  <Text lang="de">Wie oft fühlst duch dich überfordert?</Text>
+</QuestionCard>
+<QuestionCard id="8psA" tags="Personal" willPower="2">
+  <QuestionCard.targetPlayer>
+    <Player gender="m" />
+  </QuestionCard.targetPlayer>
+  <Text lang="en">If you see a homeless person asking for money, do you give them any?</Text>
+  <Text lang="de">Wenn du einen Obdachlosen siehst, der nach Geld fragt, gibst du ihm dann welches?</Text>
+</QuestionCard>
+<QuestionCard id="1Esl" tags="Personal" willPower="3">
+  <QuestionCard.targetPlayer>
+    <Player gender="m" />
+  </QuestionCard.targetPlayer>
+  <Text lang="en">What will immediately disqualify a potential SO?</Text>
+  <Text lang="de">Was disqualifiziert eine potentielle Partnerin sofort?</Text>
+</QuestionCard>
+<QuestionCard id="65so" tags="Personal" willPower="3">
+  <QuestionCard.targetPlayer>
+    <Player gender="m" />
+  </QuestionCard.targetPlayer>
+  <Text lang="en">Who do you want to be more like?</Text>
+  <Text lang="de">Wem willst du mehr ähneln?</Text>
+</QuestionCard>
+<QuestionCard id="4ms3" tags="Personal" willPower="3">
+  <QuestionCard.targetPlayer>
+    <Player gender="m" />
+  </QuestionCard.targetPlayer>
+  <Text lang="en">When was the last time you really panicked?</Text>
+  <Text lang="de">Wann warst du das letzte Mal wirklich in Panik?</Text>
+</QuestionCard>
+<QuestionCard id="eas7" tags="Personal" willPower="4">
+  <QuestionCard.targetPlayer>
+    <Player gender="m" />
+  </QuestionCard.targetPlayer>
+  <Text lang="en">What was the most awkward conversation you ever had with someone?</Text>
+  <Text lang="de">Was war das peinlichste Gespräch, das du je mit jemandem geführt hast?</Text>
+</QuestionCard>
+<QuestionCard id="gWsL" tags="Personal" willPower="1">
+  <QuestionCard.targetPlayer>
+    <Player gender="m" />
+  </QuestionCard.targetPlayer>
+  <Text lang="en">Would you rather spend the day at an art, history, or science museum?</Text>
+  <Text lang="de">Möchtest du den Tag lieber in einem Kunst-, Geschichts- oder Wissenschaftsmuseum verbringen?</Text>
+</QuestionCard>
+<QuestionCard id="OAsb" tags="Personal" willPower="3">
+  <QuestionCard.targetPlayer>
+    <Player gender="m" />
+  </QuestionCard.targetPlayer>
+  <Text lang="en">What seemed normal in your family when you were growing up, but seems weird now?</Text>
+  <Text lang="de">Was schien in deiner Familie normal, als du aufgewachsen bist, aber jetzt seltsam?</Text>
+</QuestionCard>
+<QuestionCard id="YEsg" tags="Personal" willPower="1">
+  <QuestionCard.targetPlayer>
+    <Player gender="m" />
+  </QuestionCard.targetPlayer>
+  <Text lang="en">What’s your favorite scene in a movie?</Text>
+  <Text lang="de">Was ist deine Lieblingsszene in einem Film?</Text>
+</QuestionCard>

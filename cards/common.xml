@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<WyrCard id="p5ask">
+    <Text lang="de">in einem coolen Schloss leben oder eine Yacht besitzen?</Text>
+    <Text lang="en">live in a really nice castle, or own a really nice yacht?</Text>
+</WyrCard>
+<WyrCard id="GQNc8">
+    <Text lang="de">jedem Obdachlosen Menschen in deinem Land 500€ geben oder selber 50 0000€ bekommen?</Text>
+    <Text lang="en">give $500 to every homeless person in your country or have 50k $ yourself?</Text>
+</WyrCard>
+<NeverEverCard id="yemUQ">
+    <Text lang="de">mich selber verletzt, während ich versucht habe, ein Mädchen oder einen Jungen zu beeindrucken, an dem ich interessiert war.</Text>
+    <Text lang="en">injured myself while trying to impress a girl or boy I was interested in.</Text>
+</NeverEverCard>
+<DrinkCard id="BQJcJ" condition="[Females] > 0">
+    <Text lang="de">[Player1], trinke so viele Schlucke, wie Titten im Raum sind.</Text>
+    <Text lang="en">[Player1], drink as many sips as tits are in this room.</Text>
+</DrinkCard>
+<DrinkCard id="7QEc4">
+    <Text lang="de">[Player1], trinke [sips], wenn du schon einmal mit [Player2] Sport gemacht hast.</Text>
+    <Text lang="en">[Player1], if you ever made sport together with [Player2], drink [sips].</Text>
+</DrinkCard>
+<DrinkCard id="llZHv">
+    <Text lang="de">[Player], trinke [sips] wenn du *nicht* bei einer Flugzeuglandung applaudierst.</Text>
+</DrinkCard>
+<DrinkCard id="XdkFy">
+    <Text lang="de">[Player], trinke [sips], wenn du *nicht* die Hauptstadt von !{Kanada,Frankreich,Griechenland} kennst.</Text>
+</DrinkCard>
+<TaskCard id="EQJcl" willPower="9">
+    <Text lang="de">[Player1:f], zeig [Player2:m] deine Brüste, oder trink dein Glas aus.</Text>
+</TaskCard>
+<NoIdeaLosesCard id="zNmix">
+    <Text lang="de">Gemüsesorten</Text>
+    <Text lang="en">Vegetables</Text>
+</NoIdeaLosesCard>
+<TaskCard id="8QzcQ" category="Dare" willPower="3">
+    <Text lang="en">Eat a banana with the skin on</Text>
+    <Text lang="de">Iss eine Banane mit Schale.</Text>
+</TaskCard>
+<TaskCard id="1QGcn" category="Dare" willPower="1">
+    <Text lang="en">Do a touching kissing scene with a book.</Text>
+    <Text lang="de">Mach eine berührende Kussszene mit einem Buch.</Text>
+</TaskCard>

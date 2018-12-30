@@ -1,0 +1,140 @@
+﻿<QuestionCard id="XWs4" tags="Personal">
+  <QuestionCard.targetPlayer>
+    <Player gender="m" />
+  </QuestionCard.targetPlayer>
+  <Text lang="en">Do you prefer to spend more time with your SO, family, or friends? Why?</Text>
+  <Text lang="de">Möchten Sie mehr Zeit mit Ihrer SO, Ihrer Familie oder Ihren Freunden verbringen? Warum?</Text>
+</QuestionCard>
+<QuestionCard id="E9s9" tags="Personal">
+  <QuestionCard.targetPlayer>
+    <Player gender="m" />
+  </QuestionCard.targetPlayer>
+  <Text lang="en">What activity calms you down and makes you feel at peace with the world?</Text>
+  <Text lang="de">Welche Aktivität beruhigt Sie und lässt Sie mit der Welt in Frieden leben?</Text>
+</QuestionCard>
+<QuestionCard id="zOsb" tags="Personal">
+  <QuestionCard.targetPlayer>
+    <Player gender="m" />
+  </QuestionCard.targetPlayer>
+  <Text lang="en">How often do you feel overwhelmed?</Text>
+  <Text lang="de">Wie oft fühlen Sie sich überfordert?</Text>
+</QuestionCard>
+<QuestionCard id="8psA" tags="Personal">
+  <QuestionCard.targetPlayer>
+    <Player gender="m" />
+  </QuestionCard.targetPlayer>
+  <Text lang="en">If you see a homeless person asking for money, do you give them any?</Text>
+  <Text lang="de">Wenn du einen Obdachlosen siehst, der nach Geld fragt, gibst du ihm dann welche?</Text>
+</QuestionCard>
+<QuestionCard id="1Esl" tags="Personal">
+  <QuestionCard.targetPlayer>
+    <Player gender="m" />
+  </QuestionCard.targetPlayer>
+  <Text lang="en">What will immediately disqualify a potential SO?</Text>
+  <Text lang="de">Was disqualifiziert eine potentielle SO sofort?</Text>
+</QuestionCard>
+<QuestionCard id="65so" tags="Personal">
+  <QuestionCard.targetPlayer>
+    <Player gender="m" />
+  </QuestionCard.targetPlayer>
+  <Text lang="en">Who do you want to be more like?</Text>
+  <Text lang="de">Wem willst du mehr ähneln?</Text>
+</QuestionCard>
+<QuestionCard id="dDsd" tags="Personal">
+  <QuestionCard.targetPlayer>
+    <Player gender="m" />
+  </QuestionCard.targetPlayer>
+  <Text lang="en">Do you think any part of your personality needs to be improved? If so, which part and why?</Text>
+  <Text lang="de">Denken Sie, dass irgendein Teil Ihrer Persönlichkeit verbessert werden muss? Wenn ja, welcher Teil und warum?</Text>
+</QuestionCard>
+<QuestionCard id="JvsW" tags="Personal">
+  <QuestionCard.targetPlayer>
+    <Player gender="m" />
+  </QuestionCard.targetPlayer>
+  <Text lang="en">Which aspect of your life is going really well right now and which aspect could you use some help with?</Text>
+  <Text lang="de">Welcher Aspekt Ihres Lebens läuft derzeit wirklich gut und bei welchem Aspekt könnten Sie Hilfe gebrauchen?</Text>
+</QuestionCard>
+<QuestionCard id="b8sD" tags="Personal">
+  <QuestionCard.targetPlayer>
+    <Player gender="m" />
+  </QuestionCard.targetPlayer>
+  <Text lang="en">How politically involved are you?</Text>
+  <Text lang="de">Wie politisch engagiert sind Sie?</Text>
+</QuestionCard>
+<QuestionCard id="4ms3" tags="Personal">
+  <QuestionCard.targetPlayer>
+    <Player gender="m" />
+  </QuestionCard.targetPlayer>
+  <Text lang="en">When was the last time you really panicked?</Text>
+  <Text lang="de">Wann waren Sie das letzte Mal wirklich in Panik?</Text>
+</QuestionCard>
+<QuestionCard id="PWs3" tags="Personal">
+  <QuestionCard.targetPlayer>
+    <Player gender="m" />
+  </QuestionCard.targetPlayer>
+  <Text lang="en">Where do you go when you want to be alone?</Text>
+  <Text lang="de">Wo gehst du hin, wenn du allein sein willst?</Text>
+</QuestionCard>
+<QuestionCard id="o6s9" tags="Personal">
+  <QuestionCard.targetPlayer>
+    <Player gender="m" />
+  </QuestionCard.targetPlayer>
+  <Text lang="en">What chokes you up when you think about it?</Text>
+  <Text lang="de">Was würgt dich, wenn du darüber nachdenkst?</Text>
+</QuestionCard>
+<QuestionCard id="eas7" tags="Personal">
+  <QuestionCard.targetPlayer>
+    <Player gender="m" />
+  </QuestionCard.targetPlayer>
+  <Text lang="en">What was the most awkward conversation you ever had with someone?</Text>
+  <Text lang="de">Was war das peinlichste Gespräch, das du je mit jemandem geführt hast?</Text>
+</QuestionCard>
+<QuestionCard id="NLs8" tags="Personal">
+  <QuestionCard.targetPlayer>
+    <Player gender="m" />
+  </QuestionCard.targetPlayer>
+  <Text lang="en">What holidays did your family really go all out for when you were growing up?</Text>
+  <Text lang="de">Für welche Feiertage hat deine Familie wirklich alles gegeben, als du aufgewachsen bist?</Text>
+</QuestionCard>
+<QuestionCard id="gWsL" tags="Personal">
+  <QuestionCard.targetPlayer>
+    <Player gender="m" />
+  </QuestionCard.targetPlayer>
+  <Text lang="en">Would you rather spend the day at an art, history, or science museum?</Text>
+  <Text lang="de">Möchten Sie den Tag lieber in einem Kunst-, Geschichts- oder Wissenschaftsmuseum verbringen?</Text>
+</QuestionCard>
+<QuestionCard id="OAsb" tags="Personal">
+  <QuestionCard.targetPlayer>
+    <Player gender="m" />
+  </QuestionCard.targetPlayer>
+  <Text lang="en">What seemed normal in your family when you were growing up, but seems weird now?</Text>
+  <Text lang="de">Was schien in deiner Familie normal, als du aufgewachsen bist, aber jetzt seltsam?</Text>
+</QuestionCard>
+<QuestionCard id="YEsg" tags="Personal">
+  <QuestionCard.targetPlayer>
+    <Player gender="m" />
+  </QuestionCard.targetPlayer>
+  <Text lang="en">What’s your favorite scene in a movie?</Text>
+  <Text lang="de">Was ist deine Lieblingsszene in einem Film?</Text>
+</QuestionCard>
+<QuestionCard id="nes1" tags="Personal">
+  <QuestionCard.targetPlayer>
+    <Player gender="m" />
+  </QuestionCard.targetPlayer>
+  <Text lang="en">What is a controversial opinion do you have?</Text>
+  <Text lang="de">Was ist eine umstrittene Meinung?</Text>
+</QuestionCard>
+<QuestionCard id="KvsY" tags="Personal">
+  <QuestionCard.targetPlayer>
+    <Player gender="m" />
+  </QuestionCard.targetPlayer>
+  <Text lang="en">What fact do you try to ignore?</Text>
+  <Text lang="de">Welche Tatsache versuchen Sie zu ignorieren?</Text>
+</QuestionCard>
+<QuestionCard id="9GsN" tags="Personal">
+  <QuestionCard.targetPlayer>
+    <Player gender="m" />
+  </QuestionCard.targetPlayer>
+  <Text lang="en">Who in your life always stresses you out and who do you rely on to help you calm down?</Text>
+  <Text lang="de">Wer in Ihrem Leben stresst Sie immer und auf wen verlassen Sie sich, um sich zu beruhigen?</Text>
+</QuestionCard>

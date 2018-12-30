@@ -93,7 +93,8 @@ namespace Drinctet.Core.Selection
                 randomNum = randomNum - weight;
             }
 
-            throw new InvalidOperationException("No choice could be made");
+            return default;
+            //throw new InvalidOperationException("No choice could be made");
         }
     }
 }

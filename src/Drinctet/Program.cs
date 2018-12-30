@@ -6,6 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Xml;
 using Drinctet.Core;
+using Drinctet.Core.Cards.Base;
 using Drinctet.ViewModels;
 using Drinctet.ViewModels.Manager;
 using Drinctet.ViewModels.Slides;
@@ -33,21 +34,39 @@ namespace Drinctet
     {
         private static void Main(string[] args)
         {
+            //var lines = File.ReadAllLines("F:\\Projects\\Drinctet\\cards\\Picolo.xml");
+            //var random = new Random();
+            //for (int i = 0; i < lines.Length; i++)
+            //{
+            //    var line = lines[i];
+            //    if (line.Contains("willPower"))
+            //        continue;
+            //    if (line.Contains("id=\""))
+            //    {
+            //        line = line.TrimEnd('>');
+            //        var willPower = random.Next(1, 11);
+            //        line += $" willPower=\"{willPower}\">";
+            //        lines[i] = line;
+            //    }
+            //}
+
+            //File.WriteAllLines("F:\\Projects\\Drinctet\\cards\\Picolo2.xml", lines);
+            //return;
+
+
             var dependencyService = new SimpleDependencyService();
             dependencyService.Register<ICardsProvider>(GetCards());
 
             var status = new DrinctetStatus();
-            status.SlideTypes.Clear();
-            status.SlideTypes.Add(new WeightedValue<SlideType>(SlideType.Task, 1));
-            status.SlideTypes.Add(new WeightedValue<SlideType>(SlideType.Question, 1));
 
             status.Players.Add(new PlayerInfo(1, Gender.Male){Name = "Vincent"});
             status.Players.Add(new PlayerInfo(4, Gender.Male){Name = "Bursod"});
             status.Players.Add(new PlayerInfo(8, Gender.Female){Name = "Larny"});
             status.Players.Add(new PlayerInfo(9, Gender.Female){Name = "Britta"});
 
-            status.InitializePlayers();
+            status.UpdatePlayers();
             status.PlayerArrangements.Add(4, 9);
+            status.WillPower = 8;
 
             DependencyServiceInitializer.DependencyService = dependencyService;
 
@@ -64,6 +83,9 @@ namespace Drinctet
 
         private static void DisplaySlide(ISlideViewModel slide)
         {
+            var value = (BaseCard) slide.GetType().GetProperty("SelectedCard").GetValue(slide);
+            Console.WriteLine("==> " + value.Origin?.SourceString);
+
             switch (slide)
             {
                 case DownViewModel downViewModel:
@@ -108,9 +130,8 @@ namespace Drinctet
 
         private static ICardsProvider GetCards()
         {
-            //var sourceFiles = new List<string>(new DirectoryInfo(@"F:\Projects\Drinctet\cards").GetFiles("*.xml")
-            //    .Select(x => x.FullName));
-            var sourceFiles = new[] { "F:\\Projects\\Drinctet\\cards\\Bevil.xml" };
+            var sourceFiles = new List<string>(new DirectoryInfo(@"F:\Projects\Drinctet\cards").GetFiles("*.xml")
+                .Select(x => x.FullName));
 
             var settings = new XmlReaderSettings {ConformanceLevel = ConformanceLevel.Fragment};
             var provider = new CardsProvider();

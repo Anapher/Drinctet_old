@@ -46,7 +46,7 @@
     
     mimetype: application/x-microsoft.net.object.binary.base64
     value   : The object must be serialized with 
-            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : System.Serialization.Formatters.Binary.BinaryFormatter
             : and then encoded with base64 encoding.
     
     mimetype: application/x-microsoft.net.object.soap.base64
@@ -60,7 +60,6 @@
             : and then encoded with base64 encoding.
     -->
   <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
         <xsd:choice maxOccurs="unbounded">
@@ -69,10 +68,9 @@
               <xsd:sequence>
                 <xsd:element name="value" type="xsd:string" minOccurs="0" />
               </xsd:sequence>
-              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
               <xsd:attribute name="type" type="xsd:string" />
               <xsd:attribute name="mimetype" type="xsd:string" />
-              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="assembly">
@@ -87,10 +85,9 @@
                 <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
                 <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
               <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
               <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
-              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="resheader">
@@ -112,78 +109,9 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AddPlayer" xml:space="preserve">
-    <value>Spieler hinzufügen</value>
-  </data>
-  <data name="DownPresenter_Title" xml:space="preserve">
-    <value>Auf Ex'</value>
-  </data>
-  <data name="Joke_Joke1" xml:space="preserve">
-    <value>[Player1], nimm einen Schluck in den Mund. Setz dich [Player2] gegenüber. Höre folgenden Witz: "{0}"</value>
-  </data>
-  <data name="NeverEver_Title" xml:space="preserve">
-    <value>Ich habe noch nie...</value>
-  </data>
-  <data name="OneSip" xml:space="preserve">
-    <value>einen Schluck</value>
-  </data>
-  <data name="Question_Question1" xml:space="preserve">
-    <value>[Player], {0}</value>
-  </data>
-  <data name="Question_Question2" xml:space="preserve">
-    <value>Nachdem [Player1000] und [Player1001] [sips] getrunken haben: {0}</value>
-  </data>
-  <data name="Question_Question3" xml:space="preserve">
-    <value>An alle: {0}</value>
-  </data>
-  <data name="Question_Question4" xml:space="preserve">
-    <value>[Player1000], stell [Player1001] folgende Frage: "{0}" [Player1001] muss die Frage zu deiner Zufriedenheit beantworten, oder darf {{ihr/sein|Player1001}} Glas austrinken.</value>
-  </data>
-  <data name="Question_Question5" xml:space="preserve">
-    <value>[Player1000], {0} Wenn [Player1001] der Meinung ist, dass die Frage nicht richtig beantwortet wurde, trink dein Glas aus.</value>
-  </data>
-  <data name="Question_Question6" xml:space="preserve">
-    <value>[Player1000], trink [sips] und beantworte folgende Frage: {0}</value>
-  </data>
-  <data name="Question_Title" xml:space="preserve">
-    <value>Frage</value>
-  </data>
-  <data name="Sips" xml:space="preserve">
-    <value>{0} Schlucke</value>
-  </data>
-  <data name="SocialMedia_Text" xml:space="preserve">
-    <value>[Player], stell bei {0} einen bekloppten Satz rein, der folgende Wörter beinhaltet: {1} und {2}, und schreib am Ende #Drinctet - Oder trink [sips:5].</value>
-  </data>
-  <data name="Task_Task1" xml:space="preserve">
-    <value>[Player100], {0}. Wenn du dich weigerst trinke [sips].</value>
-  </data>
-  <data name="Task_Task2" xml:space="preserve">
-    <value>[Player100], {0}.</value>
-  </data>
-  <data name="Task_Task3" xml:space="preserve">
-    <value>[Player100], {0}. Wenn du dich weigerst, trinke [sips] und [Player101] muss die Aufgabe machen.</value>
-  </data>
-  <data name="Task_Title" xml:space="preserve">
-    <value>Aufgabe</value>
-  </data>
-  <data name="WouldYouRather_Title" xml:space="preserve">
-    <value>Würdest du lieber...</value>
-  </data>
-  <data name="WouldYouRather_Wyr1" xml:space="preserve">
-    <value>[Player], würdest du lieber {0}</value>
-  </data>
-  <data name="WouldYouRather_Wyr2" xml:space="preserve">
-    <value>An [Player1] und [Player2], würdet ihr lieber {0} Wenn ihr euch nicht einigen könnt, trinkt [sips].</value>
-  </data>
-  <data name="WouldYouRather_Wyr3" xml:space="preserve">
-    <value>An alle: Würdet ihr lieber {0} Stimmt alle gleichzeitig ab, die Verlierer trinken [sips].</value>
-  </data>
-  <data name="WouldYouRather_Wyr4" xml:space="preserve">
-    <value>[Player], würdest du lieber {0} Alle, die anderer Meinung sind, trinken [sips].</value>
-  </data>
 </root>

@@ -1,0 +1,371 @@
+﻿<UserControl
+    x:Class="Drinctet.Wpf.Views.GameView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:converters="clr-namespace:Drinctet.Wpf.Converters"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:slides="clr-namespace:Drinctet.ViewModels.Slides;assembly=Drinctet.ViewModels"
+    xmlns:system="clr-namespace:System;assembly=mscorlib"
+    xmlns:viewModels="clr-namespace:Drinctet.ViewModels;assembly=Drinctet.ViewModels"
+    xmlns:xaml="clr-namespace:Markdown.Xaml;assembly=Markdown.Xaml"
+    d:DataContext="{d:DesignInstance viewModels:GameViewModel}"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    MouseDown="GameView_OnMouseDown"
+    mc:Ignorable="d">
+    <UserControl.Resources>
+        <converters:WidthFontSizeConverter x:Key="WidthFontSizeConverter" />
+
+        <Style x:Key="DocumentStyle" TargetType="FlowDocument">
+            <Setter Property="FontFamily" Value="Calibri" />
+            <Setter Property="TextAlignment" Value="Left" />
+            <Setter Property="FontSize" Value="{Binding RelativeSource={RelativeSource AncestorType=UserControl}, Path=ActualWidth, Converter={StaticResource WidthFontSizeConverter}}" />
+            <Setter Property="TextAlignment" Value="Center" />
+        </Style>
+
+        <Style x:Key="H1Style" TargetType="Paragraph">
+            <Setter Property="FontSize" Value="42" />
+            <Setter Property="Foreground" Value="#ff000000" />
+            <Setter Property="FontWeight" Value="Light" />
+        </Style>
+
+        <Style x:Key="H2Style" TargetType="Paragraph">
+            <Setter Property="FontSize" Value="20" />
+            <Setter Property="Foreground" Value="#ff000000" />
+            <Setter Property="FontWeight" Value="Light" />
+        </Style>
+
+        <Style x:Key="H3Style" TargetType="Paragraph">
+            <Setter Property="FontSize" Value="20" />
+            <Setter Property="Foreground" Value="#99000000" />
+            <Setter Property="FontWeight" Value="Light" />
+        </Style>
+
+        <Style x:Key="H4Style" TargetType="Paragraph">
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="Foreground" Value="#99000000" />
+            <Setter Property="FontWeight" Value="Light" />
+        </Style>
+
+        <Style x:Key="LinkStyle" TargetType="Hyperlink">
+            <Setter Property="TextDecorations" Value="None" />
+        </Style>
+
+        <Style x:Key="ImageStyle" TargetType="Image">
+            <Setter Property="RenderOptions.BitmapScalingMode" Value="NearestNeighbor" />
+            <Style.Triggers>
+                <Trigger Property="Tag" Value="imageright">
+                    <Setter Property="Margin" Value="20,0,0,0" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="SeparatorStyle" TargetType="Line">
+            <Setter Property="X2" Value="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=FlowDocumentScrollViewer}}" />
+            <Setter Property="Stroke" Value="#99000000" />
+            <Setter Property="StrokeThickness" Value="2" />
+        </Style>
+
+        <xaml:Markdown
+            x:Key="Markdown"
+            AssetPathRoot="{x:Static system:Environment.CurrentDirectory}"
+            DocumentStyle="{StaticResource DocumentStyle}"
+            Heading1Style="{StaticResource H1Style}"
+            Heading2Style="{StaticResource H2Style}"
+            Heading3Style="{StaticResource H3Style}"
+            Heading4Style="{StaticResource H4Style}"
+            ImageStyle="{StaticResource ImageStyle}"
+            LinkStyle="{StaticResource LinkStyle}"
+            SeparatorStyle="{StaticResource SeparatorStyle}" />
+
+        <xaml:TextToFlowDocumentConverter x:Key="TextToFlowDocumentConverter" Markdown="{StaticResource Markdown}" />
+    </UserControl.Resources>
+    <mah:TransitioningContentControl
+        Content="{Binding CurrentSlide}"
+        Focusable="False"
+        Transition="LeftReplace">
+        <ContentControl.Resources>
+            <Style x:Key="CardText" TargetType="FlowDocumentScrollViewer">
+                <Setter Property="VerticalScrollBarVisibility" Value="Disabled" />
+                <Setter Property="HorizontalScrollBarVisibility" Value="Disabled" />
+                <Setter Property="IsSelectionEnabled" Value="False" />
+                <Setter Property="HorizontalAlignment" Value="Center" />
+                <Setter Property="VerticalAlignment" Value="Center" />
+                <Setter Property="Foreground" Value="White" />
+            </Style>
+
+            <Style x:Key="CardTextBlock" TargetType="TextBlock">
+                <Setter Property="HorizontalAlignment" Value="Center" />
+                <Setter Property="VerticalAlignment" Value="Center" />
+                <Setter Property="Foreground" Value="White" />
+                <Setter Property="FontSize" Value="{Binding RelativeSource={RelativeSource AncestorType=UserControl}, Path=ActualWidth, Converter={StaticResource WidthFontSizeConverter}}" />
+            </Style>
+
+            <DataTemplate DataType="{x:Type slides:DrinkViewModel}">
+                <Grid Background="#d35400">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="5*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <FlowDocumentScrollViewer
+                        Grid.Column="1"
+                        Document="{Binding Text, Converter={StaticResource TextToFlowDocumentConverter}}"
+                        Style="{StaticResource CardText}" />
+                </Grid>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type slides:VirusViewModel}">
+                <Grid Background="#1b7741">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="5*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <StackPanel
+                        Grid.Column="1"
+                        VerticalAlignment="Center"
+                        Orientation="Vertical">
+                        <TextBlock
+                            FontWeight="Bold"
+                            Style="{StaticResource CardTextBlock}"
+                            Text="Virus">
+                            <TextBlock.LayoutTransform>
+                                <ScaleTransform ScaleX="2" ScaleY="2" />
+                            </TextBlock.LayoutTransform>
+                        </TextBlock>
+                        <FlowDocumentScrollViewer
+                            Margin="10"
+                            Document="{Binding Text, Converter={StaticResource TextToFlowDocumentConverter}}"
+                            Style="{StaticResource CardText}" />
+                        <TextBlock
+                            FontWeight="Bold"
+                            Style="{StaticResource CardTextBlock}"
+                            Text="Virus"
+                            Visibility="Hidden">
+                            <TextBlock.LayoutTransform>
+                                <ScaleTransform ScaleX="2" ScaleY="2" />
+                            </TextBlock.LayoutTransform>
+                        </TextBlock>
+                    </StackPanel>
+                </Grid>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type slides:WouldYouRatherViewModel}">
+                <Grid Background="#196090">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="5*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <StackPanel
+                        Grid.Column="1"
+                        VerticalAlignment="Center"
+                        Orientation="Vertical">
+                        <TextBlock
+                            FontWeight="Bold"
+                            Style="{StaticResource CardTextBlock}"
+                            Text="Würdest du lieber...">
+                            <TextBlock.LayoutTransform>
+                                <ScaleTransform ScaleX="2" ScaleY="2" />
+                            </TextBlock.LayoutTransform>
+                        </TextBlock>
+                        <FlowDocumentScrollViewer
+                            Margin="10"
+                            Document="{Binding Text, Converter={StaticResource TextToFlowDocumentConverter}}"
+                            Style="{StaticResource CardText}" />
+                        <TextBlock
+                            FontWeight="Bold"
+                            Style="{StaticResource CardTextBlock}"
+                            Text="Würdest du lieber..."
+                            Visibility="Hidden">
+                            <TextBlock.LayoutTransform>
+                                <ScaleTransform ScaleX="2" ScaleY="2" />
+                            </TextBlock.LayoutTransform>
+                        </TextBlock>
+                    </StackPanel>
+                </Grid>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type slides:NeverEverViewModel}">
+                <Grid Background="#34495e">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="5*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <StackPanel
+                        Grid.Column="1"
+                        VerticalAlignment="Center"
+                        Orientation="Vertical">
+                        <TextBlock
+                            FontWeight="Bold"
+                            Style="{StaticResource CardTextBlock}"
+                            Text="Ich habe noch nie...">
+                            <TextBlock.LayoutTransform>
+                                <ScaleTransform ScaleX="2" ScaleY="2" />
+                            </TextBlock.LayoutTransform>
+                        </TextBlock>
+                        <FlowDocumentScrollViewer
+                            Margin="10"
+                            Document="{Binding Text, Converter={StaticResource TextToFlowDocumentConverter}}"
+                            Style="{StaticResource CardText}" />
+                        <TextBlock
+                            FontWeight="Bold"
+                            Style="{StaticResource CardTextBlock}"
+                            Text="Ich habe noch nie..."
+                            Visibility="Hidden">
+                            <TextBlock.LayoutTransform>
+                                <ScaleTransform ScaleX="2" ScaleY="2" />
+                            </TextBlock.LayoutTransform>
+                        </TextBlock>
+                    </StackPanel>
+                </Grid>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type slides:GroupGameViewModel}">
+                <Grid Background="#5c2c70">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="5*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <FlowDocumentScrollViewer
+                        Grid.Column="1"
+                        Margin="10"
+                        Document="{Binding Text, Converter={StaticResource TextToFlowDocumentConverter}}"
+                        Style="{StaticResource CardText}" />
+                </Grid>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type slides:NoIdeaLosesViewModel}">
+                <Grid Background="#cf6d17">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="5*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <FlowDocumentScrollViewer
+                        Grid.Column="1"
+                        Document="{Binding Text, Converter={StaticResource TextToFlowDocumentConverter}}"
+                        Style="{StaticResource CardText}" />
+                </Grid>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type slides:TaskViewModel}">
+                <Grid Background="#a43125">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="5*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <StackPanel
+                        Grid.Column="1"
+                        VerticalAlignment="Center"
+                        Orientation="Vertical">
+                        <TextBlock
+                            FontWeight="Bold"
+                            Style="{StaticResource CardTextBlock}"
+                            Text="Pflicht!">
+                            <TextBlock.LayoutTransform>
+                                <ScaleTransform ScaleX="2" ScaleY="2" />
+                            </TextBlock.LayoutTransform>
+                        </TextBlock>
+                        <FlowDocumentScrollViewer
+                            Margin="10"
+                            Document="{Binding Text, Converter={StaticResource TextToFlowDocumentConverter}}"
+                            Style="{StaticResource CardText}" />
+                        <TextBlock
+                            FontWeight="Bold"
+                            Style="{StaticResource CardTextBlock}"
+                            Text="Pflicht!"
+                            Visibility="Hidden">
+                            <TextBlock.LayoutTransform>
+                                <ScaleTransform ScaleX="2" ScaleY="2" />
+                            </TextBlock.LayoutTransform>
+                        </TextBlock>
+                    </StackPanel>
+                </Grid>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type slides:SocialMediaViewModel}">
+                <Grid Background="#273c75">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="5*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <FlowDocumentScrollViewer
+                        Grid.Column="1"
+                        Document="{Binding Text, Converter={StaticResource TextToFlowDocumentConverter}}"
+                        Style="{StaticResource CardText}" />
+                </Grid>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type slides:QuestionViewModel}">
+                <Grid Background="#0e6453">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="5*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <StackPanel
+                        Grid.Column="1"
+                        VerticalAlignment="Center"
+                        Orientation="Vertical">
+                        <TextBlock
+                            FontWeight="Bold"
+                            Style="{StaticResource CardTextBlock}"
+                            Text="Wahrheit!">
+                            <TextBlock.LayoutTransform>
+                                <ScaleTransform ScaleX="2" ScaleY="2" />
+                            </TextBlock.LayoutTransform>
+                        </TextBlock>
+                        <FlowDocumentScrollViewer
+                            Margin="10"
+                            Document="{Binding Text, Converter={StaticResource TextToFlowDocumentConverter}}"
+                            Style="{StaticResource CardText}" />
+                        <TextBlock
+                            FontWeight="Bold"
+                            Style="{StaticResource CardTextBlock}"
+                            Text="Wahrheit!"
+                            Visibility="Hidden">
+                            <TextBlock.LayoutTransform>
+                                <ScaleTransform ScaleX="2" ScaleY="2" />
+                            </TextBlock.LayoutTransform>
+                        </TextBlock>
+                    </StackPanel>
+                </Grid>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type slides:DownViewModel}">
+                <Grid Background="Black">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="5*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <StackPanel
+                        Grid.Column="1"
+                        VerticalAlignment="Center"
+                        Orientation="Vertical">
+                        <TextBlock
+                            FontWeight="Bold"
+                            Style="{StaticResource CardTextBlock}"
+                            Text="Auf Ex'">
+                            <TextBlock.LayoutTransform>
+                                <ScaleTransform ScaleX="2" ScaleY="2" />
+                            </TextBlock.LayoutTransform>
+                        </TextBlock>
+                        <FlowDocumentScrollViewer
+                            Margin="10"
+                            Document="{Binding Text, Converter={StaticResource TextToFlowDocumentConverter}}"
+                            Style="{StaticResource CardText}" />
+                        <TextBlock
+                            FontWeight="Bold"
+                            Style="{StaticResource CardTextBlock}"
+                            Text="Auf Ex'"
+                            Visibility="Hidden">
+                            <TextBlock.LayoutTransform>
+                                <ScaleTransform ScaleX="2" ScaleY="2" />
+                            </TextBlock.LayoutTransform>
+                        </TextBlock>
+                    </StackPanel>
+                </Grid>
+            </DataTemplate>
+        </ContentControl.Resources>
+    </mah:TransitioningContentControl>
+</UserControl>

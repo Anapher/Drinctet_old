@@ -1,0 +1,120 @@
+﻿<UserControl
+    x:Class="Drinctet.Wpf.Views.SettingsView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:core="clr-namespace:Drinctet.Core;assembly=Drinctet.Core"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:extensions="clr-namespace:Anapher.Wpf.Swan.Extensions;assembly=Anapher.Wpf.Swan"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModels="clr-namespace:Drinctet.Wpf.ViewModels"
+    d:DataContext="{d:DesignInstance viewModels:SettingsViewModel}"
+    d:DesignHeight="720"
+    d:DesignWidth="1000"
+    mc:Ignorable="d">
+    <UserControl.Resources>
+        <Style BasedOn="{StaticResource MetroSlider}" TargetType="Slider">
+            <Setter Property="AutoToolTipPlacement" Value="BottomRight" />
+            <Setter Property="AutoToolTipPrecision" Value="2" />
+        </Style>
+    </UserControl.Resources>
+    <StackPanel Orientation="Vertical">
+        <TextBlock FontSize="16" Text="Mitspieler" />
+        <Grid Margin="0,10,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" MaxWidth="400" />
+            </Grid.ColumnDefinitions>
+            <DataGrid AutoGenerateColumns="False" ItemsSource="{Binding Status.Players}">
+                <DataGrid.Columns>
+                    <DataGridTextColumn
+                        Width="*"
+                        Binding="{Binding Name}"
+                        Header="Name" />
+                    <DataGridComboBoxColumn
+                        Width="120"
+                        DisplayMemberPath="Description"
+                        Header="Geschlecht"
+                        ItemsSource="{Binding Source={extensions:Enumeration {x:Type core:Gender}}}"
+                        SelectedValueBinding="{Binding Gender}"
+                        SelectedValuePath="Value" />
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+        <TextBlock
+            Margin="0,10,0,0"
+            FontSize="16"
+            Text="Schlucke" />
+        <Grid Margin="0,5,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" MaxWidth="300" />
+            </Grid.ColumnDefinitions>
+            <Slider
+                LargeChange=".2"
+                Maximum="1"
+                Minimum="0.1"
+                SmallChange=".1"
+                Value="{Binding Status.DrinkALot}" />
+        </Grid>
+        <TextBlock
+            Margin="0,10,0,0"
+            FontSize="16"
+            Text="Karten" />
+        <ItemsControl ItemsSource="{Binding Status.SlideTypes}">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <DockPanel Margin="5">
+                        <TextBlock
+                            Width="75"
+                            VerticalAlignment="Center"
+                            Text="{Binding Value}" />
+                        <Slider
+                            Width="300"
+                            Margin="10,0,0,0"
+                            HorizontalAlignment="Left"
+                            Maximum="1"
+                            Minimum="0"
+                            Value="{Binding Weight}" />
+                    </DockPanel>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+        <TextBlock
+            Margin="0,10,0,0"
+            FontSize="16"
+            Text="WillPower" />
+        <DockPanel Margin="0,5,0,0">
+            <TextBlock VerticalAlignment="Center" Text="Aktuell:" />
+            <Slider
+                Width="200"
+                Margin="10,0,0,0"
+                HorizontalAlignment="Left"
+                Maximum="10"
+                Minimum="1"
+                Value="{Binding Status.WillPower}" />
+        </DockPanel>
+        <CheckBox
+            Margin="0,2,0,0"
+            Content="Nicht veränderbar"
+            IsChecked="{Binding Status.IsWillPowerStatic}" />
+        <DockPanel Margin="0,10,0,0">
+            <TextBlock VerticalAlignment="Center" Text="Multiplicator:" />
+            <Slider
+                Width="200"
+                Margin="5,0,0,0"
+                HorizontalAlignment="Left"
+                LargeChange=".5"
+                Maximum="2"
+                Minimum=".1"
+                SmallChange=".1"
+                Value="{Binding Status.WillPowerMultiplicator}" />
+        </DockPanel>
+        <TextBlock
+            Margin="0,10,0,0"
+            FontSize="16"
+            Text="Social Media Platform" />
+        <TextBox
+            Width="200"
+            Margin="0,5,0,0"
+            HorizontalAlignment="Left"
+            Text="{Binding Status.SocialMediaPlatform}" />
+    </StackPanel>
+</UserControl>

@@ -1,0 +1,140 @@
+﻿<QuestionCard id="lXUk">
+  <QuestionCard.targetPlayer>
+    <Player gender="f" />
+  </QuestionCard.targetPlayer>
+  <Text lang="en">What do you hope you grow out of?</Text>
+  <Text lang="de">Bei welcher Sache hoffst du, dass du sie dir in Zukunft abgewöhnst?</Text>
+</QuestionCard>
+<QuestionCard id="XjUA">
+  <QuestionCard.targetPlayer>
+    <Player gender="f" />
+  </QuestionCard.targetPlayer>
+  <Text lang="en">What is the healthiest and unhealthiest thing you do on a regular basis?</Text>
+  <Text lang="de">Was ist die gesündeste und ungesündeste Sache, die Sie regelmäßig tun?</Text>
+</QuestionCard>
+<QuestionCard id="EpU0">
+  <QuestionCard.targetPlayer>
+    <Player gender="f" />
+  </QuestionCard.targetPlayer>
+  <Text lang="en">When looking for a SO, what three things are most important (besides looks)?</Text>
+  <Text lang="de">Welche drei Dinge sind bei der Suche nach einer SO am wichtigsten (neben dem Aussehen)?</Text>
+</QuestionCard>
+<QuestionCard id="zzU1">
+  <QuestionCard.targetPlayer>
+    <Player gender="f" />
+  </QuestionCard.targetPlayer>
+  <Text lang="en">How much do you judge a person by their appearance?</Text>
+  <Text lang="de">Wie beurteilen Sie eine Person nach ihrem Aussehen?</Text>
+</QuestionCard>
+<QuestionCard id="8yUj">
+  <QuestionCard.targetPlayer>
+    <Player gender="f" />
+  </QuestionCard.targetPlayer>
+  <Text lang="en">What is the most embarrassing thing you own?</Text>
+  <Text lang="de">Was ist das Peinlichste, was Sie besitzen?</Text>
+</QuestionCard>
+<QuestionCard id="1nU7">
+  <QuestionCard.targetPlayer>
+    <Player gender="f" />
+  </QuestionCard.targetPlayer>
+  <Text lang="en">What is the strangest habit you have?</Text>
+  <Text lang="de">Was ist die seltsamste Angewohnheit, die Sie haben?</Text>
+</QuestionCard>
+<QuestionCard id="6pUP">
+  <QuestionCard.targetPlayer>
+    <Player gender="f" />
+  </QuestionCard.targetPlayer>
+  <Text lang="en">What movie made you cry the most?</Text>
+  <Text lang="de">Welcher Film hat dich am meisten zum Weinen gebracht?</Text>
+</QuestionCard>
+<QuestionCard id="d6Ug">
+  <QuestionCard.targetPlayer>
+    <Player gender="f" />
+  </QuestionCard.targetPlayer>
+  <Text lang="en">What was one of the happiest moments of your childhood?</Text>
+  <Text lang="de">Was war einer der glücklichsten Momente Ihrer Kindheit?</Text>
+</QuestionCard>
+<QuestionCard id="JjUe">
+  <QuestionCard.targetPlayer>
+    <Player gender="f" />
+  </QuestionCard.targetPlayer>
+  <Text lang="en">What was the worst date that you’ve ever been on?</Text>
+  <Text lang="de">Was war das schlimmste Date, das du je hattest?</Text>
+</QuestionCard>
+<QuestionCard id="bWU7">
+  <QuestionCard.targetPlayer>
+    <Player gender="f" />
+  </QuestionCard.targetPlayer>
+  <Text lang="en">What’s your favorite vacation memory from when you were a child?</Text>
+  <Text lang="de">Was ist deine Lieblings-Urlaubserinnerung aus deiner Kindheit?</Text>
+</QuestionCard>
+<QuestionCard id="4nUW">
+  <QuestionCard.targetPlayer>
+    <Player gender="f" />
+  </QuestionCard.targetPlayer>
+  <Text lang="en">What belief do you have that most people disagree with?</Text>
+  <Text lang="de">Welchen Glauben haben Sie, mit dem die meisten Menschen nicht einverstanden sind?</Text>
+</QuestionCard>
+<QuestionCard id="P1Uo">
+  <QuestionCard.targetPlayer>
+    <Player gender="f" />
+  </QuestionCard.targetPlayer>
+  <Text lang="en">What impression do you try to give when you first meet someone?</Text>
+  <Text lang="de">Welchen Eindruck vermitteln Sie, wenn Sie jemanden zum ersten Mal treffen?</Text>
+</QuestionCard>
+<QuestionCard id="oyUx">
+  <QuestionCard.targetPlayer>
+    <Player gender="f" />
+  </QuestionCard.targetPlayer>
+  <Text lang="en">Who or what inspires you to be a better person?</Text>
+  <Text lang="de">Wer oder was inspiriert Sie, ein besserer Mensch zu sein?</Text>
+</QuestionCard>
+<QuestionCard id="eWUe">
+  <QuestionCard.targetPlayer>
+    <Player gender="f" />
+  </QuestionCard.targetPlayer>
+  <Text lang="en">What’s the TLDR description of your last relationship?</Text>
+  <Text lang="de">Wie lautet die TLDR-Beschreibung Ihrer letzten Beziehung?</Text>
+</QuestionCard>
+<QuestionCard id="NzUl">
+  <QuestionCard.targetPlayer>
+    <Player gender="f" />
+  </QuestionCard.targetPlayer>
+  <Text lang="en">What dumb thing did you believe for a really long time?</Text>
+  <Text lang="de">Welches dumme Ding hast du wirklich lange geglaubt?</Text>
+</QuestionCard>
+<QuestionCard id="g4Uj">
+  <QuestionCard.targetPlayer>
+    <Player gender="f" />
+  </QuestionCard.targetPlayer>
+  <Text lang="en">What are some things you would you like to achieve before you die?</Text>
+  <Text lang="de">Was möchten Sie erreichen, bevor Sie sterben?</Text>
+</QuestionCard>
+<QuestionCard id="OPUX">
+  <QuestionCard.targetPlayer>
+    <Player gender="f" />
+  </QuestionCard.targetPlayer>
+  <Text lang="en">Where would you like to retire?</Text>
+  <Text lang="de">Wo möchten Sie sich zur Ruhe setzen?</Text>
+</QuestionCard>
+<QuestionCard id="YaU6">
+  <QuestionCard.targetPlayer>
+    <Player gender="f" />
+  </QuestionCard.targetPlayer>
+  <Text lang="en">What brings you the most joy in life?</Text>
+  <Text lang="de">Was bringt Ihnen die größte Freude im Leben?</Text>
+</QuestionCard>
+<QuestionCard id="nGU6">
+  <QuestionCard.targetPlayer>
+    <Player gender="f" />
+  </QuestionCard.targetPlayer>
+  <Text lang="en">What is the best and worst part of your personality?</Text>
+  <Text lang="de">Was ist der beste und schlechteste Teil Ihrer Persönlichkeit?</Text>
+</QuestionCard>
+<QuestionCard id="KXUK">
+  <QuestionCard.targetPlayer>
+    <Player gender="f" />
+  </QuestionCard.targetPlayer>
+  <Text lang="en">How would your perfect partner treat you?</Text>
+  <Text lang="de">Wie würde Ihr perfekter Partner Sie behandeln?</Text>
+</QuestionCard>

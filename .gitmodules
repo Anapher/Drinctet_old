@@ -1,0 +1,3 @@
+[submodule "src/submodules/Anapher.Wpf.Swan"]
+	path = src/submodules/Anapher.Wpf.Swan
+	url = https://github.com/Anapher/Anapher.Wpf.Swan.git

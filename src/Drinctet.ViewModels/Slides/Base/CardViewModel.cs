@@ -12,7 +12,7 @@ namespace Drinctet.ViewModels.Slides.Base
 
         public abstract bool IsInteractive { get; }
 
-        protected TCard SelectedCard { get; set; }
+        public TCard SelectedCard { get; set; }
         protected IScreenGameManager GameManager { get; set; }
         protected ITextResource TextResource { get; set; }
 

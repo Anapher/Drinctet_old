@@ -2,6 +2,7 @@
 using Drinctet.Core;
 using Drinctet.Core.Cards.Base;
 using Drinctet.Core.Parsing.TextDecoder;
+using Drinctet.Core.Selection;
 using Drinctet.ViewModels.Formatter;
 
 namespace Drinctet.ViewModels.Manager
@@ -20,8 +21,15 @@ namespace Drinctet.ViewModels.Manager
         public ISlideViewModel Next(ICardsProvider cardsProvider)
         {
             var nextSlide = Selection.SelectNextSlide();
-            var viewModel = SlideViewModelFactory.Create(nextSlide, this, cardsProvider, _textResource);
-            return viewModel;
+            try
+            {
+                var viewModel = SlideViewModelFactory.Create(nextSlide, this, cardsProvider, _textResource);
+                return viewModel;
+            }
+            catch (InvalidCardException)
+            {
+                return Next(cardsProvider);
+            }
         }
 
         public ITextDecoder TextDecoder { get; }

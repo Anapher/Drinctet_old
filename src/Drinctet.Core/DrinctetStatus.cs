@@ -85,7 +85,7 @@ namespace Drinctet.Core
         /// <summary>
         ///     A static will power value that will not change
         /// </summary>
-        public int? StaticWillPower { get; set; }
+        public bool IsWillPowerStatic { get; set; }
 
         /// <summary>
         ///     A multiplicator for will power
@@ -97,9 +97,41 @@ namespace Drinctet.Core
         /// </summary>
         public string SocialMediaPlatform { get; set; } = "Snapchat";
 
-        public void InitializePlayers()
+        /// <summary>
+        ///     The current will power level
+        /// </summary>
+        public int WillPower { get; set; }
+
+        /// <summary>
+        ///     Data needed by the algorithm to increase the will power linear
+        /// </summary>
+        public IDictionary<string, string> WillPowerMemory { get; set; } = new Dictionary<string, string>();
+
+        public void UpdatePlayers()
         {
-            PlayerScores = Players.ToDictionary(x => x.Id, x => 0);
+            foreach (var playerInfo in Players)
+            {
+                if (playerInfo.Id == 0)
+                {
+                    playerInfo.Id = Players.Select(x => x.Id).Max() + 1;
+                }
+            }
+
+            var medianScore = !PlayerScores.Any() ? 0 : PlayerScores.Values.Aggregate(0, (x, y) => x + y) / PlayerScores.Count;
+
+            var removedPlayers = PlayerScores.Keys.ToList();
+            foreach (var playerInfo in Players)
+            {
+                if (!PlayerScores.ContainsKey(playerInfo.Id))
+                    PlayerScores.Add(playerInfo.Id, medianScore);
+                else
+                    removedPlayers.Remove(playerInfo.Id);
+            }
+
+            foreach (var removedPlayer in removedPlayers)
+            {
+                PlayerScores.Remove(removedPlayer);
+            }
         }
     }
 

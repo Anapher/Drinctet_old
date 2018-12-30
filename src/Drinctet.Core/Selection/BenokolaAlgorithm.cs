@@ -1,7 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using Drinctet.Core.Cards.Base;
+#if NETSTANDARD
+using Drinctet.Core.Utilities;
+
+#endif
 
 namespace Drinctet.Core.Selection
 {
@@ -15,6 +20,9 @@ namespace Drinctet.Core.Selection
         {
             if (requiredGenders.Count == 0)
                 return Array.Empty<PlayerInfo>();
+
+            if (requiredGenders.Count > Status.Players.Count)
+                throw new InvalidCardException();
 
             int lowestPlayerScore = Status.PlayerScores.Min(x => x.Value);
             int greatestDifference = Status.PlayerScores.Max(x => x.Value) - lowestPlayerScore;
@@ -63,7 +71,7 @@ namespace Drinctet.Core.Selection
                         if (greatestDifference == 0)
                             value = 1;
                         else
-                            value = 1 + 0.25 * ((Status.PlayerScores[p.Id] - lowestPlayerScore) /
+                            value = 1 + 0.25 * ((lowestPlayerScore + greatestDifference - Status.PlayerScores[p.Id]) /
                                     (double) greatestDifference);
 
                         if (forArrangement.Contains(p))
@@ -158,26 +166,67 @@ namespace Drinctet.Core.Selection
 
         public override int GetWillPowerLevel()
         {
-            var willPower = 0;
-            if (Status.StaticWillPower == null)
+            if (Status.IsWillPowerStatic)
+                return Status.WillPower;
+
+            var willPower = Status.WillPower;
+
+            var localTime = DateTimeOffset.UtcNow.Add(Status.TimeZone.BaseUtcOffset);
+            if (localTime.Hour > 22 || localTime.Hour < 8)
             {
-                var localTime = DateTimeOffset.UtcNow.Add(Status.TimeZone.BaseUtcOffset);
-                if (localTime.Hour > 22 || localTime.Hour < 8)
+                if (!Status.WillPowerMemory.ContainsKey("After_10"))
+                {
                     willPower++;
-
-                if (localTime.Hour < 8)
-                    willPower++;
-
-                willPower += (int)(localTime - Status.StartTime).TotalHours;
-                willPower += Status.SlidesCounter / 12;
-                willPower = (int)(willPower * Status.WillPowerMultiplicator);
+                    Status.WillPowerMemory.Add("After_10", null);
+                }
             }
-            else willPower = Status.StaticWillPower.Value;
+
+            if (localTime.Hour < 8)
+            {
+                if(!Status.WillPowerMemory.ContainsKey("After_12"))
+                {
+                    willPower++;
+                    Status.WillPowerMemory.Add("After_12", null);
+                }
+            }
+
+            int hours;
+            if (Status.WillPowerMemory.TryGetValue("LastTimeAdded", out var time))
+            {
+                var lastTimeAdded = DateTimeOffset.ParseExact(time, "O", CultureInfo.InvariantCulture);
+                hours = (int) (localTime - lastTimeAdded).TotalHours;
+            }
+            else
+            {
+                hours = (int) (localTime - Status.StartTime).TotalHours;
+            }
+
+            if (hours >= 1)
+            {
+                willPower += hours;
+                Status.WillPowerMemory["LastTimeAdded"] = Status.StartTime.AddHours(hours)
+                    .ToString("O", CultureInfo.InvariantCulture);
+            }
+
+            int diff;
+            if (Status.WillPowerMemory.TryGetValue("LastSlidesCount", out var slidesCountString))
+                diff = Status.SlidesCounter - int.Parse(slidesCountString);
+            else diff = Status.SlidesCounter;
+
+            if (diff > 12)
+            {
+                willPower++;
+                Status.WillPowerMemory["LastSlidesCount"] = Status.SlidesCounter.ToString();
+            }
 
             if (willPower > 10)
                 willPower = 10;
 
-            return willPower;
+            Status.WillPower = willPower;
+
+            willPower = (int) (willPower * Status.WillPowerMultiplicator);
+
+            return willPower > 10 ? 10 : willPower;
         }
 
         //public TCard SelectCard2<TCard>(IReadOnlyList<TCard> cards)
@@ -272,8 +321,8 @@ namespace Drinctet.Core.Selection
                 return (card, weight);
             }).Where(x => x.weight > 0).ToDictionary(x => x.card, x => x.weight);
 
-            var noRepetitionSeries = cardsWeight.Count / 3 * 2;
-            var historicalCards = new HashSet<int>(Status.CardHistory.Where(x => cards.Any(y => y.Id == x)).Take(noRepetitionSeries));
+            var noRepetitionSeries = (int) Math.Ceiling(cardsWeight.Count / 3d * 2d);
+            var historicalCards = new HashSet<int>(Status.CardHistory.Where(x => cards.Any(y => y.Id == x)).TakeLast(noRepetitionSeries));
 
             var result = SelectRandomWeighted(cards, card =>
             {
@@ -282,6 +331,9 @@ namespace Drinctet.Core.Selection
 
                 return 0;
             });
+
+            if (result == null)
+                throw new InvalidCardException();
 
             Console.WriteLine($"[Current WillPower: {willPower}; picked card: {result.WillPower}]");
             Status.CardHistory.Add(result.Id);

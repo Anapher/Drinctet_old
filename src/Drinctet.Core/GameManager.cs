@@ -19,7 +19,7 @@ namespace Drinctet.Core
 
             switch (status.SelectionAlgorithm)
             {
-                case Core.SelectionAlgorithm.Benokla:
+                case SelectionAlgorithm.Benokla:
                     Selection = new BenokolaAlgorithm();
                     break;
                 default:

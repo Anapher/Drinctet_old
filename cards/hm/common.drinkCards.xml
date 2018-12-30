@@ -1,0 +1,19 @@
+<DrinkCard>
+    <DrinkCard.Begin>
+        <Text lang="de">Entscheidet euch für Schwarz oder weiß. Die Auflösung folgt...</Text>
+    </DrinkCard.Begin>
+    <Case>
+        <Text lang="de">Schwarz. Alle die weiß gewählt haben trinken [sips]</Text>
+    </Case>
+</DrinkCard>
+<DrinkCard followUpProbability="1" followUpDelay="5">
+    <Text lang="de">Entscheidet euch für Schwarz oder weiß. Die Auflösung folgt...</Text>
+    <DrinkCard.followUp>
+        <Case weight="60">
+            <Text lang="de">Schwarz. Alle, die weiß gewählt haben, trinken [sips]</Text>
+        </Case>
+        <Case weight="40">
+            <Text lang="de">Weiß. Alle, die schwarz gewählt haben, trinken [sips]</Text>
+        </Case>
+    </DrinkCard.followUp>
+</DrinkCard>

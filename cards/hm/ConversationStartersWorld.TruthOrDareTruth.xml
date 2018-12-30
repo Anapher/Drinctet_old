@@ -1,0 +1,228 @@
+﻿<QuestionCard id="zBSK" willPower="6">
+  <Text lang="en">What are you most self-conscious about?</Text>
+  <Text lang="de">Worauf sind Sie am meisten bedacht?</Text>
+</QuestionCard>
+<QuestionCard id="8bS0" willPower="6">
+  <Text lang="en">What is the most embarrassing picture of you?</Text>
+  <Text lang="de">Was ist das peinlichste Bild von dir?</Text>
+</QuestionCard>
+<QuestionCard id="1JSN" willPower="6">
+  <Text lang="en">What would you do if you were the opposite sex for a month?</Text>
+  <Text lang="de">Was würden Sie tun, wenn Sie einen Monat lang das andere Geschlecht wären?</Text>
+</QuestionCard>
+<QuestionCard id="6vSX" willPower="6">
+  <Text lang="en">What is the most expensive thing you have stolen?</Text>
+  <Text lang="de">Was ist das Teuerste, was Sie gestohlen haben?</Text>
+</QuestionCard>
+<QuestionCard id="dZSa" willPower="6">
+  <Text lang="en">What is the most childish thing you still do?</Text>
+  <Text lang="de">Was ist das kindischste, was du noch machst?</Text>
+</QuestionCard>
+<QuestionCard id="JOSm" willPower="6">
+  <Text lang="en">Have you ever let someone take the blame for something you did?</Text>
+  <Text lang="de">Hast du jemals jemanden die Schuld für etwas übernehmen lassen, was du getan hast?</Text>
+</QuestionCard>
+<QuestionCard id="bnSP" willPower="6">
+  <Text lang="en">What do most of your friends think about you that is totally untrue?</Text>
+  <Text lang="de">Was denken die meisten deiner Freunde über dich, was völlig unwahr ist?</Text>
+</QuestionCard>
+<QuestionCard id="4NSZ" willPower="6">
+  <Text lang="en">Who here would you most like to make out with?</Text>
+  <Text lang="de">Mit wem hier würdest du am liebsten rummachen?</Text>
+</QuestionCard>
+<QuestionCard id="PLSx" willPower="6">
+  <Text lang="en">Have you ever cheated or been cheated on?</Text>
+  <Text lang="de">Haben Sie jemals betrogen oder wurden Sie betrogen?</Text>
+</QuestionCard>
+<QuestionCard id="opSQ" willPower="6">
+  <Text lang="en">What lie have you told that hurt someone?</Text>
+  <Text lang="de">Welche Lüge hast du erzählt, die jemanden verletzt hat?</Text>
+</QuestionCard>
+<QuestionCard id="enSJ" willPower="6">
+  <Text lang="en">What is the meanest you have been to someone that didn’t deserve it?</Text>
+  <Text lang="de">Was ist das Fieseste, was du für jemanden getan hast, der es nicht verdient hat?</Text>
+</QuestionCard>
+<QuestionCard id="N8SO" willPower="6">
+  <Text lang="en">What is something that people think you would never do but you have?</Text>
+  <Text lang="de">Was ist etwas, von dem die Leute denken, dass du es nie tun würdest, aber du hast es?</Text>
+</QuestionCard>
+<QuestionCard id="g9SG" willPower="6">
+  <Text lang="en">What was the worst encounter you had with a police officer?</Text>
+  <Text lang="de">Was war die schlimmste Begegnung mit einem Polizisten?</Text>
+</QuestionCard>
+<QuestionCard id="OeSm" willPower="6">
+  <Text lang="en">Tell me about your most awkward date.</Text>
+  <Text lang="de">Erzähl mir von deinem peinlichsten Date.</Text>
+</QuestionCard>
+<QuestionCard id="YbSX" willPower="6">
+  <Text lang="en">What is the silliest thing you have an emotional attachment to?</Text>
+  <Text lang="de">Was ist das Dümmste, zu dem du eine emotionale Bindung hast?</Text>
+</QuestionCard>
+<QuestionCard id="n1SX" willPower="6">
+  <Text lang="en">What is your deepest darkest fear?</Text>
+  <Text lang="de">Was ist deine tiefste dunkelste Angst?</Text>
+</QuestionCard>
+<QuestionCard id="KNSN" willPower="6">
+  <Text lang="en">Tell me about your first kiss.</Text>
+  <Text lang="de">Erzähl mir von deinem ersten Kuss.</Text>
+</QuestionCard>
+<QuestionCard id="9DS4" willPower="6">
+  <Text lang="en">Where is the strangest place you have peed?</Text>
+  <Text lang="de">Wo ist der seltsamste Ort, an dem du gepinkelt hast?</Text>
+</QuestionCard>
+<QuestionCard id="2JSA" willPower="6">
+  <Text lang="en">Who is the person you most regret kissing?</Text>
+  <Text lang="de">Wer ist die Person, die du am meisten bereust?</Text>
+</QuestionCard>
+<QuestionCard id="jkS2" willPower="6">
+  <Text lang="en">Have you ever crapped your pants since you were a child?</Text>
+  <Text lang="de">Hast du dir jemals in die Hose gemacht, seit du ein Kind warst?</Text>
+</QuestionCard>
+<QuestionCard id="0PS5" willPower="6">
+  <Text lang="en">What is the most embarrassing thing your parents have caught you doing?</Text>
+  <Text lang="de">Was ist das Peinlichste, was deine Eltern dich dabei erwischt haben?</Text>
+</QuestionCard>
+<QuestionCard id="xGS5" willPower="6">
+  <Text lang="en">What secret about yourself did you tell someone in confidence and then they told a lot of other people?</Text>
+  <Text lang="de">Welches Geheimnis hast du jemandem im Vertrauen erzählt und dann haben sie es vielen anderen erzählt?</Text>
+</QuestionCard>
+<QuestionCard id="moSo" willPower="6">
+  <Text lang="en">When was the most inappropriate time you farted?</Text>
+  <Text lang="de">Wann haben Sie am unpassendsten gefurzt?</Text>
+</QuestionCard>
+<QuestionCard id="ZjSp" willPower="6">
+  <Text lang="en">What is the scariest dream you have ever had?</Text>
+  <Text lang="de">Was ist der erschreckendste Traum, den du je hattest?</Text>
+</QuestionCard>
+<QuestionCard id="QeSB" willPower="6">
+  <Text lang="en">What is the most embarrassing thing in your room?</Text>
+  <Text lang="de">Was ist das Peinlichste in deinem Zimmer?</Text>
+</QuestionCard>
+<QuestionCard id="vESV" willPower="6">
+  <Text lang="en">Why did you break up with your last boyfriend or girlfriend?</Text>
+  <Text lang="de">Warum hast du mit deinem letzten Freund oder deiner letzten Freundin Schluss gemacht?</Text>
+</QuestionCard>
+<QuestionCard id="keSY" willPower="6">
+  <Text lang="en">What is the stupidest thing you have ever done?</Text>
+  <Text lang="de">Was ist das Dümmste, was du je getan hast?</Text>
+</QuestionCard>
+<QuestionCard id="V9Se" willPower="6">
+  <Text lang="en">When was the last time you peed in bed?</Text>
+  <Text lang="de">Wann hast du das letzte Mal ins Bett gepinkelt?</Text>
+</QuestionCard>
+<QuestionCard id="ReSl" willPower="6">
+  <Text lang="en">Who is the sexiest person here?</Text>
+  <Text lang="de">Wer ist die sexieste Person hier?</Text>
+</QuestionCard>
+<QuestionCard id="avS1" willPower="6">
+  <Text lang="en">What is the grossest thing that has come out of your body?</Text>
+  <Text lang="de">Was ist das Ekelhafteste, das aus deinem Körper gekommen ist?</Text>
+</QuestionCard>
+<QuestionCard id="A6SR" willPower="6">
+  <Text lang="en">What terrible thing have you done that you lied to cover up?</Text>
+  <Text lang="de">Was hast du getan, dass du gelogen hast, um es zu vertuschen?</Text>
+</QuestionCard>
+<QuestionCard id="3DSl" willPower="6">
+  <Text lang="en">Who have you loved but they didn’t love you back?</Text>
+  <Text lang="de">Wen hast du geliebt, aber sie haben dich nicht geliebt?</Text>
+</QuestionCard>
+<QuestionCard id="LLSp" willPower="6">
+  <Text lang="en">What is something that you have never told anyone?</Text>
+  <Text lang="de">Was ist etwas, das Sie noch nie jemandem erzählt haben?</Text>
+</QuestionCard>
+<QuestionCard id="WDSJ" willPower="6">
+  <Text lang="en">What is the most disgusting habit you have?</Text>
+  <Text lang="de">Was ist die widerlichste Angewohnheit, die Sie haben?</Text>
+</QuestionCard>
+<QuestionCard id="DLS5" willPower="6">
+  <Text lang="en">What was the cruelest joke you played on someone?</Text>
+  <Text lang="de">Was war der grausamste Witz, den du jemandem vorgespielt hast?</Text>
+</QuestionCard>
+<QuestionCard id="5JSZ" willPower="6">
+  <Text lang="en">What is the most embarrassing thing you have put up on social media?</Text>
+  <Text lang="de">Was ist die peinlichste Sache, die Sie in den sozialen Medien gemacht haben?</Text>
+</QuestionCard>
+<QuestionCard id="pGSl" willPower="6">
+  <Text lang="en">What bad thing have you done that no one else found out about?</Text>
+  <Text lang="de">Was für eine schlimme Sache hast du getan, von der niemand sonst erfahren hat?</Text>
+</QuestionCard>
+<QuestionCard id="G4Sx" willPower="6">
+  <Text lang="en">What was the most awkward romantic encounter you have had?</Text>
+  <Text lang="de">Was war die peinlichste romantische Begegnung, die Sie je hatten?</Text>
+</QuestionCard>
+<QuestionCard id="yyS7" willPower="6">
+  <Text lang="en">What is the grossest thing you have had in your mouth?</Text>
+  <Text lang="de">Was ist das Ekelhafteste, was du je in deinem Mund hattest?</Text>
+</QuestionCard>
+<QuestionCard id="B1SA" willPower="6">
+  <Text lang="en">Tell me about the last time someone unexpectedly walked in on you while you were naked.</Text>
+  <Text lang="de">Erzähl mir vom letzten Mal, als jemand unerwartet auf dich zukam, während du nackt warst.</Text>
+</QuestionCard>
+<QuestionCard id="7OSy" willPower="6">
+  <Text lang="en">What is the most embarrassing nickname you have ever had?</Text>
+  <Text lang="de">Was ist der peinlichste Spitzname, den Sie je hatten?</Text>
+</QuestionCard>
+<QuestionCard id="l3S0" willPower="6">
+  <Text lang="en">What is the biggest lie you have ever told?</Text>
+  <Text lang="de">Was ist die größte Lüge, die Sie je erzählt haben?</Text>
+</QuestionCard>
+<QuestionCard id="XvSN" willPower="6">
+  <Text lang="en">What is the most embarrassing photo you have on your phone?</Text>
+  <Text lang="de">Was ist das peinlichste Foto, das Sie auf Ihrem Handy haben?</Text>
+</QuestionCard>
+<QuestionCard id="EbS4" willPower="6">
+  <Text lang="en">Describe your most recent romantic encounter.</Text>
+  <Text lang="de">Beschreiben Sie Ihre letzte romantische Begegnung.</Text>
+</QuestionCard>
+<QuestionCard id="zBSoK" willPower="6">
+  <Text lang="en">What is the weirdest thing you have done for a boyfriend or girlfriend?</Text>
+  <Text lang="de">Was ist das Seltsamste, was du für einen Freund oder eine Freundin getan hast?</Text>
+</QuestionCard>
+<QuestionCard id="8bS00" willPower="6">
+  <Text lang="en">Who here has the nicest butt?</Text>
+  <Text lang="de">Wer hier hat den schönsten Hintern?</Text>
+</QuestionCard>
+<QuestionCard id="1JS4N" willPower="6">
+  <Text lang="en">What is your biggest regret?</Text>
+  <Text lang="de">Was ist Ihr größtes Bedauern?</Text>
+</QuestionCard>
+<QuestionCard id="6vSNX" willPower="6">
+  <Text lang="en">Is it true that you (whatever you or the group suspects they do / did)?</Text>
+  <Text lang="de">Ist es wahr, dass Sie (was auch immer Sie oder die Gruppe vermutet, sie tun / taten)?</Text>
+</QuestionCard>
+<QuestionCard id="dZSYa" willPower="6">
+  <Text lang="en">When was the last time you picked your nose without a tissue?</Text>
+  <Text lang="de">Wann haben Sie das letzte Mal Ihre Nase ohne Taschentuch gepflückt?</Text>
+</QuestionCard>
+<QuestionCard id="JOSjm" willPower="6">
+  <Text lang="en">What do you really hope your parents never find out about?</Text>
+  <Text lang="de">Was hoffen Sie wirklich, dass Ihre Eltern nie davon erfahren?</Text>
+</QuestionCard>
+<QuestionCard id="bnSpP" willPower="6">
+  <Text lang="en">Tell us your most embarrassing vomit story.</Text>
+  <Text lang="de">Erzähl uns deine peinlichste Kotzgeschichte.</Text>
+</QuestionCard>
+<QuestionCard id="4NSNZ" willPower="6">
+  <Text lang="en">Tell me something you don’t want me to know.</Text>
+  <Text lang="de">Sag mir etwas, was ich nicht wissen soll.</Text>
+</QuestionCard>
+<QuestionCard id="PLS8x" willPower="6">
+  <Text lang="en">Have you ever made out with someone here?</Text>
+  <Text lang="de">Hast du jemals mit jemandem hier rumgemacht?</Text>
+</QuestionCard>
+<QuestionCard id="opSgQ" willPower="6">
+  <Text lang="en">What is the airspeed velocity of an unladen swallow?</Text>
+  <Text lang="de">Wie hoch ist die Fluggeschwindigkeit einer unbeladenen Schwalbe?</Text>
+</QuestionCard>
+<QuestionCard id="enSKJ" willPower="6">
+  <Text lang="en">What have you done that people here would judge you most for doing?</Text>
+  <Text lang="de">Was haben Sie getan, wofür die Leute hier Sie am meisten verurteilen würden?</Text>
+</QuestionCard>
+<QuestionCard id="N8SmO" willPower="6">
+  <Text lang="en">What would you do if you were the opposite gender for a day?</Text>
+  <Text lang="de">Was würden Sie tun, wenn Sie einen Tag lang das andere Geschlecht wären?</Text>
+</QuestionCard>
+<QuestionCard id="g9S5G" willPower="6">
+  <Text lang="en">Who is your crush?</Text>
+  <Text lang="de">Wer ist dein Schwarm?</Text>
+</QuestionCard>
